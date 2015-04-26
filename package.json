@@ -1,0 +1,41 @@
+{
+  "name": "chromium-net-errors",
+  "version": "1.0.0",
+  "description": "Chromium network errors for Chromium-based JavaScript environments",
+  "keywords": [
+    "atom-shell",
+    "electron",
+    "error"
+  ],
+  "main": "index.js",
+  "files": [
+    "errors.json",
+    "index.js",
+    "LICENSE"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/maxkueng/chromium-net-errors.git"
+  },
+  "scripts": {
+    "generate": "node tools/generate.js",
+    "prepublish": "npm run generate",
+    "pretest": "npm run generate",
+    "test": "mocha --ui bdd --reporter spec"
+  },
+  "author": "Max Kueng <me@maxkueng.com> (http://maxkueng.com/)",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/maxkueng/chromium-net-errors/raw/master/LICENSE"
+    }
+  ],
+  "devDependencies": {
+    "chai": "^2.2.0",
+    "change-case": "^2.3.0",
+    "got": "^2.8.1",
+    "mocha": "^2.2.4",
+    "split": "^0.3.3",
+    "through2": "^0.6.5"
+  }
+}
