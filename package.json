@@ -1,8 +1,9 @@
 {
   "name": "chromium-net-errors",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Chromium network errors for Chromium-based JavaScript environments",
   "keywords": [
+    "chromium",
     "atom-shell",
     "electron",
     "error"
