@@ -17,6 +17,37 @@ example.
 npm install chromium-net-errors --save
 ```
 
+## Example Electron app
+
+```js
+var app = require('app');
+var BrowserWindow = require('browser-window');
+var networkErrors = require('chromium-net-errors');
+
+app.on('ready', function () {
+
+  var win = new BrowserWindow({ width: 800, height: 600 });
+
+  win.webContents.on('did-fail-load', function (e, errorCode) {
+    throw networkErrors.createByCode(errorCode);
+  });
+
+  win.loadUrl('http://blablanotexist.com');
+
+});
+```
+
+Will pop-up the following error:
+
+```
+Uncaught Exception:
+NameNotResolvedError: The host name could not be resolved.
+    at Object.exports.createByCode (/tmp/ele/node_modules/chromium-net-errors/index.js:72:9)
+    at EventEmitter.<anonymous> (/tmp/ele/app.js:10:25)
+    at emitThree (events.js:97:13)
+    at EventEmitter.emit (events.js:172:7)
+```
+
 ## Usage
 
 ```js
