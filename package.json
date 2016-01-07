@@ -1,6 +1,6 @@
 {
   "name": "chromium-net-errors",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Chromium network errors for Chromium-based JavaScript environments",
   "keywords": [
     "chromium",
