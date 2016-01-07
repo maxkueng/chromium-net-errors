@@ -1,5 +1,5 @@
 var inherits = require('util').inherits;
-var errors = require('./errors');
+var errors = require('./errors.json');
 
 var errorCodeMap = {};
 

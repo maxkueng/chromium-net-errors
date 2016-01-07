@@ -1,11 +1,11 @@
 var expect = require('chai').expect;
-var errors = require('../errors');
+var errors = require('../errors.json');
 var chromiumErrors = require('../index');
 
 describe('create', function () {
 
 	it('should create a new error', function () {
-	
+
 		errors.forEach(function (error) {
 			var ChromiumError = chromiumErrors[error.name];
 			var err = new ChromiumError;
@@ -16,11 +16,11 @@ describe('create', function () {
 			expect(err).to.be.an.instanceof(chromiumErrors.ChromiumNetError);
 			expect(err).to.be.an.instanceof(ChromiumError);
 		});
-	
+
 	});
 
 	it('should create an error by code', function () {
-	
+
 		var err = chromiumErrors.createByCode(-324);
 		expect(err).to.be.an.instanceof(chromiumErrors.EmptyResponseError);
 		expect(err.code).to.equal(-324);
@@ -28,7 +28,7 @@ describe('create', function () {
 	});
 
 	it('should have the correct type', function () {
-	
+
 		var systemErr = new chromiumErrors.AbortedError();
 		var connectionErr = new chromiumErrors.ConnectionRefusedError();
 		var certificateErr = new chromiumErrors.CertDateInvalidError();
@@ -69,7 +69,7 @@ describe('create', function () {
 		expect(dnsErr).to.have.property('type', 'dns');
 		expect(dnsErr.isDnsError()).to.be.true;
 		expect(dnsErr.isSystemError()).to.be.false;
-	
+
 	});
 
 });
