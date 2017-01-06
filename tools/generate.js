@@ -5,7 +5,7 @@ var through2 = require('through2');
 var split = require('split');
 var changeCase = require('change-case');
 
-var errorListUrl = 'http://src.chromium.org/svn/trunk/src/net/base/net_error_list.h';
+var errorListUrl = 'https://src.chromium.org/viewvc/chrome/trunk/src/net/base/net_error_list.h';
 
 var types = {
 	0: 'system',
@@ -24,7 +24,10 @@ var sinkStream = through2(function (chunk, enc, next) {
 });
 
 var segmentsStream = (function () {
-	var netErrorReg = /^NET_ERROR\(([A-Z_]+), ([0-9-]+)\)$/; 
+	var netErrorReg = /^<td class="vc_file_line_text">NET_ERROR\(([A-Z_]+), ([0-9-]+)\)/;
+	var stopReg = /^<td class="vc_file_line_text">$/;
+	var messageReg = /^<td class="vc_file_line_text">\/\/ (.*)/;
+	var textReg = /^<td class="vc_file_line_text">/;
 	var stream = through2.obj(function (line, enc, callback) {
 		function next () {
 			stream.push(line);
@@ -40,13 +43,23 @@ var segmentsStream = (function () {
 			if (seg !== '') {
 				seg += '\n';
 			}
-
 			seg += line;
 			stream.segments[stream.currentSegment] = seg;
 		}
 
 		function prevSegment () {
-			return stream.segments[stream.currentSegment - 1] || '';
+			var backtrack = 1, message = [], line;
+			do {
+				line = stream.segments[stream.currentSegment - backtrack];
+				if(messageReg.test(line)){
+					var matches = messageReg.exec(line);
+					message.push(matches[1].trim());
+				}
+				backtrack += 1
+			}
+			while(!stopReg.test(line));
+			var msg = message.reverse().join(' ');
+			return msg;
 		}
 
 		if (/^\s*$/.test(line)) {
@@ -78,11 +91,11 @@ var segmentsStream = (function () {
 
 		} else {
 			line = line.replace(/^\/\/\s*/, '');
-			addToSegment(line);
+			if(textReg.test(line)){
+				addToSegment(line);
+			}
 		}
-
 		return next();
-
 	});
 
 	stream.errors = [];
@@ -105,8 +118,7 @@ got(errorListUrl)
 			{ encoding: 'utf-8' },
 			function (err) {
 				if (err) { throw err; }
-
-				console.log('done');
+				console.log('done -', segmentsStream.errors.length, 'errors parsed');
 			}
 		);
 	});
