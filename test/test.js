@@ -27,6 +27,16 @@ describe('create', function () {
 
 	});
 
+	it('should return error with message and code if error was not found', function() {
+		
+		var err = chromiumErrors.createByCode(-999, 'Default Error', 123456);
+		expect(err).to.be.an.instanceof(chromiumErrors.ChromiumNetError);
+		expect(err).to.be.an.instanceof(Error);
+		expect(err.message).to.equal('Default Error');
+		expect(err.code).to.equal(123456);
+
+	});
+
 	it('should have the correct type', function () {
 
 		var systemErr = new chromiumErrors.AbortedError();
