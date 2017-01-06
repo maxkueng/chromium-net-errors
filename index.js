@@ -3,10 +3,11 @@ var errors = require('./errors.json');
 
 var errorCodeMap = {};
 
-function ChromiumNetError (message) {
+function ChromiumNetError (message, code) {
 	Error.captureStackTrace(this, this.constructor);
 	this.name = 'ChromiumNetError';
 	this.type = 'unknown';
+	this.code = code;
 	this.message = message || '';
 }
 
@@ -65,9 +66,9 @@ errors.forEach(function (error) {
 	exports[error.name] = CustomError;
 });
 
-exports.createByCode = function (code) {
+exports.createByCode = function (code, notFoundMessage, notFoundCode) {
 	var Err = errorCodeMap[code];
-	if (!Err) { return new ChromiumNetError(); }
+	if (!Err) { return new ChromiumNetError(notFoundMessage, notFoundCode); }
 
 	return new Err;
 };
