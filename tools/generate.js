@@ -5,7 +5,7 @@ var through2 = require('through2');
 var split = require('split');
 var changeCase = require('change-case');
 
-var errorListUrl = 'http://src.chromium.org/svn/trunk/src/net/base/net_error_list.h';
+var errorListUrl = 'https://cs.chromium.org/codesearch/f/chromium/src/net/base/net_error_list.h';
 
 var types = {
 	0: 'system',
