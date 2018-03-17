@@ -1,73 +1,84 @@
-var inherits = require('util').inherits;
-var errors = require('./errors.json');
+const errors = require('./errors.json');
 
-var errorCodeMap = {};
+exports.ERROR_TYPE_SYSTEM = 'system';
+exports.ERROR_TYPE_CONNECTION = 'connection';
+exports.ERROR_TYPE_CERTIFICATE = 'certificate';
+exports.ERROR_TYPE_HTTP = 'http';
+exports.ERROR_TYPE_CACHE = 'cache';
+exports.ERROR_TYPE_UNKNOWN = 'unknown';
+exports.ERROR_TYPE_FTP = 'ftp';
+exports.ERROR_TYPE_CERTIFICATE_MANAGER = 'certificate-manager';
+exports.ERROR_TYPE_DNS = 'dns';
 
-function ChromiumNetError (message) {
-	Error.captureStackTrace(this, this.constructor);
-	this.name = 'ChromiumNetError';
-	this.type = 'unknown';
-	this.message = message || '';
+class ChromiumNetError extends Error {
+  constructor(message, ...restArgs) {
+    super(...[message, ...restArgs]);
+    Error.captureStackTrace(this, ChromiumNetError);
+    this.name = 'ChromiumNetError';
+    this.type = 'unknown';
+    this.message = message || '';
+  }
+
+  isSystemError() {
+    return this.type === exports.ERROR_TYPE_SYSTEM;
+  }
+
+  isConnectionError() {
+    return this.type === exports.ERROR_TYPE_CONNECTION;
+  }
+
+  isCertificateError() {
+    return this.type === exports.ERROR_TYPE_CERTIFICATE;
+  }
+
+  isHttpError() {
+    return this.type === exports.ERROR_TYPE_HTTP;
+  }
+
+  isCacheError() {
+    return this.type === exports.ERROR_TYPE_CACHE;
+  }
+
+  isUnknownError() {
+    return this.type === exports.ERROR_TYPE_UNKNOWN;
+  }
+
+  isFtpError() {
+    return this.type === exports.ERROR_TYPE_FTP;
+  }
+
+  isCertificateManagerError() {
+    return this.type === exports.ERROR_TYPE_CERTIFICATE_MANAGER;
+  }
+
+  isDnsError() {
+    return this.type === exports.ERROR_TYPE_DNS;
+  }
 }
-
-inherits(ChromiumNetError, Error);
-
-ChromiumNetError.prototype.isSystemError = function () {
-	return this.type === 'system';
-};
-
-ChromiumNetError.prototype.isConnectionError = function () {
-	return this.type === 'connection';
-};
-
-ChromiumNetError.prototype.isCertificateError = function () {
-	return this.type === 'certificate';
-};
-
-ChromiumNetError.prototype.isHttpError = function () {
-	return this.type === 'http';
-};
-
-ChromiumNetError.prototype.isCacheError = function () {
-	return this.type === 'cache';
-};
-
-ChromiumNetError.prototype.isUnknownError = function () {
-	return this.type === 'unknown';
-};
-
-ChromiumNetError.prototype.isFtpError = function () {
-	return this.type === 'ftp';
-};
-
-ChromiumNetError.prototype.isCertificateManagerError = function () {
-	return this.type === 'certificate-manager';
-};
-
-ChromiumNetError.prototype.isDnsError = function () {
-	return this.type === 'dns';
-};
 
 exports.ChromiumNetError = ChromiumNetError;
 
-errors.forEach(function (error) {
-	function CustomError (message) {
-		Error.captureStackTrace(this, this.constructor);
-		this.name = error.name;
-		this.code = error.code;
-		this.type = error.type;
-		this.message = message || error.message;
-	}
+const errorCodeMap = {};
 
-	inherits(CustomError, ChromiumNetError);
+errors.forEach((error) => {
+  class CustomError extends ChromiumNetError {
+    constructor(message, ...restArgs) {
+      super(...[message, ...restArgs]);
 
-	errorCodeMap[error.code] = CustomError;
-	exports[error.name] = CustomError;
+      this.name = error.name;
+      this.code = error.code;
+      this.type = error.type;
+      this.message = message || error.message;
+    }
+  }
+
+  errorCodeMap[error.code] = CustomError;
+  exports[error.name] = CustomError;
 });
 
-exports.createByCode = function (code) {
-	var Err = errorCodeMap[code];
-	if (!Err) { return new ChromiumNetError(); }
+exports.createByCode = function createByCode(code) {
+  const Err = errorCodeMap[code];
+  if (!Err) { return new ChromiumNetError(); }
 
-	return new Err;
+  return new Err();
 };

@@ -1,112 +1,141 @@
-var fs = require('fs');
-var path = require('path');
-var got = require('got');
-var through2 = require('through2');
-var split = require('split');
-var changeCase = require('change-case');
+#!/usr/bin/env node
 
-var errorListUrl = 'https://cs.chromium.org/codesearch/f/chromium/src/net/base/net_error_list.h';
+/* eslint-disable import/no-extraneous-dependencies */
+/* eslint-disable no-console */
 
-var types = {
-	0: 'system',
-	100: 'connection',
-	200: 'certificate',
-	300: 'http',
-	400: 'cache',
-	500: 'unknown',
-	600: 'ftp',
-	700: 'certificate-manager',
-	800: 'dns'
+const fs = require('fs');
+const path = require('path');
+const got = require('got');
+const through2 = require('through2');
+const split = require('split');
+const { pascalCase } = require('change-case');
+const chromiumNetErrors = require('..');
+
+const ERROR_LIST_URL = 'https://cs.chromium.org/codesearch/f/chromium/src/net/base/net_error_list.h';
+const OUTPUT_FILE = './errors.json';
+
+const EMPTY_LINE_REGEX = /^\s*$/;
+const COMMENT_REGEX = /^\/\/\s*/;
+const NET_ERROR_REGEX = /^NET_ERROR\(([A-Z_]+), ([0-9-]+)\)$/;
+
+const errorTypes = {
+  0: chromiumNetErrors.ERROR_TYPE_SYSTEM,
+  100: chromiumNetErrors.ERROR_TYPE_CONNECTION,
+  200: chromiumNetErrors.ERROR_TYPE_CERTIFICATE,
+  300: chromiumNetErrors.ERROR_TYPE_HTTP,
+  400: chromiumNetErrors.ERROR_TYPE_CACHE,
+  500: chromiumNetErrors.ERROR_TYPE_UNKNOWN,
+  600: chromiumNetErrors.ERROR_TYPE_FTP,
+  700: chromiumNetErrors.ERROR_TYPE_CERTIFICATE_MANAGER,
+  800: chromiumNetErrors.ERROR_TYPE_DNS,
 };
 
-var sinkStream = through2(function (chunk, enc, next) {
-	next();
-});
+function createSinkStream() {
+  return through2.obj((chunk, enc, next) => next());
+}
 
-var segmentsStream = (function () {
-	var netErrorReg = /^NET_ERROR\(([A-Z_]+), ([0-9-]+)\)$/; 
-	var stream = through2.obj(function (line, enc, callback) {
-		function next () {
-			stream.push(line);
-			return callback();
-		}
+function createSegmentsStream() {
+  function fixErrorName(name) {
+    if (name.endsWith('Error')) {
+      return name;
+    }
+    return `${name}Error`;
+  }
 
-		function inc () {
-			stream.currentSegment += 1;
-		}
+  function fixErrorMessage(message) {
+    return message
+      .replace(COMMENT_REGEX, '')
+      .replace(/\r?\n/g, ' ')
+      .replace(/\s+/g, ' ');
+  }
 
-		function addToSegment (line) {
-			var seg = stream.segments[stream.currentSegment] || '';
-			if (seg !== '') {
-				seg += '\n';
-			}
+  const stream = through2.obj((chunk, enc, callback) => {
+    function next(line) {
+      stream.push(line);
+      callback();
+    }
 
-			seg += line;
-			stream.segments[stream.currentSegment] = seg;
-		}
+    function increment() {
+      stream.currentSegment += 1;
+    }
 
-		function prevSegment () {
-			return stream.segments[stream.currentSegment - 1] || '';
-		}
+    function addToSegment(line) {
+      let segment = stream.segments[stream.currentSegment] || '';
+      if (segment !== '') {
+        segment += '\n';
+      }
 
-		if (/^\s*$/.test(line)) {
-			inc();
-			return next();
-		}
+      segment += line;
+      stream.segments[stream.currentSegment] = segment;
+    }
 
-		if (netErrorReg.test(line)) {
-			inc();
-			addToSegment(line)
+    function getPreviousSegment() {
+      return stream.segments[stream.currentSegment - 1] || '';
+    }
 
-			var matches = netErrorReg.exec(line);
+    if (EMPTY_LINE_REGEX.test(chunk)) {
+      increment();
+      next(chunk);
+      return;
+    }
 
-			var errorCode = parseInt(matches[2], 10);
-			var errorMessage = prevSegment();
-			var errorName = changeCase.pascalCase(matches[1]);
-			var errorType = types[Math.floor(Math.abs(errorCode) / 100) * 100];
+    if (NET_ERROR_REGEX.test(chunk)) {
+      increment();
+      addToSegment(chunk);
 
-			if (!(/Error$/.test(errorName))) {
-				errorName += 'Error';
-			}
+      const [
+        ,
+        errorName,
+        errorCode,
+      ] = NET_ERROR_REGEX.exec(chunk);
 
-			stream.errors.push({
-				name: changeCase.pascalCase(errorName),
-				code: errorCode,
-				type: errorType,
-				message: errorMessage
-			});
+      const errorCodeNumber = Number.parseInt(errorCode, 10);
+      const errorTypeCode = Math.floor(Math.abs(errorCodeNumber) / 100) * 100;
+      const errorMessage = fixErrorMessage(getPreviousSegment());
 
-		} else {
-			line = line.replace(/^\/\/\s*/, '');
-			addToSegment(line);
-		}
+      stream.errors.push({
+        name: fixErrorName(pascalCase(errorName)),
+        code: errorCodeNumber,
+        type: errorTypes[errorTypeCode],
+        message: errorMessage,
+      });
+    } else {
+      addToSegment(chunk.replace(COMMENT_REGEX, ''));
+    }
 
-		return next();
+    next(chunk);
+  });
 
-	});
+  stream.errors = [];
+  stream.currentSegment = 0;
+  stream.segments = [];
 
-	stream.errors = [];
-	stream.currentSegment = 0;
-	stream.segments = [];
+  return stream;
+}
 
-	return stream;
-})();
+const segmentsStream = createSegmentsStream();
 
-var lineCount = 0;
+got(ERROR_LIST_URL)
+  .pipe(split())
+  .pipe(segmentsStream)
+  .pipe(createSinkStream())
+  .on('finish', () => {
+    const outputPath = path.resolve(OUTPUT_FILE);
 
-got(errorListUrl)
-	.pipe(split())
-	.pipe(segmentsStream)
-	.pipe(sinkStream)
-	.on('finish', function () {
-		fs.writeFile(
-			path.resolve('./errors.json'),
-			JSON.stringify(segmentsStream.errors, null, '  '),
-			{ encoding: 'utf-8' },
-			function (err) {
-				if (err) { throw err; }
+    fs.writeFile(
+      path.resolve(OUTPUT_FILE),
+      JSON.stringify(segmentsStream.errors, null, '  '),
+      'utf-8',
+      (err) => {
+        if (err) {
+          console.error(`Failed to write file '${OUTPUT_FILE}' - ${err.toString()}`);
+          process.exit(1);
+          return;
+        }
 
-				console.log('done');
-			}
-		);
-	});
+        console.log(`${segmentsStream.errors.length} errors parsed`);
+        console.log(`Written to ${outputPath}`);
+      },
+    );
+  });
+
