@@ -7,6 +7,7 @@ export class UnknownError extends ChromiumNetError {
 
     this.name = 'UnknownError';
     this.message = 'Unknown error';
+    Error.captureStackTrace(this, UnknownError);
   }
 }
 

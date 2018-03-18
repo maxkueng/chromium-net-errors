@@ -3,10 +3,10 @@ import * as errorTypes from './errorTypes';
 export default class ChromiumNetError extends Error {
   constructor(message, ...restArgs) {
     super(...[message, ...restArgs]);
-    Error.captureStackTrace(this, ChromiumNetError);
     this.name = 'ChromiumNetError';
     this.type = 'unknown';
     this.message = message || '';
+    Error.captureStackTrace(this, ChromiumNetError);
   }
 
   isSystemError() {
