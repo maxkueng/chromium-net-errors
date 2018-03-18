@@ -113,7 +113,7 @@ function createSegmentsStream() {
 
 const segmentsStream = createSegmentsStream();
 
-got(ERROR_LIST_URL)
+got.stream(ERROR_LIST_URL)
   .pipe(split())
   .pipe(segmentsStream)
   .pipe(createSinkStream())

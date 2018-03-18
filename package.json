@@ -42,19 +42,19 @@
     "babel-eslint": "^8.2.2",
     "babel-plugin-transform-es2015-modules-commonjs": "^6.26.0",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
-    "change-case": "^2.3.0",
+    "change-case": "^3.0.2",
     "eslint": "^4.19.0",
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-plugin-import": "^2.9.0",
-    "got": "^2.8.1",
+    "got": "^8.3.0",
     "mkdirp": "^0.5.1",
     "npm-run-all": "^4.1.2",
     "rimraf": "^2.6.2",
     "rollup": "^0.57.1",
     "rollup-plugin-babel": "^3.0.3",
     "rollup-plugin-replace": "^2.0.0",
-    "split": "^0.3.3",
-    "through2": "^0.6.5"
+    "split": "^1.0.1",
+    "through2": "^2.0.3"
   },
   "ava": {
     "require": "babel-register"
