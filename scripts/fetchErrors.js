@@ -32,79 +32,90 @@ function createSinkStream() {
   return through2.obj((chunk, enc, next) => next());
 }
 
-function createSegmentsStream() {
-  function fixErrorName(name) {
-    if (name.endsWith('Error')) {
-      return name;
+function fixErrorName(name) {
+  if (name.endsWith('Error')) {
+    return name;
+  }
+  return `${name}Error`;
+}
+
+function fixErrorMessage(message) {
+  return message
+    .replace(COMMENT_REGEX, '');
+}
+
+const segmentUtils = {
+  initStream(stream) {
+    /* eslint-disable no-param-reassign */
+    stream.errors = [];
+    stream.currentSegment = 0;
+    stream.segments = [];
+    /* eslint-enable no-param-reassign */
+  },
+  increment(stream) {
+    // eslint-disable-next-line no-param-reassign
+    stream.currentSegment += 1;
+  },
+  addToSegment(stream, line) {
+    let segment = stream.segments[stream.currentSegment] || '';
+    if (segment !== '') {
+      segment += '\n';
     }
-    return `${name}Error`;
-  }
 
-  function fixErrorMessage(message) {
-    return message
-      .replace(COMMENT_REGEX, '');
-  }
+    segment += line;
+    // eslint-disable-next-line no-param-reassign
+    stream.segments[stream.currentSegment] = segment;
+  },
+  getPreviousSegment(stream) {
+    return stream.segments[stream.currentSegment - 1] || '';
+  },
+  handleErrorChunk(stream, chunk) {
+    segmentUtils.increment(stream);
+    segmentUtils.addToSegment(stream, chunk);
 
+    const [, errorName, errorCode] = NET_ERROR_REGEX.exec(chunk);
+
+    const errorCodeNumber = Number.parseInt(errorCode, 10);
+    const errorTypeCode = Math.floor(Math.abs(errorCodeNumber) / 100) * 100;
+    const errorMessage = fixErrorMessage(segmentUtils.getPreviousSegment(stream));
+
+    stream.errors.push({
+      name: fixErrorName(pascalCase(errorName)),
+      code: errorCodeNumber,
+      type: errorTypesMap[errorTypeCode] || errorTypes.ERROR_TYPE_UNKNOWN,
+      message: errorMessage,
+    });
+  },
+  handleEmptyChunk(stream) {
+    segmentUtils.increment(stream);
+  },
+  handleMessageChunk(stream, chunk) {
+    segmentUtils.addToSegment(stream, chunk.replace(COMMENT_REGEX, ''));
+  },
+};
+
+function createSegmentsStream() {
   const stream = through2.obj((chunk, enc, callback) => {
     function next(line) {
-      stream.push(line);
-      callback();
-    }
-
-    function increment() {
-      stream.currentSegment += 1;
-    }
-
-    function addToSegment(line) {
-      let segment = stream.segments[stream.currentSegment] || '';
-      if (segment !== '') {
-        segment += '\n';
-      }
-
-      segment += line;
-      stream.segments[stream.currentSegment] = segment;
-    }
-
-    function getPreviousSegment() {
-      return stream.segments[stream.currentSegment - 1] || '';
+      callback(null, line);
     }
 
     if (EMPTY_LINE_REGEX.test(chunk)) {
-      increment();
+      segmentUtils.handleEmptyChunk(stream);
       next(chunk);
       return;
     }
 
     if (NET_ERROR_REGEX.test(chunk)) {
-      increment();
-      addToSegment(chunk);
-
-      const [
-        ,
-        errorName,
-        errorCode,
-      ] = NET_ERROR_REGEX.exec(chunk);
-
-      const errorCodeNumber = Number.parseInt(errorCode, 10);
-      const errorTypeCode = Math.floor(Math.abs(errorCodeNumber) / 100) * 100;
-      const errorMessage = fixErrorMessage(getPreviousSegment());
-
-      stream.errors.push({
-        name: fixErrorName(pascalCase(errorName)),
-        code: errorCodeNumber,
-        type: errorTypesMap[errorTypeCode] || errorTypes.ERROR_TYPE_UNKNOWN,
-        message: errorMessage,
-      });
+      segmentUtils.handleErrorChunk(stream, chunk);
     } else {
-      addToSegment(chunk.replace(COMMENT_REGEX, ''));
+      segmentUtils.handleMessageChunk(stream, chunk);
     }
 
     next(chunk);
   });
 
-  stream.errors = [];
-  stream.currentSegment = 0;
-  stream.segments = [];
+  segmentUtils.initStream(stream);
 
   return stream;
 }
