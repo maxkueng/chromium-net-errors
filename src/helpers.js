@@ -1,5 +1,3 @@
-/* global ERRORS */
-
 import * as generatedErrors from '../generated-errors/index';
 import ChromiumNetError from './ChromiumNetError';
 
@@ -12,7 +10,7 @@ export class UnknownError extends ChromiumNetError {
   }
 }
 
-const errors = ERRORS;
+const errors = 'ERRORS';
 
 const errorCodeMap = {};
 errors.forEach((error) => {

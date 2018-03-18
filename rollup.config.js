@@ -22,6 +22,7 @@ export default {
   input: 'src/index.js',
   plugins: [
     replace({
+      delimiters: ["'", "'"],
       values: {
         ERRORS: errors,
       },
