@@ -8,11 +8,20 @@ Chromium Network Errors
 
 Provides Chromium network errors found in
 [net_error_list.h](https://cs.chromium.org/codesearch/f/chromium/src/net/base/net_error_list.h)
-as custom error classes for Node.js. It can be used in browsers too.  
+as custom error classes that can be conveniently Node.js and Electron apps. It
+can be used in browsers too.  
 They correspond to the error codes that are provided in 
 [Electron's `did-fail-load` event](https://github.com/electron/electron/blob/master/docs/api/web-contents.md#event-did-fail-load).
 
-## Install
+## Features
+
+ - No dependencies.
+ - 100% test coverage.
+ - ES6 build with `import` and `export` to allow better dead code elimination
+   if you use a bundler that supports it.
+ - Daily checks on Travis CI if error list is up-to-date.
+
+## Installation
 
 ```sh
 npm install chromium-net-errors --save
@@ -64,7 +73,9 @@ console.log(err instanceof chromiumNetErrors.ConnectionTimedOutError);
 // true
 ```
 
-### Create errors by code
+### Get Errors by errorCode
+
+Get the class of an error by its `errorCode`.
 
 ```js
 const Err = chromiumNetErrors.getErrorByCode(-201);
@@ -77,7 +88,7 @@ console.log(err.isCertificateError());
 // true
 
 console.log(err.type); 
-// certificate
+// 'certificate'
 
 console.log(err.message);
 // The server responded with a certificate that is signed by an authority
@@ -91,6 +102,37 @@ console.log(err.message);
 //
 // 3. The server is presenting a self-signed certificate, providing no
 //    defense against active attackers (but foiling passive attackers).
+```
+
+### Get All Errors
+
+Get an array of all possible errors.
+
+```js
+console.log(chromiumNetErrors.getErrors());
+
+// [ { name: 'IoPendingError',
+//     code: -1,
+//     type: 'system',
+//     message: 'An asynchronous IO operation is not yet complete.  This usually does not\nindicate a fatal error.  Typically this error will be generated as a\nnotification to wait for some external notification that the IO operation\nfinally completed.' },
+//   { name: 'FailedError',
+//     code: -2,
+//     type: 'system',
+//     message: 'A generic failure occurred.' },
+//   { name: 'AbortedError',
+//     code: -3,
+//     type: 'system',
+//     message: 'An operation was aborted (due to user action).' },
+//   { name: 'InvalidArgumentError',
+//     code: -4,
+//     type: 'system',
+//     message: 'An argument to the function is incorrect.' },
+//   { name: 'InvalidHandleError',
+//     code: -5,
+//     type: 'system',
+//     message: 'The handle or file descriptor is invalid.' },
+//   ...
+// ]
 ```
 
 ## License
