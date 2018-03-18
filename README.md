@@ -27,7 +27,7 @@ They correspond to the error codes that are provided in
 npm install chromium-net-errors --save
 ```
 
-## Example use in Electron
+## Example Use in Electron
 
 ```js
 import { app, BrowserWindow } from 'electron';
@@ -60,7 +60,7 @@ app.on('ready', () => {
 import * as chromiumNetErrors from 'chromium-net-errors';
 ```
 
-### Create new errors
+### Create New Errors
 
 ```js
 const err = new chromiumNetErrors.ConnectionTimedOutError();
@@ -71,6 +71,23 @@ console.log(err instanceof chromiumNetErrors.ChromiumNetError);
 // true
 console.log(err instanceof chromiumNetErrors.ConnectionTimedOutError);
 // true
+```
+
+```js
+function thrower() {
+  throw new chromiumNetErrors.ConnectionTimedOutError();
+}
+
+try {
+  thrower();
+} catch (err) {
+  console.log(err instanceof Error);
+  // true
+  console.log(err instanceof chromiumNetErrors.ChromiumNetError);
+  // true
+  console.log(err instanceof chromiumNetErrors.ConnectionTimedOutError);
+  // true
+}
 ```
 
 ### Get Errors by errorCode
