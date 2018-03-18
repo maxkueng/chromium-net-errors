@@ -2,6 +2,7 @@ Chromium Network Errors
 =======================
 
 [![Build Status](https://secure.travis-ci.org/maxkueng/chromium-net-errors.png?branch=master)](http://travis-ci.org/maxkueng/chromium-net-errors)
+[![Coverage Status](https://coveralls.io/repos/maxkueng/chromium-net-errors/badge.svg?branch=master&service=github)](https://coveralls.io/github/maxkueng/chromium-net-errors?branch=master)
 
 Provides Chromium network errors found in
 [net_error_list.h](http://src.chromium.org/svn/trunk/src/net/base/net_error_list.h)
