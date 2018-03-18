@@ -19,7 +19,7 @@ They correspond to the error codes that are provided in
  - 100% test coverage.
  - ES6 build with `import` and `export` to allow better dead code elimination
    if you use a bundler that supports it.
- - Daily checks on Travis CI if error list is up-to-date.
+ - Daily checks for updates on net_error_list.h on [Travis CI](https://travis-ci.org/maxkueng/chromium-net-errors)
 
 ## Installation
 
