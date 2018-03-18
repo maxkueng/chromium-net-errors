@@ -94,7 +94,7 @@ function createSegmentsStream() {
       stream.errors.push({
         name: fixErrorName(pascalCase(errorName)),
         code: errorCodeNumber,
-        type: errorTypesMap[errorTypeCode],
+        type: errorTypesMap[errorTypeCode] || errorTypes.ERROR_TYPE_UNKNOWN,
         message: errorMessage,
       });
     } else {
