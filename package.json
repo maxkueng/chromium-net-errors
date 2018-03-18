@@ -27,7 +27,8 @@
     "build:js": "rollup -c rollup.config.js",
     "build": "npm-run-all -s fetch-errors generate-errors clean build:js",
     "lint": "eslint src/*.js",
-    "lint:fix": "eslint --fix src/*.js"
+    "lint:fix": "eslint --fix src/*.js",
+    "publish-coverage": "nyc report --reporter=text-lcov | coveralls"
   },
   "author": "Max Kueng <me@maxkueng.com> (http://maxkueng.com/)",
   "licenses": [
@@ -43,6 +44,7 @@
     "babel-plugin-transform-es2015-modules-commonjs": "^6.26.0",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "change-case": "^3.0.2",
+    "coveralls": "^3.0.0",
     "eslint": "^4.19.0",
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-plugin-import": "^2.9.0",
