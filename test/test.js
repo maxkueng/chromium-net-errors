@@ -6,15 +6,15 @@ test('create new error', (t) => {
   errors.forEach((error) => {
     const ChromiumError = chromiumNetErrors[error.name];
     const thrower = () => { throw new ChromiumError(); };
-
     t.throws(() => thrower(), ChromiumError);
   });
 });
 
 test('create error by code', (t) => {
-  const thrower = () => { throw chromiumNetErrors.createByCode(-324); };
-
-  t.throws(() => thrower(), chromiumNetErrors.EmptyResponseError);
+  errors.forEach((error) => {
+    const thrower = () => { throw chromiumNetErrors.createByCode(error.code); };
+    t.throws(() => thrower(), chromiumNetErrors[error.name]);
+  });
 });
 
 test('error type', (t) => {
@@ -23,7 +23,10 @@ test('error type', (t) => {
     const err = new ChromiumError();
     t.log(err.name, err.type, error.name, error.type);
 
+    t.is(err.code, error.code);
     t.is(err.type, error.type);
+    t.is(err.message, error.message);
+
     t.is(err.isSystemError(), error.type === 'system');
     t.is(err.isConnectionError(), error.type === 'connection');
     t.is(err.isCertificateError(), error.type === 'certificate');
@@ -36,3 +39,11 @@ test('error type', (t) => {
   });
 });
 
+test('getErrors', (t) => {
+  t.is(chromiumNetErrors.getErrors().length, errors.length);
+});
+
+test('unknown error', (t) => {
+  const thrower = () => { throw chromiumNetErrors.createByCode(9999); };
+  t.throws(() => thrower(), chromiumNetErrors.UnknownError);
+});
