@@ -32,7 +32,8 @@ app.on('ready', () => {
 
   win.webContents.on('did-fail-load', (event, errorCode, errorDescription, validatedURL) => {
     try {
-      throw chromiumNetErrors.createByCode(errorCode);
+      const Err = chromiumNetErrors.getErrorByCode(errorCode);
+      throw new Err();
     } catch(err if err instanceof chromiumNetErrors.NameNotResolvedError) {
       console.error(`The name '${validatedURL}' could not be resolved:\n  ${err.message}`);
     } catch(err /* if err instanceof chromiumNetErrors.UnknownError */) {
@@ -66,7 +67,8 @@ console.log(err instanceof chromiumNetErrors.ConnectionTimedOutError);
 ### Create errors by code
 
 ```js
-const err = chromiumNetErrors.createByCode(-201);
+const Err = chromiumNetErrors.getErrorByCode(-201);
+const err = new Err();
 
 console.log(err instanceof chromiumNetErrors.CertDateInvalidError);
 // true

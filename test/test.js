@@ -12,7 +12,10 @@ test('create new error', (t) => {
 
 test('create error by code', (t) => {
   errors.forEach((error) => {
-    const thrower = () => { throw chromiumNetErrors.createByCode(error.code); };
+    const thrower = () => {
+      const Err = chromiumNetErrors.getErrorByCode(error.code);
+      throw new Err();
+    };
     t.throws(() => thrower(), chromiumNetErrors[error.name]);
   });
 });
@@ -44,6 +47,9 @@ test('getErrors', (t) => {
 });
 
 test('unknown error', (t) => {
-  const thrower = () => { throw chromiumNetErrors.createByCode(9999); };
+  const thrower = () => {
+    const Err = chromiumNetErrors.getErrorByCode(9999);
+    throw new Err();
+  };
   t.throws(() => thrower(), chromiumNetErrors.UnknownError);
 });

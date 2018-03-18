@@ -22,9 +22,9 @@ export function getErrors() {
   return [...errors];
 }
 
-export function createByCode(code) {
+export function getErrorByCode(code) {
   const Err = errorCodeMap[code];
-  if (!Err) { return new UnknownError(); }
+  if (!Err) { return UnknownError; }
 
-  return new Err();
+  return Err;
 }
