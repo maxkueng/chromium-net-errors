@@ -19,8 +19,7 @@ export default class ${error.name} extends ChromiumNetError {
 
     this.name = '${error.name}';
     this.code = ${error.code};
-    this.type = '${error.type}';
-    this.type = ${error.type && `'${error.type}'`}
+    this.type = ${(error.type && `'${error.type}'`) || '\'unknown\''}
     this.message = message || '${error.message.replace(/'/g, '\\\'')}';
   }
 }
