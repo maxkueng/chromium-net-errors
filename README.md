@@ -43,14 +43,16 @@ app.on('ready', () => {
     try {
       const Err = chromiumNetErrors.getErrorByCode(errorCode);
       throw new Err();
-    } catch(err if err instanceof chromiumNetErrors.NameNotResolvedError) {
-      console.error(`The name '${validatedURL}' could not be resolved:\n  ${err.message}`);
-    } catch(err /* if err instanceof chromiumNetErrors.UnknownError */) {
-      console.error(`Something went wrong while loading ${validatedURL}`);
+    } catch (err) {
+      if (err instanceof chromiumNetErrors.NameNotResolvedError) {
+        console.error(`The name '${validatedURL}' could not be resolved:\n  ${err.message}`);
+      } else {
+        console.error(`Something went wrong while loading ${validatedURL}`);
+      }
     }
   });
 
-  win.loadUrl('http://blablanotexist.com');
+  win.loadURL('http://blablanotexist.com');
 });
 ```
 

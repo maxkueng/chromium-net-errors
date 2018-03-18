@@ -1,6 +1,10 @@
 Changelog
 =========
 
+## Version 2.0.1
+
+ - Fix Electron example in docs
+
 ## Version 2.0.0
 
  - Fixed error stacks
