@@ -42,9 +42,7 @@ function createSegmentsStream() {
 
   function fixErrorMessage(message) {
     return message
-      .replace(COMMENT_REGEX, '')
-      .replace(/\r?\n/g, ' ')
-      .replace(/\s+/g, ' ');
+      .replace(COMMENT_REGEX, '');
   }
 
   const stream = through2.obj((chunk, enc, callback) => {
