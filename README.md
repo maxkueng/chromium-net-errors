@@ -5,12 +5,10 @@ Chromium Network Errors
 [![Coverage Status](https://coveralls.io/repos/maxkueng/chromium-net-errors/badge.svg?branch=master&service=github)](https://coveralls.io/github/maxkueng/chromium-net-errors?branch=master)
 
 Provides Chromium network errors found in
-[net_error_list.h](http://src.chromium.org/svn/trunk/src/net/base/net_error_list.h)
-as custom errors for Node.js. 
-
-They correspond to the error codes that could be provided by
-[Electron](https://github.com/atom/electron)'s `did-fail-load` event, for
-example.
+[net_error_list.h](https://cs.chromium.org/codesearch/f/chromium/src/net/base/net_error_list.h)
+as custom error classes for Node.js. It can be used in browsers too.  
+They correspond to the error codes that are provided in 
+[Electron's `did-fail-load` event](https://github.com/electron/electron/blob/master/docs/api/web-contents.md#event-did-fail-load).
 
 ## Install
 
@@ -18,59 +16,57 @@ example.
 npm install chromium-net-errors --save
 ```
 
-## Example Electron app
+## Example use in Electron
 
 ```js
-var app = require('app');
-var BrowserWindow = require('browser-window');
-var networkErrors = require('chromium-net-errors');
+import { app, BrowserWindow } from 'electron';
+import * as chromiumNetErrors from 'chromium-net-errors';
 
-app.on('ready', function () {
+app.on('ready', () => {
+  const win = new BrowserWindow({
+    width: 800,
+    height: 600,
+  });
 
-  var win = new BrowserWindow({ width: 800, height: 600 });
-
-  win.webContents.on('did-fail-load', function (e, errorCode) {
-    throw networkErrors.createByCode(errorCode);
+  win.webContents.on('did-fail-load', (event, errorCode, errorDescription, validatedURL) => {
+    try {
+      throw chromiumNetErrors.createByCode(errorCode);
+    } catch(err if err instanceof chromiumNetErrors.NameNotResolvedError) {
+      console.error(`The name '${validatedURL}' could not be resolved:\n  ${err.message}`);
+    } catch(err /* if err instanceof chromiumNetErrors.UnknownError */) {
+      console.error(`Something went wrong while loading ${validatedURL}`);
+    }
   });
 
   win.loadUrl('http://blablanotexist.com');
-
 });
-```
-
-Will pop-up the following error:
-
-```
-Uncaught Exception:
-NameNotResolvedError: The host name could not be resolved.
-    at Object.exports.createByCode (/tmp/ele/node_modules/chromium-net-errors/index.js:72:9)
-    at EventEmitter.<anonymous> (/tmp/ele/app.js:10:25)
-    at emitThree (events.js:97:13)
-    at EventEmitter.emit (events.js:172:7)
 ```
 
 ## Usage
 
 ```js
-var cne = require('chromium-net-errors');
+import * as chromiumNetErrors from 'chromium-net-errors';
 ```
 
 ### Create new errors
 
 ```js
-var err = new cne.ConnectionTimedOutError();
+const err = new chromiumNetErrors.ConnectionTimedOutError();
 
-console.log(err instanceof Error); // true
-console.log(err instanceof cne.ChromiumNetError); // true
-console.log(err instanceof cne.ConnectionTimedOutError); // true
+console.log(err instanceof Error);
+// true
+console.log(err instanceof chromiumNetErrors.ChromiumNetError);
+// true
+console.log(err instanceof chromiumNetErrors.ConnectionTimedOutError);
+// true
 ```
 
 ### Create errors by code
 
 ```js
-var err = cne.createByCode(-201);
+const err = chromiumNetErrors.createByCode(-201);
 
-console.log(err instanceof cne.CertDateInvalidError);
+console.log(err instanceof chromiumNetErrors.CertDateInvalidError);
 // true
 
 console.log(err.isCertificateError());
@@ -95,4 +91,6 @@ console.log(err.message);
 
 ## License
 
-MIT
+Copyright (c) 2015 - 2018 Max Kueng and contributors
+
+MIT License
