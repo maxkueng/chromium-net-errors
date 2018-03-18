@@ -1,15 +1,13 @@
-#!/usr/bin/env node
-
 /* eslint-disable import/no-extraneous-dependencies */
 /* eslint-disable no-console */
 
-const fs = require('fs');
-const path = require('path');
-const got = require('got');
-const through2 = require('through2');
-const split = require('split');
-const { pascalCase } = require('change-case');
-const chromiumNetErrors = require('..');
+import fs from 'fs';
+import path from 'path';
+import got from 'got';
+import through2 from 'through2';
+import split from 'split';
+import { pascalCase } from 'change-case';
+import * as errorTypes from '../src/errorTypes';
 
 const ERROR_LIST_URL = 'https://cs.chromium.org/codesearch/f/chromium/src/net/base/net_error_list.h';
 const OUTPUT_FILE = './errors.json';
@@ -18,16 +16,16 @@ const EMPTY_LINE_REGEX = /^\s*$/;
 const COMMENT_REGEX = /^\/\/\s*/;
 const NET_ERROR_REGEX = /^NET_ERROR\(([A-Z_]+), ([0-9-]+)\)$/;
 
-const errorTypes = {
-  0: chromiumNetErrors.ERROR_TYPE_SYSTEM,
-  100: chromiumNetErrors.ERROR_TYPE_CONNECTION,
-  200: chromiumNetErrors.ERROR_TYPE_CERTIFICATE,
-  300: chromiumNetErrors.ERROR_TYPE_HTTP,
-  400: chromiumNetErrors.ERROR_TYPE_CACHE,
-  500: chromiumNetErrors.ERROR_TYPE_UNKNOWN,
-  600: chromiumNetErrors.ERROR_TYPE_FTP,
-  700: chromiumNetErrors.ERROR_TYPE_CERTIFICATE_MANAGER,
-  800: chromiumNetErrors.ERROR_TYPE_DNS,
+const errorTypesMap = {
+  0: errorTypes.ERROR_TYPE_SYSTEM,
+  100: errorTypes.ERROR_TYPE_CONNECTION,
+  200: errorTypes.ERROR_TYPE_CERTIFICATE,
+  300: errorTypes.ERROR_TYPE_HTTP,
+  400: errorTypes.ERROR_TYPE_CACHE,
+  500: errorTypes.ERROR_TYPE_UNKNOWN,
+  600: errorTypes.ERROR_TYPE_FTP,
+  700: errorTypes.ERROR_TYPE_CERTIFICATE_MANAGER,
+  800: errorTypes.ERROR_TYPE_DNS,
 };
 
 function createSinkStream() {
@@ -96,7 +94,7 @@ function createSegmentsStream() {
       stream.errors.push({
         name: fixErrorName(pascalCase(errorName)),
         code: errorCodeNumber,
-        type: errorTypes[errorTypeCode],
+        type: errorTypesMap[errorTypeCode],
         message: errorMessage,
       });
     } else {
