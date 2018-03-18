@@ -19,15 +19,17 @@
     "url": "git://github.com/maxkueng/chromium-net-errors.git"
   },
   "scripts": {
-    "fetch-errors": "node scripts/fetch-errors",
+    "update-errors": "node scripts/update-errors",
+    "check-update-errors": "node scripts/update-errors --check",
+    "process-errors": "node scripts/process-errors",
     "generate-errors": "node scripts/generate-errors",
     "prepublish": "npm-run-all -s build run-tests",
     "test:js": "nyc ava",
     "run-tests": "npm-run-all lint test:js",
-    "test": "npm-run-all -s clean build:js run-tests",
+    "test": "npm-run-all -s check-update-errors clean build:js run-tests",
     "clean": "rimraf build",
     "build:js": "rollup -c rollup.config.js",
-    "build": "npm-run-all -s fetch-errors generate-errors clean build:js",
+    "build": "npm-run-all -s process-errors generate-errors clean build:js",
     "lint": "eslint src/*.js",
     "lint:fix": "eslint --fix src/*.js",
     "publish-coverage": "nyc report --reporter=text-lcov | coveralls"

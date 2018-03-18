@@ -3,14 +3,16 @@
 
 import fs from 'fs';
 import path from 'path';
-import got from 'got';
 import through2 from 'through2';
 import split from 'split';
 import { pascalCase } from 'change-case';
 import * as errorTypes from '../src/errorTypes';
 
-const ERROR_LIST_URL = 'https://cs.chromium.org/codesearch/f/chromium/src/net/base/net_error_list.h';
+const INPUT_FILE = './net_error_list.h';
 const OUTPUT_FILE = './errors.json';
+
+const inputPath = path.resolve(process.cwd(), INPUT_FILE);
+const outputPath = path.resolve(process.cwd(), OUTPUT_FILE);
 
 const EMPTY_LINE_REGEX = /^\s*$/;
 const COMMENT_REGEX = /^\/\/\s*/;
@@ -122,13 +124,11 @@ function createSegmentsStream() {
 
 const segmentsStream = createSegmentsStream();
 
-got.stream(ERROR_LIST_URL)
+fs.createReadStream(inputPath, 'utf-8')
   .pipe(split())
   .pipe(segmentsStream)
   .pipe(createSinkStream())
   .on('finish', () => {
-    const outputPath = path.resolve(OUTPUT_FILE);
-
     fs.writeFile(
       path.resolve(OUTPUT_FILE),
       JSON.stringify(segmentsStream.errors, null, '  '),
