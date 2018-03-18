@@ -8,7 +8,9 @@
     "electron",
     "error"
   ],
-  "main": "index.js",
+  "main": "build/index.js",
+  "module": "build/index.es.js",
+  "jsnext:main": "build/index.es.js",
   "files": [
     "./build"
   ],
