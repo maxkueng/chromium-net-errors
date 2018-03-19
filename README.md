@@ -2,6 +2,7 @@ Chromium Network Errors
 =======================
 
 [![Build Status](https://secure.travis-ci.org/maxkueng/chromium-net-errors.png?branch=master)](http://travis-ci.org/maxkueng/chromium-net-errors)
+[![codebeat badge](https://codebeat.co/badges/b022cc1d-3ec0-4f9d-bc7d-45168ec12e08)](https://codebeat.co/projects/github-com-maxkueng-chromium-net-errors-master)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/bdec0faf360447f39cdcc70d9d0750d3)](https://www.codacy.com/app/maxkueng/chromium-net-errors?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=maxkueng/chromium-net-errors&amp;utm_campaign=Badge_Grade)
 [![Maintainability](https://api.codeclimate.com/v1/badges/df86c1d3fa5b248aaaa6/maintainability)](https://codeclimate.com/github/maxkueng/chromium-net-errors/maintainability)
 [![Coverage Status](https://coveralls.io/repos/maxkueng/chromium-net-errors/badge.svg?branch=master&service=github)](https://coveralls.io/github/maxkueng/chromium-net-errors?branch=master)
