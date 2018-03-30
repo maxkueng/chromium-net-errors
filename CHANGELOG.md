@@ -1,6 +1,10 @@
 Changelog
 =========
 
+## Version 2.1.0
+
+ - Add TooManyRetriesError (code -375)
+
 ## Version 2.0.1
 
  - Fix Electron example in docs
