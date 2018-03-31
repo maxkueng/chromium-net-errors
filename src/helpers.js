@@ -14,8 +14,10 @@ export class UnknownError extends ChromiumNetError {
 const errors = 'ERRORS';
 
 const errorCodeMap = {};
+const errorDescriptionMap = {};
 errors.forEach((error) => {
   errorCodeMap[error.code] = generatedErrors[error.name];
+  errorDescriptionMap[error.description] = generatedErrors[error.name];
 });
 
 export function getErrors() {
@@ -28,3 +30,11 @@ export function getErrorByCode(code) {
 
   return Err;
 }
+
+export function getErrorByDescription(description) {
+  const Err = errorDescriptionMap[description];
+  if (!Err) { return UnknownError; }
+
+  return Err;
+}
+

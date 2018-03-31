@@ -20,6 +20,16 @@ test('create error by code', (t) => {
   });
 });
 
+test('create error by description', (t) => {
+  errors.forEach((error) => {
+    const thrower = () => {
+      const Err = chromiumNetErrors.getErrorByDescription(error.description);
+      throw new Err();
+    };
+    t.throws(() => thrower(), chromiumNetErrors[error.name]);
+  });
+});
+
 test('error type', (t) => {
   errors.forEach((error) => {
     const ChromiumError = chromiumNetErrors[error.name];

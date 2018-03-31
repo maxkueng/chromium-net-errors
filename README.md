@@ -100,12 +100,43 @@ try {
 }
 ```
 
-### Get Errors by errorCode
+### Get Error by errorCode
 
 Get the class of an error by its `errorCode`.
 
 ```js
 const Err = chromiumNetErrors.getErrorByCode(-201);
+const err = new Err();
+
+console.log(err instanceof chromiumNetErrors.CertDateInvalidError);
+// true
+
+console.log(err.isCertificateError());
+// true
+
+console.log(err.type); 
+// 'certificate'
+
+console.log(err.message);
+// The server responded with a certificate that is signed by an authority
+// we don't trust.  The could mean:
+//
+// 1. An attacker has substituted the real certificate for a cert that
+//    contains his public key and is signed by his cousin.
+//
+// 2. The server operator has a legitimate certificate from a CA we don't
+//    know about, but should trust.
+//
+// 3. The server is presenting a self-signed certificate, providing no
+//    defense against active attackers (but foiling passive attackers).
+```
+
+### Get Error by errorDescription
+
+Get the class of an error by its `errorDescription`.
+
+```js
+const Err = chromiumNetErrors.getErrorByDescription('CERT_DATE_INVALID');
 const err = new Err();
 
 console.log(err instanceof chromiumNetErrors.CertDateInvalidError);
