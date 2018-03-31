@@ -7,6 +7,8 @@ Chromium Network Errors
 [![Maintainability](https://api.codeclimate.com/v1/badges/df86c1d3fa5b248aaaa6/maintainability)](https://codeclimate.com/github/maxkueng/chromium-net-errors/maintainability)
 [![Coverage Status](https://coveralls.io/repos/maxkueng/chromium-net-errors/badge.svg?branch=master&service=github)](https://coveralls.io/github/maxkueng/chromium-net-errors?branch=master)
 
+[![NPM](https://nodei.co/npm/chromium-net-errors.png)](https://nodei.co/npm/chromium-net-errors/)
+
 Provides Chromium network errors found in
 [net_error_list.h](https://cs.chromium.org/codesearch/f/chromium/src/net/base/net_error_list.h)
 as custom error classes that can be conveniently Node.js and Electron apps. It
