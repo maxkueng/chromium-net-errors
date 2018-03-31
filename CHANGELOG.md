@@ -1,6 +1,28 @@
 Changelog
 =========
 
+## Version 2.2.0
+
+ - Add `description` property to errors that contains the unmodified error name
+   and corresponds to the `errorDescription` returned by Electron.
+   ```js
+   const err = new chromiumNetErrors.NameNotResolvedError();
+   console.log(err.description);
+   // "NAME_NOT_RESOLVED"
+   ```
+
+ - Add `getErrorByDescription(description)` that returns the error class that
+   corresponds to the description in the same way that `getErrorByCode(code)`
+   an error class by its error code.
+   ```js
+   const Err = chromiumNetErrors.getErrorByDescription('NAME_NOT_RESOLVED');
+   const err = new Err();
+   console.log(err.code);
+   // -105
+   ```
+
+ - Add a generated list of all error classes to the README.
+
 ## Version 2.1.0
 
  - Add TooManyRetriesError (code -375)
