@@ -19,6 +19,7 @@ export default class ${error.name} extends ChromiumNetError {
 
     this.name = '${error.name}';
     this.code = ${error.code};
+    this.description = '${error.description}';
     this.type = ${(error.type && JSON.stringify(error.type)) || '\'unknown\''};
     this.message = message || ${JSON.stringify(error.message)};
     Error.captureStackTrace(this, ${error.name});

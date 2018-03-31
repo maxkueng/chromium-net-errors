@@ -27,6 +27,7 @@ test('error type', (t) => {
     t.log(err.name, err.type, error.name, error.type);
 
     t.is(err.code, error.code);
+    t.is(err.description, error.description);
     t.is(err.type, error.type);
     t.is(err.message, error.message);
 

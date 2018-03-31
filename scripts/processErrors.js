@@ -84,6 +84,7 @@ const segmentUtils = {
     stream.errors.push({
       name: fixErrorName(pascalCase(errorName)),
       code: errorCodeNumber,
+      description: errorName,
       type: errorTypesMap[errorTypeCode] || errorTypes.ERROR_TYPE_UNKNOWN,
       message: errorMessage,
     });
