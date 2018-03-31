@@ -216,7 +216,7 @@ console.log(chromiumNetErrors.getErrors());
  - Type: system
 
 ```js
-const err = new chromiumNetErrors.IoPendingError()
+const err = new chromiumNetErrors.IoPendingError();
 ```
 
 ### FailedError
@@ -229,7 +229,7 @@ const err = new chromiumNetErrors.IoPendingError()
  - Type: system
 
 ```js
-const err = new chromiumNetErrors.FailedError()
+const err = new chromiumNetErrors.FailedError();
 ```
 
 ### AbortedError
@@ -242,7 +242,7 @@ const err = new chromiumNetErrors.FailedError()
  - Type: system
 
 ```js
-const err = new chromiumNetErrors.AbortedError()
+const err = new chromiumNetErrors.AbortedError();
 ```
 
 ### InvalidArgumentError
@@ -255,7 +255,7 @@ const err = new chromiumNetErrors.AbortedError()
  - Type: system
 
 ```js
-const err = new chromiumNetErrors.InvalidArgumentError()
+const err = new chromiumNetErrors.InvalidArgumentError();
 ```
 
 ### InvalidHandleError
@@ -268,7 +268,7 @@ const err = new chromiumNetErrors.InvalidArgumentError()
  - Type: system
 
 ```js
-const err = new chromiumNetErrors.InvalidHandleError()
+const err = new chromiumNetErrors.InvalidHandleError();
 ```
 
 ### FileNotFoundError
@@ -281,7 +281,7 @@ const err = new chromiumNetErrors.InvalidHandleError()
  - Type: system
 
 ```js
-const err = new chromiumNetErrors.FileNotFoundError()
+const err = new chromiumNetErrors.FileNotFoundError();
 ```
 
 ### TimedOutError
@@ -294,7 +294,7 @@ const err = new chromiumNetErrors.FileNotFoundError()
  - Type: system
 
 ```js
-const err = new chromiumNetErrors.TimedOutError()
+const err = new chromiumNetErrors.TimedOutError();
 ```
 
 ### FileTooBigError
@@ -307,7 +307,7 @@ const err = new chromiumNetErrors.TimedOutError()
  - Type: system
 
 ```js
-const err = new chromiumNetErrors.FileTooBigError()
+const err = new chromiumNetErrors.FileTooBigError();
 ```
 
 ### UnexpectedError
@@ -321,7 +321,7 @@ const err = new chromiumNetErrors.FileTooBigError()
  - Type: system
 
 ```js
-const err = new chromiumNetErrors.UnexpectedError()
+const err = new chromiumNetErrors.UnexpectedError();
 ```
 
 ### AccessDeniedError
@@ -334,7 +334,7 @@ const err = new chromiumNetErrors.UnexpectedError()
  - Type: system
 
 ```js
-const err = new chromiumNetErrors.AccessDeniedError()
+const err = new chromiumNetErrors.AccessDeniedError();
 ```
 
 ### NotImplementedError
@@ -347,7 +347,7 @@ const err = new chromiumNetErrors.AccessDeniedError()
  - Type: system
 
 ```js
-const err = new chromiumNetErrors.NotImplementedError()
+const err = new chromiumNetErrors.NotImplementedError();
 ```
 
 ### InsufficientResourcesError
@@ -360,7 +360,7 @@ const err = new chromiumNetErrors.NotImplementedError()
  - Type: system
 
 ```js
-const err = new chromiumNetErrors.InsufficientResourcesError()
+const err = new chromiumNetErrors.InsufficientResourcesError();
 ```
 
 ### OutOfMemoryError
@@ -373,7 +373,7 @@ const err = new chromiumNetErrors.InsufficientResourcesError()
  - Type: system
 
 ```js
-const err = new chromiumNetErrors.OutOfMemoryError()
+const err = new chromiumNetErrors.OutOfMemoryError();
 ```
 
 ### UploadFileChangedError
@@ -387,7 +387,7 @@ const err = new chromiumNetErrors.OutOfMemoryError()
  - Type: system
 
 ```js
-const err = new chromiumNetErrors.UploadFileChangedError()
+const err = new chromiumNetErrors.UploadFileChangedError();
 ```
 
 ### SocketNotConnectedError
@@ -400,7 +400,7 @@ const err = new chromiumNetErrors.UploadFileChangedError()
  - Type: system
 
 ```js
-const err = new chromiumNetErrors.SocketNotConnectedError()
+const err = new chromiumNetErrors.SocketNotConnectedError();
 ```
 
 ### FileExistsError
@@ -413,7 +413,7 @@ const err = new chromiumNetErrors.SocketNotConnectedError()
  - Type: system
 
 ```js
-const err = new chromiumNetErrors.FileExistsError()
+const err = new chromiumNetErrors.FileExistsError();
 ```
 
 ### FilePathTooLongError
@@ -426,7 +426,7 @@ const err = new chromiumNetErrors.FileExistsError()
  - Type: system
 
 ```js
-const err = new chromiumNetErrors.FilePathTooLongError()
+const err = new chromiumNetErrors.FilePathTooLongError();
 ```
 
 ### FileNoSpaceError
@@ -439,7 +439,7 @@ const err = new chromiumNetErrors.FilePathTooLongError()
  - Type: system
 
 ```js
-const err = new chromiumNetErrors.FileNoSpaceError()
+const err = new chromiumNetErrors.FileNoSpaceError();
 ```
 
 ### FileVirusInfectedError
@@ -452,7 +452,7 @@ const err = new chromiumNetErrors.FileNoSpaceError()
  - Type: system
 
 ```js
-const err = new chromiumNetErrors.FileVirusInfectedError()
+const err = new chromiumNetErrors.FileVirusInfectedError();
 ```
 
 ### BlockedByClientError
@@ -465,7 +465,7 @@ const err = new chromiumNetErrors.FileVirusInfectedError()
  - Type: system
 
 ```js
-const err = new chromiumNetErrors.BlockedByClientError()
+const err = new chromiumNetErrors.BlockedByClientError();
 ```
 
 ### NetworkChangedError
@@ -478,7 +478,7 @@ const err = new chromiumNetErrors.BlockedByClientError()
  - Type: system
 
 ```js
-const err = new chromiumNetErrors.NetworkChangedError()
+const err = new chromiumNetErrors.NetworkChangedError();
 ```
 
 ### BlockedByAdministratorError
@@ -492,7 +492,7 @@ const err = new chromiumNetErrors.NetworkChangedError()
  - Type: system
 
 ```js
-const err = new chromiumNetErrors.BlockedByAdministratorError()
+const err = new chromiumNetErrors.BlockedByAdministratorError();
 ```
 
 ### SocketIsConnectedError
@@ -505,7 +505,7 @@ const err = new chromiumNetErrors.BlockedByAdministratorError()
  - Type: system
 
 ```js
-const err = new chromiumNetErrors.SocketIsConnectedError()
+const err = new chromiumNetErrors.SocketIsConnectedError();
 ```
 
 ### BlockedEnrollmentCheckPendingError
@@ -520,7 +520,7 @@ const err = new chromiumNetErrors.SocketIsConnectedError()
  - Type: system
 
 ```js
-const err = new chromiumNetErrors.BlockedEnrollmentCheckPendingError()
+const err = new chromiumNetErrors.BlockedEnrollmentCheckPendingError();
 ```
 
 ### UploadStreamRewindNotSupportedError
@@ -534,7 +534,7 @@ const err = new chromiumNetErrors.BlockedEnrollmentCheckPendingError()
  - Type: system
 
 ```js
-const err = new chromiumNetErrors.UploadStreamRewindNotSupportedError()
+const err = new chromiumNetErrors.UploadStreamRewindNotSupportedError();
 ```
 
 ### ContextShutDownError
@@ -548,7 +548,7 @@ const err = new chromiumNetErrors.UploadStreamRewindNotSupportedError()
  - Type: system
 
 ```js
-const err = new chromiumNetErrors.ContextShutDownError()
+const err = new chromiumNetErrors.ContextShutDownError();
 ```
 
 ### BlockedByResponseError
@@ -563,7 +563,7 @@ const err = new chromiumNetErrors.ContextShutDownError()
  - Type: system
 
 ```js
-const err = new chromiumNetErrors.BlockedByResponseError()
+const err = new chromiumNetErrors.BlockedByResponseError();
 ```
 
 ### BlockedByXssAuditorError
@@ -577,7 +577,7 @@ const err = new chromiumNetErrors.BlockedByResponseError()
  - Type: system
 
 ```js
-const err = new chromiumNetErrors.BlockedByXssAuditorError()
+const err = new chromiumNetErrors.BlockedByXssAuditorError();
 ```
 
 ### CleartextNotPermittedError
@@ -591,7 +591,7 @@ const err = new chromiumNetErrors.BlockedByXssAuditorError()
  - Type: system
 
 ```js
-const err = new chromiumNetErrors.CleartextNotPermittedError()
+const err = new chromiumNetErrors.CleartextNotPermittedError();
 ```
 
 ### ConnectionClosedError
@@ -604,7 +604,7 @@ const err = new chromiumNetErrors.CleartextNotPermittedError()
  - Type: connection
 
 ```js
-const err = new chromiumNetErrors.ConnectionClosedError()
+const err = new chromiumNetErrors.ConnectionClosedError();
 ```
 
 ### ConnectionResetError
@@ -617,7 +617,7 @@ const err = new chromiumNetErrors.ConnectionClosedError()
  - Type: connection
 
 ```js
-const err = new chromiumNetErrors.ConnectionResetError()
+const err = new chromiumNetErrors.ConnectionResetError();
 ```
 
 ### ConnectionRefusedError
@@ -630,7 +630,7 @@ const err = new chromiumNetErrors.ConnectionResetError()
  - Type: connection
 
 ```js
-const err = new chromiumNetErrors.ConnectionRefusedError()
+const err = new chromiumNetErrors.ConnectionRefusedError();
 ```
 
 ### ConnectionAbortedError
@@ -644,7 +644,7 @@ const err = new chromiumNetErrors.ConnectionRefusedError()
  - Type: connection
 
 ```js
-const err = new chromiumNetErrors.ConnectionAbortedError()
+const err = new chromiumNetErrors.ConnectionAbortedError();
 ```
 
 ### ConnectionFailedError
@@ -657,7 +657,7 @@ const err = new chromiumNetErrors.ConnectionAbortedError()
  - Type: connection
 
 ```js
-const err = new chromiumNetErrors.ConnectionFailedError()
+const err = new chromiumNetErrors.ConnectionFailedError();
 ```
 
 ### NameNotResolvedError
@@ -670,7 +670,7 @@ const err = new chromiumNetErrors.ConnectionFailedError()
  - Type: connection
 
 ```js
-const err = new chromiumNetErrors.NameNotResolvedError()
+const err = new chromiumNetErrors.NameNotResolvedError();
 ```
 
 ### InternetDisconnectedError
@@ -683,7 +683,7 @@ const err = new chromiumNetErrors.NameNotResolvedError()
  - Type: connection
 
 ```js
-const err = new chromiumNetErrors.InternetDisconnectedError()
+const err = new chromiumNetErrors.InternetDisconnectedError();
 ```
 
 ### SslProtocolError
@@ -696,7 +696,7 @@ const err = new chromiumNetErrors.InternetDisconnectedError()
  - Type: connection
 
 ```js
-const err = new chromiumNetErrors.SslProtocolError()
+const err = new chromiumNetErrors.SslProtocolError();
 ```
 
 ### AddressInvalidError
@@ -710,7 +710,7 @@ const err = new chromiumNetErrors.SslProtocolError()
  - Type: connection
 
 ```js
-const err = new chromiumNetErrors.AddressInvalidError()
+const err = new chromiumNetErrors.AddressInvalidError();
 ```
 
 ### AddressUnreachableError
@@ -724,7 +724,7 @@ const err = new chromiumNetErrors.AddressInvalidError()
  - Type: connection
 
 ```js
-const err = new chromiumNetErrors.AddressUnreachableError()
+const err = new chromiumNetErrors.AddressUnreachableError();
 ```
 
 ### SslClientAuthCertNeededError
@@ -737,7 +737,7 @@ const err = new chromiumNetErrors.AddressUnreachableError()
  - Type: connection
 
 ```js
-const err = new chromiumNetErrors.SslClientAuthCertNeededError()
+const err = new chromiumNetErrors.SslClientAuthCertNeededError();
 ```
 
 ### TunnelConnectionFailedError
@@ -750,7 +750,7 @@ const err = new chromiumNetErrors.SslClientAuthCertNeededError()
  - Type: connection
 
 ```js
-const err = new chromiumNetErrors.TunnelConnectionFailedError()
+const err = new chromiumNetErrors.TunnelConnectionFailedError();
 ```
 
 ### NoSslVersionsEnabledError
@@ -763,7 +763,7 @@ const err = new chromiumNetErrors.TunnelConnectionFailedError()
  - Type: connection
 
 ```js
-const err = new chromiumNetErrors.NoSslVersionsEnabledError()
+const err = new chromiumNetErrors.NoSslVersionsEnabledError();
 ```
 
 ### SslVersionOrCipherMismatchError
@@ -777,7 +777,7 @@ const err = new chromiumNetErrors.NoSslVersionsEnabledError()
  - Type: connection
 
 ```js
-const err = new chromiumNetErrors.SslVersionOrCipherMismatchError()
+const err = new chromiumNetErrors.SslVersionOrCipherMismatchError();
 ```
 
 ### SslRenegotiationRequestedError
@@ -790,7 +790,7 @@ const err = new chromiumNetErrors.SslVersionOrCipherMismatchError()
  - Type: connection
 
 ```js
-const err = new chromiumNetErrors.SslRenegotiationRequestedError()
+const err = new chromiumNetErrors.SslRenegotiationRequestedError();
 ```
 
 ### ProxyAuthUnsupportedError
@@ -804,7 +804,7 @@ const err = new chromiumNetErrors.SslRenegotiationRequestedError()
  - Type: connection
 
 ```js
-const err = new chromiumNetErrors.ProxyAuthUnsupportedError()
+const err = new chromiumNetErrors.ProxyAuthUnsupportedError();
 ```
 
 ### CertErrorInSslRenegotiationError
@@ -821,7 +821,7 @@ const err = new chromiumNetErrors.ProxyAuthUnsupportedError()
  - Type: connection
 
 ```js
-const err = new chromiumNetErrors.CertErrorInSslRenegotiationError()
+const err = new chromiumNetErrors.CertErrorInSslRenegotiationError();
 ```
 
 ### BadSslClientAuthCertError
@@ -834,7 +834,7 @@ const err = new chromiumNetErrors.CertErrorInSslRenegotiationError()
  - Type: connection
 
 ```js
-const err = new chromiumNetErrors.BadSslClientAuthCertError()
+const err = new chromiumNetErrors.BadSslClientAuthCertError();
 ```
 
 ### ConnectionTimedOutError
@@ -847,7 +847,7 @@ const err = new chromiumNetErrors.BadSslClientAuthCertError()
  - Type: connection
 
 ```js
-const err = new chromiumNetErrors.ConnectionTimedOutError()
+const err = new chromiumNetErrors.ConnectionTimedOutError();
 ```
 
 ### HostResolverQueueTooLargeError
@@ -861,7 +861,7 @@ const err = new chromiumNetErrors.ConnectionTimedOutError()
  - Type: connection
 
 ```js
-const err = new chromiumNetErrors.HostResolverQueueTooLargeError()
+const err = new chromiumNetErrors.HostResolverQueueTooLargeError();
 ```
 
 ### SocksConnectionFailedError
@@ -874,7 +874,7 @@ const err = new chromiumNetErrors.HostResolverQueueTooLargeError()
  - Type: connection
 
 ```js
-const err = new chromiumNetErrors.SocksConnectionFailedError()
+const err = new chromiumNetErrors.SocksConnectionFailedError();
 ```
 
 ### SocksConnectionHostUnreachableError
@@ -888,7 +888,7 @@ const err = new chromiumNetErrors.SocksConnectionFailedError()
  - Type: connection
 
 ```js
-const err = new chromiumNetErrors.SocksConnectionHostUnreachableError()
+const err = new chromiumNetErrors.SocksConnectionHostUnreachableError();
 ```
 
 ### AlpnNegotiationFailedError
@@ -901,7 +901,7 @@ const err = new chromiumNetErrors.SocksConnectionHostUnreachableError()
  - Type: connection
 
 ```js
-const err = new chromiumNetErrors.AlpnNegotiationFailedError()
+const err = new chromiumNetErrors.AlpnNegotiationFailedError();
 ```
 
 ### SslNoRenegotiationError
@@ -914,7 +914,7 @@ const err = new chromiumNetErrors.AlpnNegotiationFailedError()
  - Type: connection
 
 ```js
-const err = new chromiumNetErrors.SslNoRenegotiationError()
+const err = new chromiumNetErrors.SslNoRenegotiationError();
 ```
 
 ### WinsockUnexpectedWrittenBytesError
@@ -928,7 +928,7 @@ const err = new chromiumNetErrors.SslNoRenegotiationError()
  - Type: connection
 
 ```js
-const err = new chromiumNetErrors.WinsockUnexpectedWrittenBytesError()
+const err = new chromiumNetErrors.WinsockUnexpectedWrittenBytesError();
 ```
 
 ### SslDecompressionFailureAlertError
@@ -943,7 +943,7 @@ const err = new chromiumNetErrors.WinsockUnexpectedWrittenBytesError()
  - Type: connection
 
 ```js
-const err = new chromiumNetErrors.SslDecompressionFailureAlertError()
+const err = new chromiumNetErrors.SslDecompressionFailureAlertError();
 ```
 
 ### SslBadRecordMacAlertError
@@ -957,7 +957,7 @@ const err = new chromiumNetErrors.SslDecompressionFailureAlertError()
  - Type: connection
 
 ```js
-const err = new chromiumNetErrors.SslBadRecordMacAlertError()
+const err = new chromiumNetErrors.SslBadRecordMacAlertError();
 ```
 
 ### ProxyAuthRequestedError
@@ -970,7 +970,7 @@ const err = new chromiumNetErrors.SslBadRecordMacAlertError()
  - Type: connection
 
 ```js
-const err = new chromiumNetErrors.ProxyAuthRequestedError()
+const err = new chromiumNetErrors.ProxyAuthRequestedError();
 ```
 
 ### SslWeakServerEphemeralDhKeyError
@@ -983,7 +983,7 @@ const err = new chromiumNetErrors.ProxyAuthRequestedError()
  - Type: connection
 
 ```js
-const err = new chromiumNetErrors.SslWeakServerEphemeralDhKeyError()
+const err = new chromiumNetErrors.SslWeakServerEphemeralDhKeyError();
 ```
 
 ### ProxyConnectionFailedError
@@ -999,7 +999,7 @@ const err = new chromiumNetErrors.SslWeakServerEphemeralDhKeyError()
  - Type: connection
 
 ```js
-const err = new chromiumNetErrors.ProxyConnectionFailedError()
+const err = new chromiumNetErrors.ProxyConnectionFailedError();
 ```
 
 ### MandatoryProxyConfigurationFailedError
@@ -1013,7 +1013,7 @@ const err = new chromiumNetErrors.ProxyConnectionFailedError()
  - Type: connection
 
 ```js
-const err = new chromiumNetErrors.MandatoryProxyConfigurationFailedError()
+const err = new chromiumNetErrors.MandatoryProxyConfigurationFailedError();
 ```
 
 ### PreconnectMaxSocketLimitError
@@ -1027,7 +1027,7 @@ const err = new chromiumNetErrors.MandatoryProxyConfigurationFailedError()
  - Type: connection
 
 ```js
-const err = new chromiumNetErrors.PreconnectMaxSocketLimitError()
+const err = new chromiumNetErrors.PreconnectMaxSocketLimitError();
 ```
 
 ### SslClientAuthPrivateKeyAccessDeniedError
@@ -1040,7 +1040,7 @@ const err = new chromiumNetErrors.PreconnectMaxSocketLimitError()
  - Type: connection
 
 ```js
-const err = new chromiumNetErrors.SslClientAuthPrivateKeyAccessDeniedError()
+const err = new chromiumNetErrors.SslClientAuthPrivateKeyAccessDeniedError();
 ```
 
 ### SslClientAuthCertNoPrivateKeyError
@@ -1053,7 +1053,7 @@ const err = new chromiumNetErrors.SslClientAuthPrivateKeyAccessDeniedError()
  - Type: connection
 
 ```js
-const err = new chromiumNetErrors.SslClientAuthCertNoPrivateKeyError()
+const err = new chromiumNetErrors.SslClientAuthCertNoPrivateKeyError();
 ```
 
 ### ProxyCertificateInvalidError
@@ -1066,7 +1066,7 @@ const err = new chromiumNetErrors.SslClientAuthCertNoPrivateKeyError()
  - Type: connection
 
 ```js
-const err = new chromiumNetErrors.ProxyCertificateInvalidError()
+const err = new chromiumNetErrors.ProxyCertificateInvalidError();
 ```
 
 ### NameResolutionFailedError
@@ -1079,7 +1079,7 @@ const err = new chromiumNetErrors.ProxyCertificateInvalidError()
  - Type: connection
 
 ```js
-const err = new chromiumNetErrors.NameResolutionFailedError()
+const err = new chromiumNetErrors.NameResolutionFailedError();
 ```
 
 ### NetworkAccessDeniedError
@@ -1094,7 +1094,7 @@ const err = new chromiumNetErrors.NameResolutionFailedError()
  - Type: connection
 
 ```js
-const err = new chromiumNetErrors.NetworkAccessDeniedError()
+const err = new chromiumNetErrors.NetworkAccessDeniedError();
 ```
 
 ### TemporarilyThrottledError
@@ -1107,7 +1107,7 @@ const err = new chromiumNetErrors.NetworkAccessDeniedError()
  - Type: connection
 
 ```js
-const err = new chromiumNetErrors.TemporarilyThrottledError()
+const err = new chromiumNetErrors.TemporarilyThrottledError();
 ```
 
 ### HttpsProxyTunnelResponseError
@@ -1122,7 +1122,7 @@ const err = new chromiumNetErrors.TemporarilyThrottledError()
  - Type: connection
 
 ```js
-const err = new chromiumNetErrors.HttpsProxyTunnelResponseError()
+const err = new chromiumNetErrors.HttpsProxyTunnelResponseError();
 ```
 
 ### SslClientAuthSignatureFailedError
@@ -1141,7 +1141,7 @@ const err = new chromiumNetErrors.HttpsProxyTunnelResponseError()
  - Type: connection
 
 ```js
-const err = new chromiumNetErrors.SslClientAuthSignatureFailedError()
+const err = new chromiumNetErrors.SslClientAuthSignatureFailedError();
 ```
 
 ### MsgTooBigError
@@ -1155,7 +1155,7 @@ const err = new chromiumNetErrors.SslClientAuthSignatureFailedError()
  - Type: connection
 
 ```js
-const err = new chromiumNetErrors.MsgTooBigError()
+const err = new chromiumNetErrors.MsgTooBigError();
 ```
 
 ### SpdySessionAlreadyExistsError
@@ -1168,7 +1168,7 @@ const err = new chromiumNetErrors.MsgTooBigError()
  - Type: connection
 
 ```js
-const err = new chromiumNetErrors.SpdySessionAlreadyExistsError()
+const err = new chromiumNetErrors.SpdySessionAlreadyExistsError();
 ```
 
 ### WsProtocolError
@@ -1182,7 +1182,7 @@ const err = new chromiumNetErrors.SpdySessionAlreadyExistsError()
  - Type: connection
 
 ```js
-const err = new chromiumNetErrors.WsProtocolError()
+const err = new chromiumNetErrors.WsProtocolError();
 ```
 
 ### AddressInUseError
@@ -1195,7 +1195,7 @@ const err = new chromiumNetErrors.WsProtocolError()
  - Type: connection
 
 ```js
-const err = new chromiumNetErrors.AddressInUseError()
+const err = new chromiumNetErrors.AddressInUseError();
 ```
 
 ### SslHandshakeNotCompletedError
@@ -1208,7 +1208,7 @@ const err = new chromiumNetErrors.AddressInUseError()
  - Type: connection
 
 ```js
-const err = new chromiumNetErrors.SslHandshakeNotCompletedError()
+const err = new chromiumNetErrors.SslHandshakeNotCompletedError();
 ```
 
 ### SslBadPeerPublicKeyError
@@ -1221,7 +1221,7 @@ const err = new chromiumNetErrors.SslHandshakeNotCompletedError()
  - Type: connection
 
 ```js
-const err = new chromiumNetErrors.SslBadPeerPublicKeyError()
+const err = new chromiumNetErrors.SslBadPeerPublicKeyError();
 ```
 
 ### SslPinnedKeyNotInCertChainError
@@ -1236,7 +1236,7 @@ const err = new chromiumNetErrors.SslBadPeerPublicKeyError()
  - Type: connection
 
 ```js
-const err = new chromiumNetErrors.SslPinnedKeyNotInCertChainError()
+const err = new chromiumNetErrors.SslPinnedKeyNotInCertChainError();
 ```
 
 ### ClientAuthCertTypeUnsupportedError
@@ -1249,7 +1249,7 @@ const err = new chromiumNetErrors.SslPinnedKeyNotInCertChainError()
  - Type: connection
 
 ```js
-const err = new chromiumNetErrors.ClientAuthCertTypeUnsupportedError()
+const err = new chromiumNetErrors.ClientAuthCertTypeUnsupportedError();
 ```
 
 ### OriginBoundCertGenerationTypeMismatchError
@@ -1263,7 +1263,7 @@ const err = new chromiumNetErrors.ClientAuthCertTypeUnsupportedError()
  - Type: connection
 
 ```js
-const err = new chromiumNetErrors.OriginBoundCertGenerationTypeMismatchError()
+const err = new chromiumNetErrors.OriginBoundCertGenerationTypeMismatchError();
 ```
 
 ### SslDecryptErrorAlertError
@@ -1278,7 +1278,7 @@ const err = new chromiumNetErrors.OriginBoundCertGenerationTypeMismatchError()
  - Type: connection
 
 ```js
-const err = new chromiumNetErrors.SslDecryptErrorAlertError()
+const err = new chromiumNetErrors.SslDecryptErrorAlertError();
 ```
 
 ### WsThrottleQueueTooLargeError
@@ -1292,7 +1292,7 @@ const err = new chromiumNetErrors.SslDecryptErrorAlertError()
  - Type: connection
 
 ```js
-const err = new chromiumNetErrors.WsThrottleQueueTooLargeError()
+const err = new chromiumNetErrors.WsThrottleQueueTooLargeError();
 ```
 
 ### SslServerCertChangedError
@@ -1305,7 +1305,7 @@ const err = new chromiumNetErrors.WsThrottleQueueTooLargeError()
  - Type: connection
 
 ```js
-const err = new chromiumNetErrors.SslServerCertChangedError()
+const err = new chromiumNetErrors.SslServerCertChangedError();
 ```
 
 ### SslUnrecognizedNameAlertError
@@ -1318,7 +1318,7 @@ const err = new chromiumNetErrors.SslServerCertChangedError()
  - Type: connection
 
 ```js
-const err = new chromiumNetErrors.SslUnrecognizedNameAlertError()
+const err = new chromiumNetErrors.SslUnrecognizedNameAlertError();
 ```
 
 ### SocketSetReceiveBufferSizeError
@@ -1331,7 +1331,7 @@ const err = new chromiumNetErrors.SslUnrecognizedNameAlertError()
  - Type: connection
 
 ```js
-const err = new chromiumNetErrors.SocketSetReceiveBufferSizeError()
+const err = new chromiumNetErrors.SocketSetReceiveBufferSizeError();
 ```
 
 ### SocketSetSendBufferSizeError
@@ -1344,7 +1344,7 @@ const err = new chromiumNetErrors.SocketSetReceiveBufferSizeError()
  - Type: connection
 
 ```js
-const err = new chromiumNetErrors.SocketSetSendBufferSizeError()
+const err = new chromiumNetErrors.SocketSetSendBufferSizeError();
 ```
 
 ### SocketReceiveBufferSizeUnchangeableError
@@ -1358,7 +1358,7 @@ const err = new chromiumNetErrors.SocketSetSendBufferSizeError()
  - Type: connection
 
 ```js
-const err = new chromiumNetErrors.SocketReceiveBufferSizeUnchangeableError()
+const err = new chromiumNetErrors.SocketReceiveBufferSizeUnchangeableError();
 ```
 
 ### SocketSendBufferSizeUnchangeableError
@@ -1372,7 +1372,7 @@ const err = new chromiumNetErrors.SocketReceiveBufferSizeUnchangeableError()
  - Type: connection
 
 ```js
-const err = new chromiumNetErrors.SocketSendBufferSizeUnchangeableError()
+const err = new chromiumNetErrors.SocketSendBufferSizeUnchangeableError();
 ```
 
 ### SslClientAuthCertBadFormatError
@@ -1386,7 +1386,7 @@ const err = new chromiumNetErrors.SocketSendBufferSizeUnchangeableError()
  - Type: connection
 
 ```js
-const err = new chromiumNetErrors.SslClientAuthCertBadFormatError()
+const err = new chromiumNetErrors.SslClientAuthCertBadFormatError();
 ```
 
 ### IcannNameCollisionError
@@ -1402,7 +1402,7 @@ const err = new chromiumNetErrors.SslClientAuthCertBadFormatError()
  - Type: connection
 
 ```js
-const err = new chromiumNetErrors.IcannNameCollisionError()
+const err = new chromiumNetErrors.IcannNameCollisionError();
 ```
 
 ### SslServerCertBadFormatError
@@ -1417,7 +1417,7 @@ const err = new chromiumNetErrors.IcannNameCollisionError()
  - Type: connection
 
 ```js
-const err = new chromiumNetErrors.SslServerCertBadFormatError()
+const err = new chromiumNetErrors.SslServerCertBadFormatError();
 ```
 
 ### CtSthParsingFailedError
@@ -1430,7 +1430,7 @@ const err = new chromiumNetErrors.SslServerCertBadFormatError()
  - Type: connection
 
 ```js
-const err = new chromiumNetErrors.CtSthParsingFailedError()
+const err = new chromiumNetErrors.CtSthParsingFailedError();
 ```
 
 ### CtSthIncompleteError
@@ -1444,7 +1444,7 @@ const err = new chromiumNetErrors.CtSthParsingFailedError()
  - Type: connection
 
 ```js
-const err = new chromiumNetErrors.CtSthIncompleteError()
+const err = new chromiumNetErrors.CtSthIncompleteError();
 ```
 
 ### UnableToReuseConnectionForProxyAuthError
@@ -1460,7 +1460,7 @@ const err = new chromiumNetErrors.CtSthIncompleteError()
  - Type: connection
 
 ```js
-const err = new chromiumNetErrors.UnableToReuseConnectionForProxyAuthError()
+const err = new chromiumNetErrors.UnableToReuseConnectionForProxyAuthError();
 ```
 
 ### CtConsistencyProofParsingFailedError
@@ -1473,7 +1473,7 @@ const err = new chromiumNetErrors.UnableToReuseConnectionForProxyAuthError()
  - Type: connection
 
 ```js
-const err = new chromiumNetErrors.CtConsistencyProofParsingFailedError()
+const err = new chromiumNetErrors.CtConsistencyProofParsingFailedError();
 ```
 
 ### SslObsoleteCipherError
@@ -1489,7 +1489,7 @@ const err = new chromiumNetErrors.CtConsistencyProofParsingFailedError()
  - Type: connection
 
 ```js
-const err = new chromiumNetErrors.SslObsoleteCipherError()
+const err = new chromiumNetErrors.SslObsoleteCipherError();
 ```
 
 ### WsUpgradeError
@@ -1503,7 +1503,7 @@ const err = new chromiumNetErrors.SslObsoleteCipherError()
  - Type: connection
 
 ```js
-const err = new chromiumNetErrors.WsUpgradeError()
+const err = new chromiumNetErrors.WsUpgradeError();
 ```
 
 ### ReadIfReadyNotImplementedError
@@ -1517,7 +1517,7 @@ const err = new chromiumNetErrors.WsUpgradeError()
  - Type: connection
 
 ```js
-const err = new chromiumNetErrors.ReadIfReadyNotImplementedError()
+const err = new chromiumNetErrors.ReadIfReadyNotImplementedError();
 ```
 
 ### SslVersionInterferenceError
@@ -1541,7 +1541,7 @@ const err = new chromiumNetErrors.ReadIfReadyNotImplementedError()
  - Type: connection
 
 ```js
-const err = new chromiumNetErrors.SslVersionInterferenceError()
+const err = new chromiumNetErrors.SslVersionInterferenceError();
 ```
 
 ### NoBufferSpaceError
@@ -1554,7 +1554,7 @@ const err = new chromiumNetErrors.SslVersionInterferenceError()
  - Type: connection
 
 ```js
-const err = new chromiumNetErrors.NoBufferSpaceError()
+const err = new chromiumNetErrors.NoBufferSpaceError();
 ```
 
 ### SslClientAuthNoCommonAlgorithmsError
@@ -1568,7 +1568,7 @@ const err = new chromiumNetErrors.NoBufferSpaceError()
  - Type: unknown
 
 ```js
-const err = new chromiumNetErrors.SslClientAuthNoCommonAlgorithmsError()
+const err = new chromiumNetErrors.SslClientAuthNoCommonAlgorithmsError();
 ```
 
 ### CertCommonNameInvalidError
@@ -1594,7 +1594,7 @@ const err = new chromiumNetErrors.SslClientAuthNoCommonAlgorithmsError()
  - Type: certificate
 
 ```js
-const err = new chromiumNetErrors.CertCommonNameInvalidError()
+const err = new chromiumNetErrors.CertCommonNameInvalidError();
 ```
 
 ### CertDateInvalidError
@@ -1616,7 +1616,7 @@ const err = new chromiumNetErrors.CertCommonNameInvalidError()
  - Type: certificate
 
 ```js
-const err = new chromiumNetErrors.CertDateInvalidError()
+const err = new chromiumNetErrors.CertDateInvalidError();
 ```
 
 ### CertAuthorityInvalidError
@@ -1640,7 +1640,7 @@ const err = new chromiumNetErrors.CertDateInvalidError()
  - Type: certificate
 
 ```js
-const err = new chromiumNetErrors.CertAuthorityInvalidError()
+const err = new chromiumNetErrors.CertAuthorityInvalidError();
 ```
 
 ### CertContainsErrorsError
@@ -1660,7 +1660,7 @@ const err = new chromiumNetErrors.CertAuthorityInvalidError()
  - Type: certificate
 
 ```js
-const err = new chromiumNetErrors.CertContainsErrorsError()
+const err = new chromiumNetErrors.CertContainsErrorsError();
 ```
 
 ### CertNoRevocationMechanismError
@@ -1674,7 +1674,7 @@ const err = new chromiumNetErrors.CertContainsErrorsError()
  - Type: certificate
 
 ```js
-const err = new chromiumNetErrors.CertNoRevocationMechanismError()
+const err = new chromiumNetErrors.CertNoRevocationMechanismError();
 ```
 
 ### CertUnableToCheckRevocationError
@@ -1695,7 +1695,7 @@ const err = new chromiumNetErrors.CertNoRevocationMechanismError()
  - Type: certificate
 
 ```js
-const err = new chromiumNetErrors.CertUnableToCheckRevocationError()
+const err = new chromiumNetErrors.CertUnableToCheckRevocationError();
 ```
 
 ### CertRevokedError
@@ -1710,7 +1710,7 @@ const err = new chromiumNetErrors.CertUnableToCheckRevocationError()
  - Type: certificate
 
 ```js
-const err = new chromiumNetErrors.CertRevokedError()
+const err = new chromiumNetErrors.CertRevokedError();
 ```
 
 ### CertInvalidError
@@ -1728,7 +1728,7 @@ const err = new chromiumNetErrors.CertRevokedError()
  - Type: certificate
 
 ```js
-const err = new chromiumNetErrors.CertInvalidError()
+const err = new chromiumNetErrors.CertInvalidError();
 ```
 
 ### CertWeakSignatureAlgorithmError
@@ -1742,7 +1742,7 @@ const err = new chromiumNetErrors.CertInvalidError()
  - Type: certificate
 
 ```js
-const err = new chromiumNetErrors.CertWeakSignatureAlgorithmError()
+const err = new chromiumNetErrors.CertWeakSignatureAlgorithmError();
 ```
 
 ### CertNonUniqueNameError
@@ -1755,7 +1755,7 @@ const err = new chromiumNetErrors.CertWeakSignatureAlgorithmError()
  - Type: certificate
 
 ```js
-const err = new chromiumNetErrors.CertNonUniqueNameError()
+const err = new chromiumNetErrors.CertNonUniqueNameError();
 ```
 
 ### CertWeakKeyError
@@ -1769,7 +1769,7 @@ const err = new chromiumNetErrors.CertNonUniqueNameError()
  - Type: certificate
 
 ```js
-const err = new chromiumNetErrors.CertWeakKeyError()
+const err = new chromiumNetErrors.CertWeakKeyError();
 ```
 
 ### CertNameConstraintViolationError
@@ -1782,7 +1782,7 @@ const err = new chromiumNetErrors.CertWeakKeyError()
  - Type: certificate
 
 ```js
-const err = new chromiumNetErrors.CertNameConstraintViolationError()
+const err = new chromiumNetErrors.CertNameConstraintViolationError();
 ```
 
 ### CertValidityTooLongError
@@ -1795,7 +1795,7 @@ const err = new chromiumNetErrors.CertNameConstraintViolationError()
  - Type: certificate
 
 ```js
-const err = new chromiumNetErrors.CertValidityTooLongError()
+const err = new chromiumNetErrors.CertValidityTooLongError();
 ```
 
 ### CertificateTransparencyRequiredError
@@ -1809,7 +1809,7 @@ const err = new chromiumNetErrors.CertValidityTooLongError()
  - Type: certificate
 
 ```js
-const err = new chromiumNetErrors.CertificateTransparencyRequiredError()
+const err = new chromiumNetErrors.CertificateTransparencyRequiredError();
 ```
 
 ### CertSymantecLegacyError
@@ -1823,7 +1823,7 @@ const err = new chromiumNetErrors.CertificateTransparencyRequiredError()
  - Type: certificate
 
 ```js
-const err = new chromiumNetErrors.CertSymantecLegacyError()
+const err = new chromiumNetErrors.CertSymantecLegacyError();
 ```
 
 ### CertEndError
@@ -1836,7 +1836,7 @@ const err = new chromiumNetErrors.CertSymantecLegacyError()
  - Type: certificate
 
 ```js
-const err = new chromiumNetErrors.CertEndError()
+const err = new chromiumNetErrors.CertEndError();
 ```
 
 ### InvalidUrlError
@@ -1849,7 +1849,7 @@ const err = new chromiumNetErrors.CertEndError()
  - Type: http
 
 ```js
-const err = new chromiumNetErrors.InvalidUrlError()
+const err = new chromiumNetErrors.InvalidUrlError();
 ```
 
 ### DisallowedUrlSchemeError
@@ -1862,7 +1862,7 @@ const err = new chromiumNetErrors.InvalidUrlError()
  - Type: http
 
 ```js
-const err = new chromiumNetErrors.DisallowedUrlSchemeError()
+const err = new chromiumNetErrors.DisallowedUrlSchemeError();
 ```
 
 ### UnknownUrlSchemeError
@@ -1875,7 +1875,7 @@ const err = new chromiumNetErrors.DisallowedUrlSchemeError()
  - Type: http
 
 ```js
-const err = new chromiumNetErrors.UnknownUrlSchemeError()
+const err = new chromiumNetErrors.UnknownUrlSchemeError();
 ```
 
 ### InvalidRedirectError
@@ -1888,7 +1888,7 @@ const err = new chromiumNetErrors.UnknownUrlSchemeError()
  - Type: http
 
 ```js
-const err = new chromiumNetErrors.InvalidRedirectError()
+const err = new chromiumNetErrors.InvalidRedirectError();
 ```
 
 ### TooManyRedirectsError
@@ -1901,7 +1901,7 @@ const err = new chromiumNetErrors.InvalidRedirectError()
  - Type: http
 
 ```js
-const err = new chromiumNetErrors.TooManyRedirectsError()
+const err = new chromiumNetErrors.TooManyRedirectsError();
 ```
 
 ### UnsafeRedirectError
@@ -1915,7 +1915,7 @@ const err = new chromiumNetErrors.TooManyRedirectsError()
  - Type: http
 
 ```js
-const err = new chromiumNetErrors.UnsafeRedirectError()
+const err = new chromiumNetErrors.UnsafeRedirectError();
 ```
 
 ### UnsafePortError
@@ -1931,7 +1931,7 @@ const err = new chromiumNetErrors.UnsafeRedirectError()
  - Type: http
 
 ```js
-const err = new chromiumNetErrors.UnsafePortError()
+const err = new chromiumNetErrors.UnsafePortError();
 ```
 
 ### InvalidResponseError
@@ -1944,7 +1944,7 @@ const err = new chromiumNetErrors.UnsafePortError()
  - Type: http
 
 ```js
-const err = new chromiumNetErrors.InvalidResponseError()
+const err = new chromiumNetErrors.InvalidResponseError();
 ```
 
 ### InvalidChunkedEncodingError
@@ -1957,7 +1957,7 @@ const err = new chromiumNetErrors.InvalidResponseError()
  - Type: http
 
 ```js
-const err = new chromiumNetErrors.InvalidChunkedEncodingError()
+const err = new chromiumNetErrors.InvalidChunkedEncodingError();
 ```
 
 ### MethodNotSupportedError
@@ -1970,7 +1970,7 @@ const err = new chromiumNetErrors.InvalidChunkedEncodingError()
  - Type: http
 
 ```js
-const err = new chromiumNetErrors.MethodNotSupportedError()
+const err = new chromiumNetErrors.MethodNotSupportedError();
 ```
 
 ### UnexpectedProxyAuthError
@@ -1984,7 +1984,7 @@ const err = new chromiumNetErrors.MethodNotSupportedError()
  - Type: http
 
 ```js
-const err = new chromiumNetErrors.UnexpectedProxyAuthError()
+const err = new chromiumNetErrors.UnexpectedProxyAuthError();
 ```
 
 ### EmptyResponseError
@@ -1997,7 +1997,7 @@ const err = new chromiumNetErrors.UnexpectedProxyAuthError()
  - Type: http
 
 ```js
-const err = new chromiumNetErrors.EmptyResponseError()
+const err = new chromiumNetErrors.EmptyResponseError();
 ```
 
 ### ResponseHeadersTooBigError
@@ -2010,7 +2010,7 @@ const err = new chromiumNetErrors.EmptyResponseError()
  - Type: http
 
 ```js
-const err = new chromiumNetErrors.ResponseHeadersTooBigError()
+const err = new chromiumNetErrors.ResponseHeadersTooBigError();
 ```
 
 ### PacStatusNotOkError
@@ -2023,7 +2023,7 @@ const err = new chromiumNetErrors.ResponseHeadersTooBigError()
  - Type: http
 
 ```js
-const err = new chromiumNetErrors.PacStatusNotOkError()
+const err = new chromiumNetErrors.PacStatusNotOkError();
 ```
 
 ### PacScriptFailedError
@@ -2036,7 +2036,7 @@ const err = new chromiumNetErrors.PacStatusNotOkError()
  - Type: http
 
 ```js
-const err = new chromiumNetErrors.PacScriptFailedError()
+const err = new chromiumNetErrors.PacScriptFailedError();
 ```
 
 ### RequestRangeNotSatisfiableError
@@ -2050,7 +2050,7 @@ const err = new chromiumNetErrors.PacScriptFailedError()
  - Type: http
 
 ```js
-const err = new chromiumNetErrors.RequestRangeNotSatisfiableError()
+const err = new chromiumNetErrors.RequestRangeNotSatisfiableError();
 ```
 
 ### MalformedIdentityError
@@ -2063,7 +2063,7 @@ const err = new chromiumNetErrors.RequestRangeNotSatisfiableError()
  - Type: http
 
 ```js
-const err = new chromiumNetErrors.MalformedIdentityError()
+const err = new chromiumNetErrors.MalformedIdentityError();
 ```
 
 ### ContentDecodingFailedError
@@ -2076,7 +2076,7 @@ const err = new chromiumNetErrors.MalformedIdentityError()
  - Type: http
 
 ```js
-const err = new chromiumNetErrors.ContentDecodingFailedError()
+const err = new chromiumNetErrors.ContentDecodingFailedError();
 ```
 
 ### NetworkIoSuspendedError
@@ -2090,7 +2090,7 @@ const err = new chromiumNetErrors.ContentDecodingFailedError()
  - Type: http
 
 ```js
-const err = new chromiumNetErrors.NetworkIoSuspendedError()
+const err = new chromiumNetErrors.NetworkIoSuspendedError();
 ```
 
 ### SynReplyNotReceivedError
@@ -2103,7 +2103,7 @@ const err = new chromiumNetErrors.NetworkIoSuspendedError()
  - Type: http
 
 ```js
-const err = new chromiumNetErrors.SynReplyNotReceivedError()
+const err = new chromiumNetErrors.SynReplyNotReceivedError();
 ```
 
 ### EncodingConversionFailedError
@@ -2116,7 +2116,7 @@ const err = new chromiumNetErrors.SynReplyNotReceivedError()
  - Type: http
 
 ```js
-const err = new chromiumNetErrors.EncodingConversionFailedError()
+const err = new chromiumNetErrors.EncodingConversionFailedError();
 ```
 
 ### UnrecognizedFtpDirectoryListingFormatError
@@ -2129,7 +2129,7 @@ const err = new chromiumNetErrors.EncodingConversionFailedError()
  - Type: http
 
 ```js
-const err = new chromiumNetErrors.UnrecognizedFtpDirectoryListingFormatError()
+const err = new chromiumNetErrors.UnrecognizedFtpDirectoryListingFormatError();
 ```
 
 ### NoSupportedProxiesError
@@ -2142,7 +2142,7 @@ const err = new chromiumNetErrors.UnrecognizedFtpDirectoryListingFormatError()
  - Type: http
 
 ```js
-const err = new chromiumNetErrors.NoSupportedProxiesError()
+const err = new chromiumNetErrors.NoSupportedProxiesError();
 ```
 
 ### SpdyProtocolError
@@ -2155,7 +2155,7 @@ const err = new chromiumNetErrors.NoSupportedProxiesError()
  - Type: http
 
 ```js
-const err = new chromiumNetErrors.SpdyProtocolError()
+const err = new chromiumNetErrors.SpdyProtocolError();
 ```
 
 ### InvalidAuthCredentialsError
@@ -2168,7 +2168,7 @@ const err = new chromiumNetErrors.SpdyProtocolError()
  - Type: http
 
 ```js
-const err = new chromiumNetErrors.InvalidAuthCredentialsError()
+const err = new chromiumNetErrors.InvalidAuthCredentialsError();
 ```
 
 ### UnsupportedAuthSchemeError
@@ -2182,7 +2182,7 @@ const err = new chromiumNetErrors.InvalidAuthCredentialsError()
  - Type: http
 
 ```js
-const err = new chromiumNetErrors.UnsupportedAuthSchemeError()
+const err = new chromiumNetErrors.UnsupportedAuthSchemeError();
 ```
 
 ### EncodingDetectionFailedError
@@ -2195,7 +2195,7 @@ const err = new chromiumNetErrors.UnsupportedAuthSchemeError()
  - Type: http
 
 ```js
-const err = new chromiumNetErrors.EncodingDetectionFailedError()
+const err = new chromiumNetErrors.EncodingDetectionFailedError();
 ```
 
 ### MissingAuthCredentialsError
@@ -2208,7 +2208,7 @@ const err = new chromiumNetErrors.EncodingDetectionFailedError()
  - Type: http
 
 ```js
-const err = new chromiumNetErrors.MissingAuthCredentialsError()
+const err = new chromiumNetErrors.MissingAuthCredentialsError();
 ```
 
 ### UnexpectedSecurityLibraryStatusError
@@ -2221,7 +2221,7 @@ const err = new chromiumNetErrors.MissingAuthCredentialsError()
  - Type: http
 
 ```js
-const err = new chromiumNetErrors.UnexpectedSecurityLibraryStatusError()
+const err = new chromiumNetErrors.UnexpectedSecurityLibraryStatusError();
 ```
 
 ### MisconfiguredAuthEnvironmentError
@@ -2235,7 +2235,7 @@ const err = new chromiumNetErrors.UnexpectedSecurityLibraryStatusError()
  - Type: http
 
 ```js
-const err = new chromiumNetErrors.MisconfiguredAuthEnvironmentError()
+const err = new chromiumNetErrors.MisconfiguredAuthEnvironmentError();
 ```
 
 ### UndocumentedSecurityLibraryStatusError
@@ -2248,7 +2248,7 @@ const err = new chromiumNetErrors.MisconfiguredAuthEnvironmentError()
  - Type: http
 
 ```js
-const err = new chromiumNetErrors.UndocumentedSecurityLibraryStatusError()
+const err = new chromiumNetErrors.UndocumentedSecurityLibraryStatusError();
 ```
 
 ### ResponseBodyTooBigToDrainError
@@ -2261,7 +2261,7 @@ const err = new chromiumNetErrors.UndocumentedSecurityLibraryStatusError()
  - Type: http
 
 ```js
-const err = new chromiumNetErrors.ResponseBodyTooBigToDrainError()
+const err = new chromiumNetErrors.ResponseBodyTooBigToDrainError();
 ```
 
 ### ResponseHeadersMultipleContentLengthError
@@ -2274,7 +2274,7 @@ const err = new chromiumNetErrors.ResponseBodyTooBigToDrainError()
  - Type: http
 
 ```js
-const err = new chromiumNetErrors.ResponseHeadersMultipleContentLengthError()
+const err = new chromiumNetErrors.ResponseHeadersMultipleContentLengthError();
 ```
 
 ### IncompleteSpdyHeadersError
@@ -2288,7 +2288,7 @@ const err = new chromiumNetErrors.ResponseHeadersMultipleContentLengthError()
  - Type: http
 
 ```js
-const err = new chromiumNetErrors.IncompleteSpdyHeadersError()
+const err = new chromiumNetErrors.IncompleteSpdyHeadersError();
 ```
 
 ### PacNotInDhcpError
@@ -2303,7 +2303,7 @@ const err = new chromiumNetErrors.IncompleteSpdyHeadersError()
  - Type: http
 
 ```js
-const err = new chromiumNetErrors.PacNotInDhcpError()
+const err = new chromiumNetErrors.PacNotInDhcpError();
 ```
 
 ### ResponseHeadersMultipleContentDispositionError
@@ -2316,7 +2316,7 @@ const err = new chromiumNetErrors.PacNotInDhcpError()
  - Type: http
 
 ```js
-const err = new chromiumNetErrors.ResponseHeadersMultipleContentDispositionError()
+const err = new chromiumNetErrors.ResponseHeadersMultipleContentDispositionError();
 ```
 
 ### ResponseHeadersMultipleLocationError
@@ -2329,7 +2329,7 @@ const err = new chromiumNetErrors.ResponseHeadersMultipleContentDispositionError
  - Type: http
 
 ```js
-const err = new chromiumNetErrors.ResponseHeadersMultipleLocationError()
+const err = new chromiumNetErrors.ResponseHeadersMultipleLocationError();
 ```
 
 ### SpdyServerRefusedStreamError
@@ -2346,7 +2346,7 @@ const err = new chromiumNetErrors.ResponseHeadersMultipleLocationError()
  - Type: http
 
 ```js
-const err = new chromiumNetErrors.SpdyServerRefusedStreamError()
+const err = new chromiumNetErrors.SpdyServerRefusedStreamError();
 ```
 
 ### SpdyPingFailedError
@@ -2359,7 +2359,7 @@ const err = new chromiumNetErrors.SpdyServerRefusedStreamError()
  - Type: http
 
 ```js
-const err = new chromiumNetErrors.SpdyPingFailedError()
+const err = new chromiumNetErrors.SpdyPingFailedError();
 ```
 
 ### ContentLengthMismatchError
@@ -2373,7 +2373,7 @@ const err = new chromiumNetErrors.SpdyPingFailedError()
  - Type: http
 
 ```js
-const err = new chromiumNetErrors.ContentLengthMismatchError()
+const err = new chromiumNetErrors.ContentLengthMismatchError();
 ```
 
 ### IncompleteChunkedEncodingError
@@ -2387,7 +2387,7 @@ const err = new chromiumNetErrors.ContentLengthMismatchError()
  - Type: http
 
 ```js
-const err = new chromiumNetErrors.IncompleteChunkedEncodingError()
+const err = new chromiumNetErrors.IncompleteChunkedEncodingError();
 ```
 
 ### QuicProtocolError
@@ -2400,7 +2400,7 @@ const err = new chromiumNetErrors.IncompleteChunkedEncodingError()
  - Type: http
 
 ```js
-const err = new chromiumNetErrors.QuicProtocolError()
+const err = new chromiumNetErrors.QuicProtocolError();
 ```
 
 ### ResponseHeadersTruncatedError
@@ -2413,7 +2413,7 @@ const err = new chromiumNetErrors.QuicProtocolError()
  - Type: http
 
 ```js
-const err = new chromiumNetErrors.ResponseHeadersTruncatedError()
+const err = new chromiumNetErrors.ResponseHeadersTruncatedError();
 ```
 
 ### QuicHandshakeFailedError
@@ -2427,7 +2427,7 @@ const err = new chromiumNetErrors.ResponseHeadersTruncatedError()
  - Type: http
 
 ```js
-const err = new chromiumNetErrors.QuicHandshakeFailedError()
+const err = new chromiumNetErrors.QuicHandshakeFailedError();
 ```
 
 ### SpdyInadequateTransportSecurityError
@@ -2440,7 +2440,7 @@ const err = new chromiumNetErrors.QuicHandshakeFailedError()
  - Type: http
 
 ```js
-const err = new chromiumNetErrors.SpdyInadequateTransportSecurityError()
+const err = new chromiumNetErrors.SpdyInadequateTransportSecurityError();
 ```
 
 ### SpdyFlowControlError
@@ -2453,7 +2453,7 @@ const err = new chromiumNetErrors.SpdyInadequateTransportSecurityError()
  - Type: http
 
 ```js
-const err = new chromiumNetErrors.SpdyFlowControlError()
+const err = new chromiumNetErrors.SpdyFlowControlError();
 ```
 
 ### SpdyFrameSizeError
@@ -2466,7 +2466,7 @@ const err = new chromiumNetErrors.SpdyFlowControlError()
  - Type: http
 
 ```js
-const err = new chromiumNetErrors.SpdyFrameSizeError()
+const err = new chromiumNetErrors.SpdyFrameSizeError();
 ```
 
 ### SpdyCompressionError
@@ -2479,7 +2479,7 @@ const err = new chromiumNetErrors.SpdyFrameSizeError()
  - Type: http
 
 ```js
-const err = new chromiumNetErrors.SpdyCompressionError()
+const err = new chromiumNetErrors.SpdyCompressionError();
 ```
 
 ### ProxyAuthRequestedWithNoConnectionError
@@ -2492,7 +2492,7 @@ const err = new chromiumNetErrors.SpdyCompressionError()
  - Type: http
 
 ```js
-const err = new chromiumNetErrors.ProxyAuthRequestedWithNoConnectionError()
+const err = new chromiumNetErrors.ProxyAuthRequestedWithNoConnectionError();
 ```
 
 ### PacScriptTerminatedError
@@ -2505,7 +2505,7 @@ const err = new chromiumNetErrors.ProxyAuthRequestedWithNoConnectionError()
  - Type: http
 
 ```js
-const err = new chromiumNetErrors.PacScriptTerminatedError()
+const err = new chromiumNetErrors.PacScriptTerminatedError();
 ```
 
 ### InvalidHttpResponseError
@@ -2519,7 +2519,7 @@ const err = new chromiumNetErrors.PacScriptTerminatedError()
  - Type: http
 
 ```js
-const err = new chromiumNetErrors.InvalidHttpResponseError()
+const err = new chromiumNetErrors.InvalidHttpResponseError();
 ```
 
 ### ContentDecodingInitFailedError
@@ -2532,7 +2532,7 @@ const err = new chromiumNetErrors.InvalidHttpResponseError()
  - Type: http
 
 ```js
-const err = new chromiumNetErrors.ContentDecodingInitFailedError()
+const err = new chromiumNetErrors.ContentDecodingInitFailedError();
 ```
 
 ### SpdyRstStreamNoErrorReceivedError
@@ -2547,7 +2547,7 @@ const err = new chromiumNetErrors.ContentDecodingInitFailedError()
  - Type: http
 
 ```js
-const err = new chromiumNetErrors.SpdyRstStreamNoErrorReceivedError()
+const err = new chromiumNetErrors.SpdyRstStreamNoErrorReceivedError();
 ```
 
 ### SpdyPushedStreamNotAvailableError
@@ -2560,7 +2560,7 @@ const err = new chromiumNetErrors.SpdyRstStreamNoErrorReceivedError()
  - Type: http
 
 ```js
-const err = new chromiumNetErrors.SpdyPushedStreamNotAvailableError()
+const err = new chromiumNetErrors.SpdyPushedStreamNotAvailableError();
 ```
 
 ### SpdyClaimedPushedStreamResetByServerError
@@ -2574,7 +2574,7 @@ const err = new chromiumNetErrors.SpdyPushedStreamNotAvailableError()
  - Type: http
 
 ```js
-const err = new chromiumNetErrors.SpdyClaimedPushedStreamResetByServerError()
+const err = new chromiumNetErrors.SpdyClaimedPushedStreamResetByServerError();
 ```
 
 ### TooManyRetriesError
@@ -2590,7 +2590,7 @@ const err = new chromiumNetErrors.SpdyClaimedPushedStreamResetByServerError()
  - Type: http
 
 ```js
-const err = new chromiumNetErrors.TooManyRetriesError()
+const err = new chromiumNetErrors.TooManyRetriesError();
 ```
 
 ### CacheMissError
@@ -2603,7 +2603,7 @@ const err = new chromiumNetErrors.TooManyRetriesError()
  - Type: cache
 
 ```js
-const err = new chromiumNetErrors.CacheMissError()
+const err = new chromiumNetErrors.CacheMissError();
 ```
 
 ### CacheReadFailureError
@@ -2616,7 +2616,7 @@ const err = new chromiumNetErrors.CacheMissError()
  - Type: cache
 
 ```js
-const err = new chromiumNetErrors.CacheReadFailureError()
+const err = new chromiumNetErrors.CacheReadFailureError();
 ```
 
 ### CacheWriteFailureError
@@ -2629,7 +2629,7 @@ const err = new chromiumNetErrors.CacheReadFailureError()
  - Type: cache
 
 ```js
-const err = new chromiumNetErrors.CacheWriteFailureError()
+const err = new chromiumNetErrors.CacheWriteFailureError();
 ```
 
 ### CacheOperationNotSupportedError
@@ -2642,7 +2642,7 @@ const err = new chromiumNetErrors.CacheWriteFailureError()
  - Type: cache
 
 ```js
-const err = new chromiumNetErrors.CacheOperationNotSupportedError()
+const err = new chromiumNetErrors.CacheOperationNotSupportedError();
 ```
 
 ### CacheOpenFailureError
@@ -2655,7 +2655,7 @@ const err = new chromiumNetErrors.CacheOperationNotSupportedError()
  - Type: cache
 
 ```js
-const err = new chromiumNetErrors.CacheOpenFailureError()
+const err = new chromiumNetErrors.CacheOpenFailureError();
 ```
 
 ### CacheCreateFailureError
@@ -2668,7 +2668,7 @@ const err = new chromiumNetErrors.CacheOpenFailureError()
  - Type: cache
 
 ```js
-const err = new chromiumNetErrors.CacheCreateFailureError()
+const err = new chromiumNetErrors.CacheCreateFailureError();
 ```
 
 ### CacheRaceError
@@ -2684,7 +2684,7 @@ const err = new chromiumNetErrors.CacheCreateFailureError()
  - Type: cache
 
 ```js
-const err = new chromiumNetErrors.CacheRaceError()
+const err = new chromiumNetErrors.CacheRaceError();
 ```
 
 ### CacheChecksumReadFailureError
@@ -2700,7 +2700,7 @@ const err = new chromiumNetErrors.CacheRaceError()
  - Type: cache
 
 ```js
-const err = new chromiumNetErrors.CacheChecksumReadFailureError()
+const err = new chromiumNetErrors.CacheChecksumReadFailureError();
 ```
 
 ### CacheChecksumMismatchError
@@ -2715,7 +2715,7 @@ const err = new chromiumNetErrors.CacheChecksumReadFailureError()
  - Type: cache
 
 ```js
-const err = new chromiumNetErrors.CacheChecksumMismatchError()
+const err = new chromiumNetErrors.CacheChecksumMismatchError();
 ```
 
 ### CacheLockTimeoutError
@@ -2728,7 +2728,7 @@ const err = new chromiumNetErrors.CacheChecksumMismatchError()
  - Type: cache
 
 ```js
-const err = new chromiumNetErrors.CacheLockTimeoutError()
+const err = new chromiumNetErrors.CacheLockTimeoutError();
 ```
 
 ### CacheAuthFailureAfterReadError
@@ -2742,7 +2742,7 @@ const err = new chromiumNetErrors.CacheLockTimeoutError()
  - Type: cache
 
 ```js
-const err = new chromiumNetErrors.CacheAuthFailureAfterReadError()
+const err = new chromiumNetErrors.CacheAuthFailureAfterReadError();
 ```
 
 ### CacheEntryNotSuitableError
@@ -2757,7 +2757,7 @@ const err = new chromiumNetErrors.CacheAuthFailureAfterReadError()
  - Type: cache
 
 ```js
-const err = new chromiumNetErrors.CacheEntryNotSuitableError()
+const err = new chromiumNetErrors.CacheEntryNotSuitableError();
 ```
 
 ### InsecureResponseError
@@ -2770,7 +2770,7 @@ const err = new chromiumNetErrors.CacheEntryNotSuitableError()
  - Type: unknown
 
 ```js
-const err = new chromiumNetErrors.InsecureResponseError()
+const err = new chromiumNetErrors.InsecureResponseError();
 ```
 
 ### NoPrivateKeyForCertError
@@ -2784,7 +2784,7 @@ const err = new chromiumNetErrors.InsecureResponseError()
  - Type: unknown
 
 ```js
-const err = new chromiumNetErrors.NoPrivateKeyForCertError()
+const err = new chromiumNetErrors.NoPrivateKeyForCertError();
 ```
 
 ### AddUserCertFailedError
@@ -2797,7 +2797,7 @@ const err = new chromiumNetErrors.NoPrivateKeyForCertError()
  - Type: unknown
 
 ```js
-const err = new chromiumNetErrors.AddUserCertFailedError()
+const err = new chromiumNetErrors.AddUserCertFailedError();
 ```
 
 ### FtpFailedError
@@ -2811,7 +2811,7 @@ const err = new chromiumNetErrors.AddUserCertFailedError()
  - Type: ftp
 
 ```js
-const err = new chromiumNetErrors.FtpFailedError()
+const err = new chromiumNetErrors.FtpFailedError();
 ```
 
 ### FtpServiceUnavailableError
@@ -2826,7 +2826,7 @@ const err = new chromiumNetErrors.FtpFailedError()
  - Type: ftp
 
 ```js
-const err = new chromiumNetErrors.FtpServiceUnavailableError()
+const err = new chromiumNetErrors.FtpServiceUnavailableError();
 ```
 
 ### FtpTransferAbortedError
@@ -2840,7 +2840,7 @@ const err = new chromiumNetErrors.FtpServiceUnavailableError()
  - Type: ftp
 
 ```js
-const err = new chromiumNetErrors.FtpTransferAbortedError()
+const err = new chromiumNetErrors.FtpTransferAbortedError();
 ```
 
 ### FtpFileBusyError
@@ -2855,7 +2855,7 @@ const err = new chromiumNetErrors.FtpTransferAbortedError()
  - Type: ftp
 
 ```js
-const err = new chromiumNetErrors.FtpFileBusyError()
+const err = new chromiumNetErrors.FtpFileBusyError();
 ```
 
 ### FtpSyntaxError
@@ -2869,7 +2869,7 @@ const err = new chromiumNetErrors.FtpFileBusyError()
  - Type: ftp
 
 ```js
-const err = new chromiumNetErrors.FtpSyntaxError()
+const err = new chromiumNetErrors.FtpSyntaxError();
 ```
 
 ### FtpCommandNotSupportedError
@@ -2883,7 +2883,7 @@ const err = new chromiumNetErrors.FtpSyntaxError()
  - Type: ftp
 
 ```js
-const err = new chromiumNetErrors.FtpCommandNotSupportedError()
+const err = new chromiumNetErrors.FtpCommandNotSupportedError();
 ```
 
 ### FtpBadCommandSequenceError
@@ -2898,7 +2898,7 @@ const err = new chromiumNetErrors.FtpCommandNotSupportedError()
  - Type: ftp
 
 ```js
-const err = new chromiumNetErrors.FtpBadCommandSequenceError()
+const err = new chromiumNetErrors.FtpBadCommandSequenceError();
 ```
 
 ### ImportCaCertNotCaError
@@ -2911,7 +2911,7 @@ const err = new chromiumNetErrors.FtpBadCommandSequenceError()
  - Type: certificate-manager
 
 ```js
-const err = new chromiumNetErrors.ImportCaCertNotCaError()
+const err = new chromiumNetErrors.ImportCaCertNotCaError();
 ```
 
 ### ImportCertAlreadyExistsError
@@ -2926,7 +2926,7 @@ const err = new chromiumNetErrors.ImportCaCertNotCaError()
  - Type: certificate-manager
 
 ```js
-const err = new chromiumNetErrors.ImportCertAlreadyExistsError()
+const err = new chromiumNetErrors.ImportCertAlreadyExistsError();
 ```
 
 ### ImportCaCertFailedError
@@ -2939,7 +2939,7 @@ const err = new chromiumNetErrors.ImportCertAlreadyExistsError()
  - Type: certificate-manager
 
 ```js
-const err = new chromiumNetErrors.ImportCaCertFailedError()
+const err = new chromiumNetErrors.ImportCaCertFailedError();
 ```
 
 ### ImportServerCertFailedError
@@ -2952,7 +2952,7 @@ const err = new chromiumNetErrors.ImportCaCertFailedError()
  - Type: certificate-manager
 
 ```js
-const err = new chromiumNetErrors.ImportServerCertFailedError()
+const err = new chromiumNetErrors.ImportServerCertFailedError();
 ```
 
 ### KeyGenerationFailedError
@@ -2965,7 +2965,7 @@ const err = new chromiumNetErrors.ImportServerCertFailedError()
  - Type: certificate-manager
 
 ```js
-const err = new chromiumNetErrors.KeyGenerationFailedError()
+const err = new chromiumNetErrors.KeyGenerationFailedError();
 ```
 
 ### PrivateKeyExportFailedError
@@ -2978,7 +2978,7 @@ const err = new chromiumNetErrors.KeyGenerationFailedError()
  - Type: certificate-manager
 
 ```js
-const err = new chromiumNetErrors.PrivateKeyExportFailedError()
+const err = new chromiumNetErrors.PrivateKeyExportFailedError();
 ```
 
 ### SelfSignedCertGenerationFailedError
@@ -2991,7 +2991,7 @@ const err = new chromiumNetErrors.PrivateKeyExportFailedError()
  - Type: certificate-manager
 
 ```js
-const err = new chromiumNetErrors.SelfSignedCertGenerationFailedError()
+const err = new chromiumNetErrors.SelfSignedCertGenerationFailedError();
 ```
 
 ### CertDatabaseChangedError
@@ -3004,7 +3004,7 @@ const err = new chromiumNetErrors.SelfSignedCertGenerationFailedError()
  - Type: certificate-manager
 
 ```js
-const err = new chromiumNetErrors.CertDatabaseChangedError()
+const err = new chromiumNetErrors.CertDatabaseChangedError();
 ```
 
 ### DnsMalformedResponseError
@@ -3017,7 +3017,7 @@ const err = new chromiumNetErrors.CertDatabaseChangedError()
  - Type: dns
 
 ```js
-const err = new chromiumNetErrors.DnsMalformedResponseError()
+const err = new chromiumNetErrors.DnsMalformedResponseError();
 ```
 
 ### DnsServerRequiresTcpError
@@ -3030,7 +3030,7 @@ const err = new chromiumNetErrors.DnsMalformedResponseError()
  - Type: dns
 
 ```js
-const err = new chromiumNetErrors.DnsServerRequiresTcpError()
+const err = new chromiumNetErrors.DnsServerRequiresTcpError();
 ```
 
 ### DnsServerFailedError
@@ -3051,7 +3051,7 @@ const err = new chromiumNetErrors.DnsServerRequiresTcpError()
  - Type: dns
 
 ```js
-const err = new chromiumNetErrors.DnsServerFailedError()
+const err = new chromiumNetErrors.DnsServerFailedError();
 ```
 
 ### DnsTimedOutError
@@ -3064,7 +3064,7 @@ const err = new chromiumNetErrors.DnsServerFailedError()
  - Type: dns
 
 ```js
-const err = new chromiumNetErrors.DnsTimedOutError()
+const err = new chromiumNetErrors.DnsTimedOutError();
 ```
 
 ### DnsCacheMissError
@@ -3077,7 +3077,7 @@ const err = new chromiumNetErrors.DnsTimedOutError()
  - Type: dns
 
 ```js
-const err = new chromiumNetErrors.DnsCacheMissError()
+const err = new chromiumNetErrors.DnsCacheMissError();
 ```
 
 ### DnsSearchEmptyError
@@ -3090,7 +3090,7 @@ const err = new chromiumNetErrors.DnsCacheMissError()
  - Type: dns
 
 ```js
-const err = new chromiumNetErrors.DnsSearchEmptyError()
+const err = new chromiumNetErrors.DnsSearchEmptyError();
 ```
 
 ### DnsSortError
@@ -3103,7 +3103,7 @@ const err = new chromiumNetErrors.DnsSearchEmptyError()
  - Type: dns
 
 ```js
-const err = new chromiumNetErrors.DnsSortError()
+const err = new chromiumNetErrors.DnsSortError();
 ```
 
 ### DnsHttpFailedError
@@ -3116,7 +3116,7 @@ const err = new chromiumNetErrors.DnsSortError()
  - Type: dns
 
 ```js
-const err = new chromiumNetErrors.DnsHttpFailedError()
+const err = new chromiumNetErrors.DnsHttpFailedError();
 ```
 
 <!--END_ERROR_LIST-->

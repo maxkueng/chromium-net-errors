@@ -50,7 +50,7 @@ ${formatErrorMessage(error.message)}
  - Type: ${error.type}
 
 \`\`\`js
-const err = new chromiumNetErrors.${error.name}()
+const err = new chromiumNetErrors.${error.name}();
 \`\`\`
   `.trim()}\n`);
 });
