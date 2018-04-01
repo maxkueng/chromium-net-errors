@@ -11,10 +11,11 @@ Chromium Network Errors
 
 Provides Chromium network errors found in
 [net_error_list.h](https://cs.chromium.org/codesearch/f/chromium/src/net/base/net_error_list.h)
-as custom error classes that can be conveniently Node.js and Electron apps. It
-can be used in browsers too.  
-They correspond to the error codes that are provided in 
-[Electron's `did-fail-load` event](https://github.com/electron/electron/blob/master/docs/api/web-contents.md#event-did-fail-load).
+as custom error classes that can be conveniently used in Node.js, Electron apps and browsers.
+
+The errors correspond to the error codes that are provided in Electron's
+`did-fail-load` events of the [WebContents](https://github.com/electron/electron/blob/master/docs/api/web-contents.md#event-did-fail-load) class
+and the [webview tag](https://github.com/electron/electron/blob/master/docs/api/webview-tag.md#event-did-fail-load).
 
 [Features](#features) |
 [Installation](#installation) |
@@ -27,14 +28,23 @@ They correspond to the error codes that are provided in
 
  - No dependencies.
  - 100% test coverage.
- - ES6 build with `import` and `export` to allow better dead code elimination
-   if you use a bundler that supports it.
- - Daily checks for updates on net_error_list.h on [Travis CI](https://travis-ci.org/maxkueng/chromium-net-errors)
+ - ES6 build with `import` and `export`, and a CommonJS build. Your bundler can
+   use the ES6 modules if it supports the `"module"` or `"jsnext:main"`
+   directives in the package.json.
+ - Daily cron-triggered checks for updates on net_error_list.h on 
+   [Travis CI](https://travis-ci.org/maxkueng/chromium-net-errors)
+   to always get the most up-to-date list of errors.
 
 ## Installation
 
 ```sh
 npm install chromium-net-errors --save
+```
+
+```js
+import * as chromiumNetErrors from 'chromium-net-errors';
+// or
+const chromiumNetErrors = require('chromium-net-errors');
 ```
 
 ## Example Use in Electron
@@ -49,15 +59,15 @@ app.on('ready', () => {
     height: 600,
   });
 
-  win.webContents.on('did-fail-load', (event, errorCode, errorDescription, validatedURL) => {
+  win.webContents.on('did-fail-load', (event) => {
     try {
-      const Err = chromiumNetErrors.getErrorByCode(errorCode);
+      const Err = chromiumNetErrors.getErrorByCode(event.errorCode);
       throw new Err();
     } catch (err) {
       if (err instanceof chromiumNetErrors.NameNotResolvedError) {
-        console.error(`The name '${validatedURL}' could not be resolved:\n  ${err.message}`);
+        console.error(`The name '${event.validatedURL}' could not be resolved:\n  ${err.message}`);
       } else {
-        console.error(`Something went wrong while loading ${validatedURL}`);
+        console.error(`Something went wrong while loading ${event.validatedURL}`);
       }
     }
   });
