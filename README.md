@@ -130,17 +130,15 @@ console.log(err.type);
 // 'certificate'
 
 console.log(err.message);
-// The server responded with a certificate that is signed by an authority
-// we don't trust.  The could mean:
-//
-// 1. An attacker has substituted the real certificate for a cert that
-//    contains his public key and is signed by his cousin.
-//
-// 2. The server operator has a legitimate certificate from a CA we don't
-//    know about, but should trust.
-//
-// 3. The server is presenting a self-signed certificate, providing no
-//    defense against active attackers (but foiling passive attackers).
+// The server responded with a certificate that, by our clock, appears to
+// either not yet be valid or to have expired. This could mean:
+// 
+// 1. An attacker is presenting an old certificate for which they have
+// managed to obtain the private key.
+// 
+// 2. The server is misconfigured and is not presenting a valid cert.
+// 
+// 3. Our clock is wrong.
 ```
 
 ### Get Error by errorDescription
@@ -161,17 +159,15 @@ console.log(err.type);
 // 'certificate'
 
 console.log(err.message);
-// The server responded with a certificate that is signed by an authority
-// we don't trust.  The could mean:
-//
-// 1. An attacker has substituted the real certificate for a cert that
-//    contains his public key and is signed by his cousin.
-//
-// 2. The server operator has a legitimate certificate from a CA we don't
-//    know about, but should trust.
-//
-// 3. The server is presenting a self-signed certificate, providing no
-//    defense against active attackers (but foiling passive attackers).
+// The server responded with a certificate that, by our clock, appears to
+// either not yet be valid or to have expired. This could mean:
+// 
+// 1. An attacker is presenting an old certificate for which they have
+// managed to obtain the private key.
+// 
+// 2. The server is misconfigured and is not presenting a valid cert.
+// 
+// 3. Our clock is wrong.
 ```
 
 ### Get All Errors
