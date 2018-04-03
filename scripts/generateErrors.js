@@ -51,6 +51,12 @@ ${formatErrorMessage(error.message)}
 
 \`\`\`js
 const err = new chromiumNetErrors.${error.name}();
+// or
+const Err = chromiumNetErrors.getErrorByCode(${error.code});
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('${error.description}');
+const err = new Err();
 \`\`\`
   `.trim()}\n`);
 });

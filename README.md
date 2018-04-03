@@ -223,6 +223,12 @@ console.log(chromiumNetErrors.getErrors());
 
 ```js
 const err = new chromiumNetErrors.IoPendingError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-1);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('IO_PENDING');
+const err = new Err();
 ```
 
 ### FailedError
@@ -236,6 +242,12 @@ const err = new chromiumNetErrors.IoPendingError();
 
 ```js
 const err = new chromiumNetErrors.FailedError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-2);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('FAILED');
+const err = new Err();
 ```
 
 ### AbortedError
@@ -249,6 +261,12 @@ const err = new chromiumNetErrors.FailedError();
 
 ```js
 const err = new chromiumNetErrors.AbortedError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-3);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('ABORTED');
+const err = new Err();
 ```
 
 ### InvalidArgumentError
@@ -262,6 +280,12 @@ const err = new chromiumNetErrors.AbortedError();
 
 ```js
 const err = new chromiumNetErrors.InvalidArgumentError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-4);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('INVALID_ARGUMENT');
+const err = new Err();
 ```
 
 ### InvalidHandleError
@@ -275,6 +299,12 @@ const err = new chromiumNetErrors.InvalidArgumentError();
 
 ```js
 const err = new chromiumNetErrors.InvalidHandleError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-5);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('INVALID_HANDLE');
+const err = new Err();
 ```
 
 ### FileNotFoundError
@@ -288,6 +318,12 @@ const err = new chromiumNetErrors.InvalidHandleError();
 
 ```js
 const err = new chromiumNetErrors.FileNotFoundError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-6);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('FILE_NOT_FOUND');
+const err = new Err();
 ```
 
 ### TimedOutError
@@ -301,6 +337,12 @@ const err = new chromiumNetErrors.FileNotFoundError();
 
 ```js
 const err = new chromiumNetErrors.TimedOutError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-7);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('TIMED_OUT');
+const err = new Err();
 ```
 
 ### FileTooBigError
@@ -314,6 +356,12 @@ const err = new chromiumNetErrors.TimedOutError();
 
 ```js
 const err = new chromiumNetErrors.FileTooBigError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-8);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('FILE_TOO_BIG');
+const err = new Err();
 ```
 
 ### UnexpectedError
@@ -328,6 +376,12 @@ const err = new chromiumNetErrors.FileTooBigError();
 
 ```js
 const err = new chromiumNetErrors.UnexpectedError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-9);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('UNEXPECTED');
+const err = new Err();
 ```
 
 ### AccessDeniedError
@@ -341,6 +395,12 @@ const err = new chromiumNetErrors.UnexpectedError();
 
 ```js
 const err = new chromiumNetErrors.AccessDeniedError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-10);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('ACCESS_DENIED');
+const err = new Err();
 ```
 
 ### NotImplementedError
@@ -354,6 +414,12 @@ const err = new chromiumNetErrors.AccessDeniedError();
 
 ```js
 const err = new chromiumNetErrors.NotImplementedError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-11);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('NOT_IMPLEMENTED');
+const err = new Err();
 ```
 
 ### InsufficientResourcesError
@@ -367,6 +433,12 @@ const err = new chromiumNetErrors.NotImplementedError();
 
 ```js
 const err = new chromiumNetErrors.InsufficientResourcesError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-12);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('INSUFFICIENT_RESOURCES');
+const err = new Err();
 ```
 
 ### OutOfMemoryError
@@ -380,6 +452,12 @@ const err = new chromiumNetErrors.InsufficientResourcesError();
 
 ```js
 const err = new chromiumNetErrors.OutOfMemoryError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-13);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('OUT_OF_MEMORY');
+const err = new Err();
 ```
 
 ### UploadFileChangedError
@@ -394,6 +472,12 @@ const err = new chromiumNetErrors.OutOfMemoryError();
 
 ```js
 const err = new chromiumNetErrors.UploadFileChangedError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-14);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('UPLOAD_FILE_CHANGED');
+const err = new Err();
 ```
 
 ### SocketNotConnectedError
@@ -407,6 +491,12 @@ const err = new chromiumNetErrors.UploadFileChangedError();
 
 ```js
 const err = new chromiumNetErrors.SocketNotConnectedError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-15);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('SOCKET_NOT_CONNECTED');
+const err = new Err();
 ```
 
 ### FileExistsError
@@ -420,6 +510,12 @@ const err = new chromiumNetErrors.SocketNotConnectedError();
 
 ```js
 const err = new chromiumNetErrors.FileExistsError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-16);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('FILE_EXISTS');
+const err = new Err();
 ```
 
 ### FilePathTooLongError
@@ -433,6 +529,12 @@ const err = new chromiumNetErrors.FileExistsError();
 
 ```js
 const err = new chromiumNetErrors.FilePathTooLongError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-17);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('FILE_PATH_TOO_LONG');
+const err = new Err();
 ```
 
 ### FileNoSpaceError
@@ -446,6 +548,12 @@ const err = new chromiumNetErrors.FilePathTooLongError();
 
 ```js
 const err = new chromiumNetErrors.FileNoSpaceError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-18);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('FILE_NO_SPACE');
+const err = new Err();
 ```
 
 ### FileVirusInfectedError
@@ -459,6 +567,12 @@ const err = new chromiumNetErrors.FileNoSpaceError();
 
 ```js
 const err = new chromiumNetErrors.FileVirusInfectedError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-19);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('FILE_VIRUS_INFECTED');
+const err = new Err();
 ```
 
 ### BlockedByClientError
@@ -472,6 +586,12 @@ const err = new chromiumNetErrors.FileVirusInfectedError();
 
 ```js
 const err = new chromiumNetErrors.BlockedByClientError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-20);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('BLOCKED_BY_CLIENT');
+const err = new Err();
 ```
 
 ### NetworkChangedError
@@ -485,6 +605,12 @@ const err = new chromiumNetErrors.BlockedByClientError();
 
 ```js
 const err = new chromiumNetErrors.NetworkChangedError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-21);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('NETWORK_CHANGED');
+const err = new Err();
 ```
 
 ### BlockedByAdministratorError
@@ -499,6 +625,12 @@ const err = new chromiumNetErrors.NetworkChangedError();
 
 ```js
 const err = new chromiumNetErrors.BlockedByAdministratorError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-22);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('BLOCKED_BY_ADMINISTRATOR');
+const err = new Err();
 ```
 
 ### SocketIsConnectedError
@@ -512,6 +644,12 @@ const err = new chromiumNetErrors.BlockedByAdministratorError();
 
 ```js
 const err = new chromiumNetErrors.SocketIsConnectedError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-23);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('SOCKET_IS_CONNECTED');
+const err = new Err();
 ```
 
 ### BlockedEnrollmentCheckPendingError
@@ -527,6 +665,12 @@ const err = new chromiumNetErrors.SocketIsConnectedError();
 
 ```js
 const err = new chromiumNetErrors.BlockedEnrollmentCheckPendingError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-24);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('BLOCKED_ENROLLMENT_CHECK_PENDING');
+const err = new Err();
 ```
 
 ### UploadStreamRewindNotSupportedError
@@ -541,6 +685,12 @@ const err = new chromiumNetErrors.BlockedEnrollmentCheckPendingError();
 
 ```js
 const err = new chromiumNetErrors.UploadStreamRewindNotSupportedError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-25);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('UPLOAD_STREAM_REWIND_NOT_SUPPORTED');
+const err = new Err();
 ```
 
 ### ContextShutDownError
@@ -555,6 +705,12 @@ const err = new chromiumNetErrors.UploadStreamRewindNotSupportedError();
 
 ```js
 const err = new chromiumNetErrors.ContextShutDownError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-26);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('CONTEXT_SHUT_DOWN');
+const err = new Err();
 ```
 
 ### BlockedByResponseError
@@ -570,6 +726,12 @@ const err = new chromiumNetErrors.ContextShutDownError();
 
 ```js
 const err = new chromiumNetErrors.BlockedByResponseError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-27);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('BLOCKED_BY_RESPONSE');
+const err = new Err();
 ```
 
 ### BlockedByXssAuditorError
@@ -584,6 +746,12 @@ const err = new chromiumNetErrors.BlockedByResponseError();
 
 ```js
 const err = new chromiumNetErrors.BlockedByXssAuditorError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-28);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('BLOCKED_BY_XSS_AUDITOR');
+const err = new Err();
 ```
 
 ### CleartextNotPermittedError
@@ -598,6 +766,12 @@ const err = new chromiumNetErrors.BlockedByXssAuditorError();
 
 ```js
 const err = new chromiumNetErrors.CleartextNotPermittedError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-29);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('CLEARTEXT_NOT_PERMITTED');
+const err = new Err();
 ```
 
 ### ConnectionClosedError
@@ -611,6 +785,12 @@ const err = new chromiumNetErrors.CleartextNotPermittedError();
 
 ```js
 const err = new chromiumNetErrors.ConnectionClosedError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-100);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('CONNECTION_CLOSED');
+const err = new Err();
 ```
 
 ### ConnectionResetError
@@ -624,6 +804,12 @@ const err = new chromiumNetErrors.ConnectionClosedError();
 
 ```js
 const err = new chromiumNetErrors.ConnectionResetError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-101);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('CONNECTION_RESET');
+const err = new Err();
 ```
 
 ### ConnectionRefusedError
@@ -637,6 +823,12 @@ const err = new chromiumNetErrors.ConnectionResetError();
 
 ```js
 const err = new chromiumNetErrors.ConnectionRefusedError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-102);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('CONNECTION_REFUSED');
+const err = new Err();
 ```
 
 ### ConnectionAbortedError
@@ -651,6 +843,12 @@ const err = new chromiumNetErrors.ConnectionRefusedError();
 
 ```js
 const err = new chromiumNetErrors.ConnectionAbortedError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-103);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('CONNECTION_ABORTED');
+const err = new Err();
 ```
 
 ### ConnectionFailedError
@@ -664,6 +862,12 @@ const err = new chromiumNetErrors.ConnectionAbortedError();
 
 ```js
 const err = new chromiumNetErrors.ConnectionFailedError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-104);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('CONNECTION_FAILED');
+const err = new Err();
 ```
 
 ### NameNotResolvedError
@@ -677,6 +881,12 @@ const err = new chromiumNetErrors.ConnectionFailedError();
 
 ```js
 const err = new chromiumNetErrors.NameNotResolvedError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-105);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('NAME_NOT_RESOLVED');
+const err = new Err();
 ```
 
 ### InternetDisconnectedError
@@ -690,6 +900,12 @@ const err = new chromiumNetErrors.NameNotResolvedError();
 
 ```js
 const err = new chromiumNetErrors.InternetDisconnectedError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-106);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('INTERNET_DISCONNECTED');
+const err = new Err();
 ```
 
 ### SslProtocolError
@@ -703,6 +919,12 @@ const err = new chromiumNetErrors.InternetDisconnectedError();
 
 ```js
 const err = new chromiumNetErrors.SslProtocolError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-107);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('SSL_PROTOCOL_ERROR');
+const err = new Err();
 ```
 
 ### AddressInvalidError
@@ -717,6 +939,12 @@ const err = new chromiumNetErrors.SslProtocolError();
 
 ```js
 const err = new chromiumNetErrors.AddressInvalidError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-108);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('ADDRESS_INVALID');
+const err = new Err();
 ```
 
 ### AddressUnreachableError
@@ -731,6 +959,12 @@ const err = new chromiumNetErrors.AddressInvalidError();
 
 ```js
 const err = new chromiumNetErrors.AddressUnreachableError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-109);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('ADDRESS_UNREACHABLE');
+const err = new Err();
 ```
 
 ### SslClientAuthCertNeededError
@@ -744,6 +978,12 @@ const err = new chromiumNetErrors.AddressUnreachableError();
 
 ```js
 const err = new chromiumNetErrors.SslClientAuthCertNeededError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-110);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('SSL_CLIENT_AUTH_CERT_NEEDED');
+const err = new Err();
 ```
 
 ### TunnelConnectionFailedError
@@ -757,6 +997,12 @@ const err = new chromiumNetErrors.SslClientAuthCertNeededError();
 
 ```js
 const err = new chromiumNetErrors.TunnelConnectionFailedError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-111);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('TUNNEL_CONNECTION_FAILED');
+const err = new Err();
 ```
 
 ### NoSslVersionsEnabledError
@@ -770,6 +1016,12 @@ const err = new chromiumNetErrors.TunnelConnectionFailedError();
 
 ```js
 const err = new chromiumNetErrors.NoSslVersionsEnabledError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-112);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('NO_SSL_VERSIONS_ENABLED');
+const err = new Err();
 ```
 
 ### SslVersionOrCipherMismatchError
@@ -784,6 +1036,12 @@ const err = new chromiumNetErrors.NoSslVersionsEnabledError();
 
 ```js
 const err = new chromiumNetErrors.SslVersionOrCipherMismatchError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-113);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('SSL_VERSION_OR_CIPHER_MISMATCH');
+const err = new Err();
 ```
 
 ### SslRenegotiationRequestedError
@@ -797,6 +1055,12 @@ const err = new chromiumNetErrors.SslVersionOrCipherMismatchError();
 
 ```js
 const err = new chromiumNetErrors.SslRenegotiationRequestedError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-114);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('SSL_RENEGOTIATION_REQUESTED');
+const err = new Err();
 ```
 
 ### ProxyAuthUnsupportedError
@@ -811,6 +1075,12 @@ const err = new chromiumNetErrors.SslRenegotiationRequestedError();
 
 ```js
 const err = new chromiumNetErrors.ProxyAuthUnsupportedError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-115);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('PROXY_AUTH_UNSUPPORTED');
+const err = new Err();
 ```
 
 ### CertErrorInSslRenegotiationError
@@ -828,6 +1098,12 @@ const err = new chromiumNetErrors.ProxyAuthUnsupportedError();
 
 ```js
 const err = new chromiumNetErrors.CertErrorInSslRenegotiationError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-116);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('CERT_ERROR_IN_SSL_RENEGOTIATION');
+const err = new Err();
 ```
 
 ### BadSslClientAuthCertError
@@ -841,6 +1117,12 @@ const err = new chromiumNetErrors.CertErrorInSslRenegotiationError();
 
 ```js
 const err = new chromiumNetErrors.BadSslClientAuthCertError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-117);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('BAD_SSL_CLIENT_AUTH_CERT');
+const err = new Err();
 ```
 
 ### ConnectionTimedOutError
@@ -854,6 +1136,12 @@ const err = new chromiumNetErrors.BadSslClientAuthCertError();
 
 ```js
 const err = new chromiumNetErrors.ConnectionTimedOutError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-118);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('CONNECTION_TIMED_OUT');
+const err = new Err();
 ```
 
 ### HostResolverQueueTooLargeError
@@ -868,6 +1156,12 @@ const err = new chromiumNetErrors.ConnectionTimedOutError();
 
 ```js
 const err = new chromiumNetErrors.HostResolverQueueTooLargeError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-119);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('HOST_RESOLVER_QUEUE_TOO_LARGE');
+const err = new Err();
 ```
 
 ### SocksConnectionFailedError
@@ -881,6 +1175,12 @@ const err = new chromiumNetErrors.HostResolverQueueTooLargeError();
 
 ```js
 const err = new chromiumNetErrors.SocksConnectionFailedError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-120);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('SOCKS_CONNECTION_FAILED');
+const err = new Err();
 ```
 
 ### SocksConnectionHostUnreachableError
@@ -895,6 +1195,12 @@ const err = new chromiumNetErrors.SocksConnectionFailedError();
 
 ```js
 const err = new chromiumNetErrors.SocksConnectionHostUnreachableError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-121);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('SOCKS_CONNECTION_HOST_UNREACHABLE');
+const err = new Err();
 ```
 
 ### AlpnNegotiationFailedError
@@ -908,6 +1214,12 @@ const err = new chromiumNetErrors.SocksConnectionHostUnreachableError();
 
 ```js
 const err = new chromiumNetErrors.AlpnNegotiationFailedError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-122);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('ALPN_NEGOTIATION_FAILED');
+const err = new Err();
 ```
 
 ### SslNoRenegotiationError
@@ -921,6 +1233,12 @@ const err = new chromiumNetErrors.AlpnNegotiationFailedError();
 
 ```js
 const err = new chromiumNetErrors.SslNoRenegotiationError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-123);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('SSL_NO_RENEGOTIATION');
+const err = new Err();
 ```
 
 ### WinsockUnexpectedWrittenBytesError
@@ -935,6 +1253,12 @@ const err = new chromiumNetErrors.SslNoRenegotiationError();
 
 ```js
 const err = new chromiumNetErrors.WinsockUnexpectedWrittenBytesError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-124);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('WINSOCK_UNEXPECTED_WRITTEN_BYTES');
+const err = new Err();
 ```
 
 ### SslDecompressionFailureAlertError
@@ -950,6 +1274,12 @@ const err = new chromiumNetErrors.WinsockUnexpectedWrittenBytesError();
 
 ```js
 const err = new chromiumNetErrors.SslDecompressionFailureAlertError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-125);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('SSL_DECOMPRESSION_FAILURE_ALERT');
+const err = new Err();
 ```
 
 ### SslBadRecordMacAlertError
@@ -964,6 +1294,12 @@ const err = new chromiumNetErrors.SslDecompressionFailureAlertError();
 
 ```js
 const err = new chromiumNetErrors.SslBadRecordMacAlertError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-126);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('SSL_BAD_RECORD_MAC_ALERT');
+const err = new Err();
 ```
 
 ### ProxyAuthRequestedError
@@ -977,6 +1313,12 @@ const err = new chromiumNetErrors.SslBadRecordMacAlertError();
 
 ```js
 const err = new chromiumNetErrors.ProxyAuthRequestedError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-127);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('PROXY_AUTH_REQUESTED');
+const err = new Err();
 ```
 
 ### SslWeakServerEphemeralDhKeyError
@@ -990,6 +1332,12 @@ const err = new chromiumNetErrors.ProxyAuthRequestedError();
 
 ```js
 const err = new chromiumNetErrors.SslWeakServerEphemeralDhKeyError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-129);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('SSL_WEAK_SERVER_EPHEMERAL_DH_KEY');
+const err = new Err();
 ```
 
 ### ProxyConnectionFailedError
@@ -1006,6 +1354,12 @@ const err = new chromiumNetErrors.SslWeakServerEphemeralDhKeyError();
 
 ```js
 const err = new chromiumNetErrors.ProxyConnectionFailedError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-130);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('PROXY_CONNECTION_FAILED');
+const err = new Err();
 ```
 
 ### MandatoryProxyConfigurationFailedError
@@ -1020,6 +1374,12 @@ const err = new chromiumNetErrors.ProxyConnectionFailedError();
 
 ```js
 const err = new chromiumNetErrors.MandatoryProxyConfigurationFailedError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-131);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('MANDATORY_PROXY_CONFIGURATION_FAILED');
+const err = new Err();
 ```
 
 ### PreconnectMaxSocketLimitError
@@ -1034,6 +1394,12 @@ const err = new chromiumNetErrors.MandatoryProxyConfigurationFailedError();
 
 ```js
 const err = new chromiumNetErrors.PreconnectMaxSocketLimitError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-133);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('PRECONNECT_MAX_SOCKET_LIMIT');
+const err = new Err();
 ```
 
 ### SslClientAuthPrivateKeyAccessDeniedError
@@ -1047,6 +1413,12 @@ const err = new chromiumNetErrors.PreconnectMaxSocketLimitError();
 
 ```js
 const err = new chromiumNetErrors.SslClientAuthPrivateKeyAccessDeniedError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-134);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('SSL_CLIENT_AUTH_PRIVATE_KEY_ACCESS_DENIED');
+const err = new Err();
 ```
 
 ### SslClientAuthCertNoPrivateKeyError
@@ -1060,6 +1432,12 @@ const err = new chromiumNetErrors.SslClientAuthPrivateKeyAccessDeniedError();
 
 ```js
 const err = new chromiumNetErrors.SslClientAuthCertNoPrivateKeyError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-135);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('SSL_CLIENT_AUTH_CERT_NO_PRIVATE_KEY');
+const err = new Err();
 ```
 
 ### ProxyCertificateInvalidError
@@ -1073,6 +1451,12 @@ const err = new chromiumNetErrors.SslClientAuthCertNoPrivateKeyError();
 
 ```js
 const err = new chromiumNetErrors.ProxyCertificateInvalidError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-136);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('PROXY_CERTIFICATE_INVALID');
+const err = new Err();
 ```
 
 ### NameResolutionFailedError
@@ -1086,6 +1470,12 @@ const err = new chromiumNetErrors.ProxyCertificateInvalidError();
 
 ```js
 const err = new chromiumNetErrors.NameResolutionFailedError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-137);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('NAME_RESOLUTION_FAILED');
+const err = new Err();
 ```
 
 ### NetworkAccessDeniedError
@@ -1101,6 +1491,12 @@ const err = new chromiumNetErrors.NameResolutionFailedError();
 
 ```js
 const err = new chromiumNetErrors.NetworkAccessDeniedError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-138);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('NETWORK_ACCESS_DENIED');
+const err = new Err();
 ```
 
 ### TemporarilyThrottledError
@@ -1114,6 +1510,12 @@ const err = new chromiumNetErrors.NetworkAccessDeniedError();
 
 ```js
 const err = new chromiumNetErrors.TemporarilyThrottledError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-139);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('TEMPORARILY_THROTTLED');
+const err = new Err();
 ```
 
 ### HttpsProxyTunnelResponseError
@@ -1129,6 +1531,12 @@ const err = new chromiumNetErrors.TemporarilyThrottledError();
 
 ```js
 const err = new chromiumNetErrors.HttpsProxyTunnelResponseError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-140);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('HTTPS_PROXY_TUNNEL_RESPONSE');
+const err = new Err();
 ```
 
 ### SslClientAuthSignatureFailedError
@@ -1148,6 +1556,12 @@ const err = new chromiumNetErrors.HttpsProxyTunnelResponseError();
 
 ```js
 const err = new chromiumNetErrors.SslClientAuthSignatureFailedError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-141);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('SSL_CLIENT_AUTH_SIGNATURE_FAILED');
+const err = new Err();
 ```
 
 ### MsgTooBigError
@@ -1162,6 +1576,12 @@ const err = new chromiumNetErrors.SslClientAuthSignatureFailedError();
 
 ```js
 const err = new chromiumNetErrors.MsgTooBigError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-142);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('MSG_TOO_BIG');
+const err = new Err();
 ```
 
 ### SpdySessionAlreadyExistsError
@@ -1175,6 +1595,12 @@ const err = new chromiumNetErrors.MsgTooBigError();
 
 ```js
 const err = new chromiumNetErrors.SpdySessionAlreadyExistsError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-143);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('SPDY_SESSION_ALREADY_EXISTS');
+const err = new Err();
 ```
 
 ### WsProtocolError
@@ -1189,6 +1615,12 @@ const err = new chromiumNetErrors.SpdySessionAlreadyExistsError();
 
 ```js
 const err = new chromiumNetErrors.WsProtocolError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-145);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('WS_PROTOCOL_ERROR');
+const err = new Err();
 ```
 
 ### AddressInUseError
@@ -1202,6 +1634,12 @@ const err = new chromiumNetErrors.WsProtocolError();
 
 ```js
 const err = new chromiumNetErrors.AddressInUseError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-147);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('ADDRESS_IN_USE');
+const err = new Err();
 ```
 
 ### SslHandshakeNotCompletedError
@@ -1215,6 +1653,12 @@ const err = new chromiumNetErrors.AddressInUseError();
 
 ```js
 const err = new chromiumNetErrors.SslHandshakeNotCompletedError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-148);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('SSL_HANDSHAKE_NOT_COMPLETED');
+const err = new Err();
 ```
 
 ### SslBadPeerPublicKeyError
@@ -1228,6 +1672,12 @@ const err = new chromiumNetErrors.SslHandshakeNotCompletedError();
 
 ```js
 const err = new chromiumNetErrors.SslBadPeerPublicKeyError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-149);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('SSL_BAD_PEER_PUBLIC_KEY');
+const err = new Err();
 ```
 
 ### SslPinnedKeyNotInCertChainError
@@ -1243,6 +1693,12 @@ const err = new chromiumNetErrors.SslBadPeerPublicKeyError();
 
 ```js
 const err = new chromiumNetErrors.SslPinnedKeyNotInCertChainError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-150);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('SSL_PINNED_KEY_NOT_IN_CERT_CHAIN');
+const err = new Err();
 ```
 
 ### ClientAuthCertTypeUnsupportedError
@@ -1256,6 +1712,12 @@ const err = new chromiumNetErrors.SslPinnedKeyNotInCertChainError();
 
 ```js
 const err = new chromiumNetErrors.ClientAuthCertTypeUnsupportedError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-151);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('CLIENT_AUTH_CERT_TYPE_UNSUPPORTED');
+const err = new Err();
 ```
 
 ### OriginBoundCertGenerationTypeMismatchError
@@ -1270,6 +1732,12 @@ const err = new chromiumNetErrors.ClientAuthCertTypeUnsupportedError();
 
 ```js
 const err = new chromiumNetErrors.OriginBoundCertGenerationTypeMismatchError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-152);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('ORIGIN_BOUND_CERT_GENERATION_TYPE_MISMATCH');
+const err = new Err();
 ```
 
 ### SslDecryptErrorAlertError
@@ -1285,6 +1753,12 @@ const err = new chromiumNetErrors.OriginBoundCertGenerationTypeMismatchError();
 
 ```js
 const err = new chromiumNetErrors.SslDecryptErrorAlertError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-153);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('SSL_DECRYPT_ERROR_ALERT');
+const err = new Err();
 ```
 
 ### WsThrottleQueueTooLargeError
@@ -1299,6 +1773,12 @@ const err = new chromiumNetErrors.SslDecryptErrorAlertError();
 
 ```js
 const err = new chromiumNetErrors.WsThrottleQueueTooLargeError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-154);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('WS_THROTTLE_QUEUE_TOO_LARGE');
+const err = new Err();
 ```
 
 ### SslServerCertChangedError
@@ -1312,6 +1792,12 @@ const err = new chromiumNetErrors.WsThrottleQueueTooLargeError();
 
 ```js
 const err = new chromiumNetErrors.SslServerCertChangedError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-156);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('SSL_SERVER_CERT_CHANGED');
+const err = new Err();
 ```
 
 ### SslUnrecognizedNameAlertError
@@ -1325,6 +1811,12 @@ const err = new chromiumNetErrors.SslServerCertChangedError();
 
 ```js
 const err = new chromiumNetErrors.SslUnrecognizedNameAlertError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-159);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('SSL_UNRECOGNIZED_NAME_ALERT');
+const err = new Err();
 ```
 
 ### SocketSetReceiveBufferSizeError
@@ -1338,6 +1830,12 @@ const err = new chromiumNetErrors.SslUnrecognizedNameAlertError();
 
 ```js
 const err = new chromiumNetErrors.SocketSetReceiveBufferSizeError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-160);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('SOCKET_SET_RECEIVE_BUFFER_SIZE_ERROR');
+const err = new Err();
 ```
 
 ### SocketSetSendBufferSizeError
@@ -1351,6 +1849,12 @@ const err = new chromiumNetErrors.SocketSetReceiveBufferSizeError();
 
 ```js
 const err = new chromiumNetErrors.SocketSetSendBufferSizeError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-161);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('SOCKET_SET_SEND_BUFFER_SIZE_ERROR');
+const err = new Err();
 ```
 
 ### SocketReceiveBufferSizeUnchangeableError
@@ -1365,6 +1869,12 @@ const err = new chromiumNetErrors.SocketSetSendBufferSizeError();
 
 ```js
 const err = new chromiumNetErrors.SocketReceiveBufferSizeUnchangeableError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-162);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('SOCKET_RECEIVE_BUFFER_SIZE_UNCHANGEABLE');
+const err = new Err();
 ```
 
 ### SocketSendBufferSizeUnchangeableError
@@ -1379,6 +1889,12 @@ const err = new chromiumNetErrors.SocketReceiveBufferSizeUnchangeableError();
 
 ```js
 const err = new chromiumNetErrors.SocketSendBufferSizeUnchangeableError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-163);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('SOCKET_SEND_BUFFER_SIZE_UNCHANGEABLE');
+const err = new Err();
 ```
 
 ### SslClientAuthCertBadFormatError
@@ -1393,6 +1909,12 @@ const err = new chromiumNetErrors.SocketSendBufferSizeUnchangeableError();
 
 ```js
 const err = new chromiumNetErrors.SslClientAuthCertBadFormatError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-164);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('SSL_CLIENT_AUTH_CERT_BAD_FORMAT');
+const err = new Err();
 ```
 
 ### IcannNameCollisionError
@@ -1409,6 +1931,12 @@ const err = new chromiumNetErrors.SslClientAuthCertBadFormatError();
 
 ```js
 const err = new chromiumNetErrors.IcannNameCollisionError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-166);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('ICANN_NAME_COLLISION');
+const err = new Err();
 ```
 
 ### SslServerCertBadFormatError
@@ -1424,6 +1952,12 @@ const err = new chromiumNetErrors.IcannNameCollisionError();
 
 ```js
 const err = new chromiumNetErrors.SslServerCertBadFormatError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-167);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('SSL_SERVER_CERT_BAD_FORMAT');
+const err = new Err();
 ```
 
 ### CtSthParsingFailedError
@@ -1437,6 +1971,12 @@ const err = new chromiumNetErrors.SslServerCertBadFormatError();
 
 ```js
 const err = new chromiumNetErrors.CtSthParsingFailedError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-168);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('CT_STH_PARSING_FAILED');
+const err = new Err();
 ```
 
 ### CtSthIncompleteError
@@ -1451,6 +1991,12 @@ const err = new chromiumNetErrors.CtSthParsingFailedError();
 
 ```js
 const err = new chromiumNetErrors.CtSthIncompleteError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-169);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('CT_STH_INCOMPLETE');
+const err = new Err();
 ```
 
 ### UnableToReuseConnectionForProxyAuthError
@@ -1467,6 +2013,12 @@ const err = new chromiumNetErrors.CtSthIncompleteError();
 
 ```js
 const err = new chromiumNetErrors.UnableToReuseConnectionForProxyAuthError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-170);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('UNABLE_TO_REUSE_CONNECTION_FOR_PROXY_AUTH');
+const err = new Err();
 ```
 
 ### CtConsistencyProofParsingFailedError
@@ -1480,6 +2032,12 @@ const err = new chromiumNetErrors.UnableToReuseConnectionForProxyAuthError();
 
 ```js
 const err = new chromiumNetErrors.CtConsistencyProofParsingFailedError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-171);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('CT_CONSISTENCY_PROOF_PARSING_FAILED');
+const err = new Err();
 ```
 
 ### SslObsoleteCipherError
@@ -1496,6 +2054,12 @@ const err = new chromiumNetErrors.CtConsistencyProofParsingFailedError();
 
 ```js
 const err = new chromiumNetErrors.SslObsoleteCipherError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-172);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('SSL_OBSOLETE_CIPHER');
+const err = new Err();
 ```
 
 ### WsUpgradeError
@@ -1510,6 +2074,12 @@ const err = new chromiumNetErrors.SslObsoleteCipherError();
 
 ```js
 const err = new chromiumNetErrors.WsUpgradeError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-173);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('WS_UPGRADE');
+const err = new Err();
 ```
 
 ### ReadIfReadyNotImplementedError
@@ -1524,6 +2094,12 @@ const err = new chromiumNetErrors.WsUpgradeError();
 
 ```js
 const err = new chromiumNetErrors.ReadIfReadyNotImplementedError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-174);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('READ_IF_READY_NOT_IMPLEMENTED');
+const err = new Err();
 ```
 
 ### SslVersionInterferenceError
@@ -1548,6 +2124,12 @@ const err = new chromiumNetErrors.ReadIfReadyNotImplementedError();
 
 ```js
 const err = new chromiumNetErrors.SslVersionInterferenceError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-175);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('SSL_VERSION_INTERFERENCE');
+const err = new Err();
 ```
 
 ### NoBufferSpaceError
@@ -1561,6 +2143,12 @@ const err = new chromiumNetErrors.SslVersionInterferenceError();
 
 ```js
 const err = new chromiumNetErrors.NoBufferSpaceError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-176);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('NO_BUFFER_SPACE');
+const err = new Err();
 ```
 
 ### SslClientAuthNoCommonAlgorithmsError
@@ -1575,6 +2163,12 @@ const err = new chromiumNetErrors.NoBufferSpaceError();
 
 ```js
 const err = new chromiumNetErrors.SslClientAuthNoCommonAlgorithmsError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-1478);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('SSL_CLIENT_AUTH_NO_COMMON_ALGORITHMS');
+const err = new Err();
 ```
 
 ### CertCommonNameInvalidError
@@ -1601,6 +2195,12 @@ const err = new chromiumNetErrors.SslClientAuthNoCommonAlgorithmsError();
 
 ```js
 const err = new chromiumNetErrors.CertCommonNameInvalidError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-200);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('CERT_COMMON_NAME_INVALID');
+const err = new Err();
 ```
 
 ### CertDateInvalidError
@@ -1623,6 +2223,12 @@ const err = new chromiumNetErrors.CertCommonNameInvalidError();
 
 ```js
 const err = new chromiumNetErrors.CertDateInvalidError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-201);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('CERT_DATE_INVALID');
+const err = new Err();
 ```
 
 ### CertAuthorityInvalidError
@@ -1647,6 +2253,12 @@ const err = new chromiumNetErrors.CertDateInvalidError();
 
 ```js
 const err = new chromiumNetErrors.CertAuthorityInvalidError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-202);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('CERT_AUTHORITY_INVALID');
+const err = new Err();
 ```
 
 ### CertContainsErrorsError
@@ -1667,6 +2279,12 @@ const err = new chromiumNetErrors.CertAuthorityInvalidError();
 
 ```js
 const err = new chromiumNetErrors.CertContainsErrorsError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-203);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('CERT_CONTAINS_ERRORS');
+const err = new Err();
 ```
 
 ### CertNoRevocationMechanismError
@@ -1681,6 +2299,12 @@ const err = new chromiumNetErrors.CertContainsErrorsError();
 
 ```js
 const err = new chromiumNetErrors.CertNoRevocationMechanismError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-204);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('CERT_NO_REVOCATION_MECHANISM');
+const err = new Err();
 ```
 
 ### CertUnableToCheckRevocationError
@@ -1702,6 +2326,12 @@ const err = new chromiumNetErrors.CertNoRevocationMechanismError();
 
 ```js
 const err = new chromiumNetErrors.CertUnableToCheckRevocationError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-205);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('CERT_UNABLE_TO_CHECK_REVOCATION');
+const err = new Err();
 ```
 
 ### CertRevokedError
@@ -1717,6 +2347,12 @@ const err = new chromiumNetErrors.CertUnableToCheckRevocationError();
 
 ```js
 const err = new chromiumNetErrors.CertRevokedError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-206);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('CERT_REVOKED');
+const err = new Err();
 ```
 
 ### CertInvalidError
@@ -1735,6 +2371,12 @@ const err = new chromiumNetErrors.CertRevokedError();
 
 ```js
 const err = new chromiumNetErrors.CertInvalidError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-207);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('CERT_INVALID');
+const err = new Err();
 ```
 
 ### CertWeakSignatureAlgorithmError
@@ -1749,6 +2391,12 @@ const err = new chromiumNetErrors.CertInvalidError();
 
 ```js
 const err = new chromiumNetErrors.CertWeakSignatureAlgorithmError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-208);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('CERT_WEAK_SIGNATURE_ALGORITHM');
+const err = new Err();
 ```
 
 ### CertNonUniqueNameError
@@ -1762,6 +2410,12 @@ const err = new chromiumNetErrors.CertWeakSignatureAlgorithmError();
 
 ```js
 const err = new chromiumNetErrors.CertNonUniqueNameError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-210);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('CERT_NON_UNIQUE_NAME');
+const err = new Err();
 ```
 
 ### CertWeakKeyError
@@ -1776,6 +2430,12 @@ const err = new chromiumNetErrors.CertNonUniqueNameError();
 
 ```js
 const err = new chromiumNetErrors.CertWeakKeyError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-211);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('CERT_WEAK_KEY');
+const err = new Err();
 ```
 
 ### CertNameConstraintViolationError
@@ -1789,6 +2449,12 @@ const err = new chromiumNetErrors.CertWeakKeyError();
 
 ```js
 const err = new chromiumNetErrors.CertNameConstraintViolationError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-212);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('CERT_NAME_CONSTRAINT_VIOLATION');
+const err = new Err();
 ```
 
 ### CertValidityTooLongError
@@ -1802,6 +2468,12 @@ const err = new chromiumNetErrors.CertNameConstraintViolationError();
 
 ```js
 const err = new chromiumNetErrors.CertValidityTooLongError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-213);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('CERT_VALIDITY_TOO_LONG');
+const err = new Err();
 ```
 
 ### CertificateTransparencyRequiredError
@@ -1816,6 +2488,12 @@ const err = new chromiumNetErrors.CertValidityTooLongError();
 
 ```js
 const err = new chromiumNetErrors.CertificateTransparencyRequiredError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-214);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('CERTIFICATE_TRANSPARENCY_REQUIRED');
+const err = new Err();
 ```
 
 ### CertSymantecLegacyError
@@ -1830,6 +2508,12 @@ const err = new chromiumNetErrors.CertificateTransparencyRequiredError();
 
 ```js
 const err = new chromiumNetErrors.CertSymantecLegacyError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-215);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('CERT_SYMANTEC_LEGACY');
+const err = new Err();
 ```
 
 ### CertEndError
@@ -1843,6 +2527,12 @@ const err = new chromiumNetErrors.CertSymantecLegacyError();
 
 ```js
 const err = new chromiumNetErrors.CertEndError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-216);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('CERT_END');
+const err = new Err();
 ```
 
 ### InvalidUrlError
@@ -1856,6 +2546,12 @@ const err = new chromiumNetErrors.CertEndError();
 
 ```js
 const err = new chromiumNetErrors.InvalidUrlError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-300);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('INVALID_URL');
+const err = new Err();
 ```
 
 ### DisallowedUrlSchemeError
@@ -1869,6 +2565,12 @@ const err = new chromiumNetErrors.InvalidUrlError();
 
 ```js
 const err = new chromiumNetErrors.DisallowedUrlSchemeError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-301);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('DISALLOWED_URL_SCHEME');
+const err = new Err();
 ```
 
 ### UnknownUrlSchemeError
@@ -1882,6 +2584,12 @@ const err = new chromiumNetErrors.DisallowedUrlSchemeError();
 
 ```js
 const err = new chromiumNetErrors.UnknownUrlSchemeError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-302);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('UNKNOWN_URL_SCHEME');
+const err = new Err();
 ```
 
 ### InvalidRedirectError
@@ -1895,6 +2603,12 @@ const err = new chromiumNetErrors.UnknownUrlSchemeError();
 
 ```js
 const err = new chromiumNetErrors.InvalidRedirectError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-303);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('INVALID_REDIRECT');
+const err = new Err();
 ```
 
 ### TooManyRedirectsError
@@ -1908,6 +2622,12 @@ const err = new chromiumNetErrors.InvalidRedirectError();
 
 ```js
 const err = new chromiumNetErrors.TooManyRedirectsError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-310);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('TOO_MANY_REDIRECTS');
+const err = new Err();
 ```
 
 ### UnsafeRedirectError
@@ -1922,6 +2642,12 @@ const err = new chromiumNetErrors.TooManyRedirectsError();
 
 ```js
 const err = new chromiumNetErrors.UnsafeRedirectError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-311);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('UNSAFE_REDIRECT');
+const err = new Err();
 ```
 
 ### UnsafePortError
@@ -1938,6 +2664,12 @@ const err = new chromiumNetErrors.UnsafeRedirectError();
 
 ```js
 const err = new chromiumNetErrors.UnsafePortError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-312);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('UNSAFE_PORT');
+const err = new Err();
 ```
 
 ### InvalidResponseError
@@ -1951,6 +2683,12 @@ const err = new chromiumNetErrors.UnsafePortError();
 
 ```js
 const err = new chromiumNetErrors.InvalidResponseError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-320);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('INVALID_RESPONSE');
+const err = new Err();
 ```
 
 ### InvalidChunkedEncodingError
@@ -1964,6 +2702,12 @@ const err = new chromiumNetErrors.InvalidResponseError();
 
 ```js
 const err = new chromiumNetErrors.InvalidChunkedEncodingError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-321);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('INVALID_CHUNKED_ENCODING');
+const err = new Err();
 ```
 
 ### MethodNotSupportedError
@@ -1977,6 +2721,12 @@ const err = new chromiumNetErrors.InvalidChunkedEncodingError();
 
 ```js
 const err = new chromiumNetErrors.MethodNotSupportedError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-322);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('METHOD_NOT_SUPPORTED');
+const err = new Err();
 ```
 
 ### UnexpectedProxyAuthError
@@ -1991,6 +2741,12 @@ const err = new chromiumNetErrors.MethodNotSupportedError();
 
 ```js
 const err = new chromiumNetErrors.UnexpectedProxyAuthError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-323);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('UNEXPECTED_PROXY_AUTH');
+const err = new Err();
 ```
 
 ### EmptyResponseError
@@ -2004,6 +2760,12 @@ const err = new chromiumNetErrors.UnexpectedProxyAuthError();
 
 ```js
 const err = new chromiumNetErrors.EmptyResponseError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-324);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('EMPTY_RESPONSE');
+const err = new Err();
 ```
 
 ### ResponseHeadersTooBigError
@@ -2017,6 +2779,12 @@ const err = new chromiumNetErrors.EmptyResponseError();
 
 ```js
 const err = new chromiumNetErrors.ResponseHeadersTooBigError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-325);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('RESPONSE_HEADERS_TOO_BIG');
+const err = new Err();
 ```
 
 ### PacStatusNotOkError
@@ -2030,6 +2798,12 @@ const err = new chromiumNetErrors.ResponseHeadersTooBigError();
 
 ```js
 const err = new chromiumNetErrors.PacStatusNotOkError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-326);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('PAC_STATUS_NOT_OK');
+const err = new Err();
 ```
 
 ### PacScriptFailedError
@@ -2043,6 +2817,12 @@ const err = new chromiumNetErrors.PacStatusNotOkError();
 
 ```js
 const err = new chromiumNetErrors.PacScriptFailedError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-327);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('PAC_SCRIPT_FAILED');
+const err = new Err();
 ```
 
 ### RequestRangeNotSatisfiableError
@@ -2057,6 +2837,12 @@ const err = new chromiumNetErrors.PacScriptFailedError();
 
 ```js
 const err = new chromiumNetErrors.RequestRangeNotSatisfiableError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-328);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('REQUEST_RANGE_NOT_SATISFIABLE');
+const err = new Err();
 ```
 
 ### MalformedIdentityError
@@ -2070,6 +2856,12 @@ const err = new chromiumNetErrors.RequestRangeNotSatisfiableError();
 
 ```js
 const err = new chromiumNetErrors.MalformedIdentityError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-329);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('MALFORMED_IDENTITY');
+const err = new Err();
 ```
 
 ### ContentDecodingFailedError
@@ -2083,6 +2875,12 @@ const err = new chromiumNetErrors.MalformedIdentityError();
 
 ```js
 const err = new chromiumNetErrors.ContentDecodingFailedError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-330);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('CONTENT_DECODING_FAILED');
+const err = new Err();
 ```
 
 ### NetworkIoSuspendedError
@@ -2097,6 +2895,12 @@ const err = new chromiumNetErrors.ContentDecodingFailedError();
 
 ```js
 const err = new chromiumNetErrors.NetworkIoSuspendedError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-331);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('NETWORK_IO_SUSPENDED');
+const err = new Err();
 ```
 
 ### SynReplyNotReceivedError
@@ -2110,6 +2914,12 @@ const err = new chromiumNetErrors.NetworkIoSuspendedError();
 
 ```js
 const err = new chromiumNetErrors.SynReplyNotReceivedError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-332);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('SYN_REPLY_NOT_RECEIVED');
+const err = new Err();
 ```
 
 ### EncodingConversionFailedError
@@ -2123,6 +2933,12 @@ const err = new chromiumNetErrors.SynReplyNotReceivedError();
 
 ```js
 const err = new chromiumNetErrors.EncodingConversionFailedError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-333);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('ENCODING_CONVERSION_FAILED');
+const err = new Err();
 ```
 
 ### UnrecognizedFtpDirectoryListingFormatError
@@ -2136,6 +2952,12 @@ const err = new chromiumNetErrors.EncodingConversionFailedError();
 
 ```js
 const err = new chromiumNetErrors.UnrecognizedFtpDirectoryListingFormatError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-334);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('UNRECOGNIZED_FTP_DIRECTORY_LISTING_FORMAT');
+const err = new Err();
 ```
 
 ### NoSupportedProxiesError
@@ -2149,6 +2971,12 @@ const err = new chromiumNetErrors.UnrecognizedFtpDirectoryListingFormatError();
 
 ```js
 const err = new chromiumNetErrors.NoSupportedProxiesError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-336);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('NO_SUPPORTED_PROXIES');
+const err = new Err();
 ```
 
 ### SpdyProtocolError
@@ -2162,6 +2990,12 @@ const err = new chromiumNetErrors.NoSupportedProxiesError();
 
 ```js
 const err = new chromiumNetErrors.SpdyProtocolError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-337);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('SPDY_PROTOCOL_ERROR');
+const err = new Err();
 ```
 
 ### InvalidAuthCredentialsError
@@ -2175,6 +3009,12 @@ const err = new chromiumNetErrors.SpdyProtocolError();
 
 ```js
 const err = new chromiumNetErrors.InvalidAuthCredentialsError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-338);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('INVALID_AUTH_CREDENTIALS');
+const err = new Err();
 ```
 
 ### UnsupportedAuthSchemeError
@@ -2189,6 +3029,12 @@ const err = new chromiumNetErrors.InvalidAuthCredentialsError();
 
 ```js
 const err = new chromiumNetErrors.UnsupportedAuthSchemeError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-339);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('UNSUPPORTED_AUTH_SCHEME');
+const err = new Err();
 ```
 
 ### EncodingDetectionFailedError
@@ -2202,6 +3048,12 @@ const err = new chromiumNetErrors.UnsupportedAuthSchemeError();
 
 ```js
 const err = new chromiumNetErrors.EncodingDetectionFailedError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-340);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('ENCODING_DETECTION_FAILED');
+const err = new Err();
 ```
 
 ### MissingAuthCredentialsError
@@ -2215,6 +3067,12 @@ const err = new chromiumNetErrors.EncodingDetectionFailedError();
 
 ```js
 const err = new chromiumNetErrors.MissingAuthCredentialsError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-341);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('MISSING_AUTH_CREDENTIALS');
+const err = new Err();
 ```
 
 ### UnexpectedSecurityLibraryStatusError
@@ -2228,6 +3086,12 @@ const err = new chromiumNetErrors.MissingAuthCredentialsError();
 
 ```js
 const err = new chromiumNetErrors.UnexpectedSecurityLibraryStatusError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-342);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('UNEXPECTED_SECURITY_LIBRARY_STATUS');
+const err = new Err();
 ```
 
 ### MisconfiguredAuthEnvironmentError
@@ -2242,6 +3106,12 @@ const err = new chromiumNetErrors.UnexpectedSecurityLibraryStatusError();
 
 ```js
 const err = new chromiumNetErrors.MisconfiguredAuthEnvironmentError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-343);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('MISCONFIGURED_AUTH_ENVIRONMENT');
+const err = new Err();
 ```
 
 ### UndocumentedSecurityLibraryStatusError
@@ -2255,6 +3125,12 @@ const err = new chromiumNetErrors.MisconfiguredAuthEnvironmentError();
 
 ```js
 const err = new chromiumNetErrors.UndocumentedSecurityLibraryStatusError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-344);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('UNDOCUMENTED_SECURITY_LIBRARY_STATUS');
+const err = new Err();
 ```
 
 ### ResponseBodyTooBigToDrainError
@@ -2268,6 +3144,12 @@ const err = new chromiumNetErrors.UndocumentedSecurityLibraryStatusError();
 
 ```js
 const err = new chromiumNetErrors.ResponseBodyTooBigToDrainError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-345);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('RESPONSE_BODY_TOO_BIG_TO_DRAIN');
+const err = new Err();
 ```
 
 ### ResponseHeadersMultipleContentLengthError
@@ -2281,6 +3163,12 @@ const err = new chromiumNetErrors.ResponseBodyTooBigToDrainError();
 
 ```js
 const err = new chromiumNetErrors.ResponseHeadersMultipleContentLengthError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-346);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('RESPONSE_HEADERS_MULTIPLE_CONTENT_LENGTH');
+const err = new Err();
 ```
 
 ### IncompleteSpdyHeadersError
@@ -2295,6 +3183,12 @@ const err = new chromiumNetErrors.ResponseHeadersMultipleContentLengthError();
 
 ```js
 const err = new chromiumNetErrors.IncompleteSpdyHeadersError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-347);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('INCOMPLETE_SPDY_HEADERS');
+const err = new Err();
 ```
 
 ### PacNotInDhcpError
@@ -2310,6 +3204,12 @@ const err = new chromiumNetErrors.IncompleteSpdyHeadersError();
 
 ```js
 const err = new chromiumNetErrors.PacNotInDhcpError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-348);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('PAC_NOT_IN_DHCP');
+const err = new Err();
 ```
 
 ### ResponseHeadersMultipleContentDispositionError
@@ -2323,6 +3223,12 @@ const err = new chromiumNetErrors.PacNotInDhcpError();
 
 ```js
 const err = new chromiumNetErrors.ResponseHeadersMultipleContentDispositionError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-349);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('RESPONSE_HEADERS_MULTIPLE_CONTENT_DISPOSITION');
+const err = new Err();
 ```
 
 ### ResponseHeadersMultipleLocationError
@@ -2336,6 +3242,12 @@ const err = new chromiumNetErrors.ResponseHeadersMultipleContentDispositionError
 
 ```js
 const err = new chromiumNetErrors.ResponseHeadersMultipleLocationError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-350);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('RESPONSE_HEADERS_MULTIPLE_LOCATION');
+const err = new Err();
 ```
 
 ### SpdyServerRefusedStreamError
@@ -2353,6 +3265,12 @@ const err = new chromiumNetErrors.ResponseHeadersMultipleLocationError();
 
 ```js
 const err = new chromiumNetErrors.SpdyServerRefusedStreamError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-351);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('SPDY_SERVER_REFUSED_STREAM');
+const err = new Err();
 ```
 
 ### SpdyPingFailedError
@@ -2366,6 +3284,12 @@ const err = new chromiumNetErrors.SpdyServerRefusedStreamError();
 
 ```js
 const err = new chromiumNetErrors.SpdyPingFailedError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-352);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('SPDY_PING_FAILED');
+const err = new Err();
 ```
 
 ### ContentLengthMismatchError
@@ -2380,6 +3304,12 @@ const err = new chromiumNetErrors.SpdyPingFailedError();
 
 ```js
 const err = new chromiumNetErrors.ContentLengthMismatchError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-354);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('CONTENT_LENGTH_MISMATCH');
+const err = new Err();
 ```
 
 ### IncompleteChunkedEncodingError
@@ -2394,6 +3324,12 @@ const err = new chromiumNetErrors.ContentLengthMismatchError();
 
 ```js
 const err = new chromiumNetErrors.IncompleteChunkedEncodingError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-355);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('INCOMPLETE_CHUNKED_ENCODING');
+const err = new Err();
 ```
 
 ### QuicProtocolError
@@ -2407,6 +3343,12 @@ const err = new chromiumNetErrors.IncompleteChunkedEncodingError();
 
 ```js
 const err = new chromiumNetErrors.QuicProtocolError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-356);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('QUIC_PROTOCOL_ERROR');
+const err = new Err();
 ```
 
 ### ResponseHeadersTruncatedError
@@ -2420,6 +3362,12 @@ const err = new chromiumNetErrors.QuicProtocolError();
 
 ```js
 const err = new chromiumNetErrors.ResponseHeadersTruncatedError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-357);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('RESPONSE_HEADERS_TRUNCATED');
+const err = new Err();
 ```
 
 ### QuicHandshakeFailedError
@@ -2434,6 +3382,12 @@ const err = new chromiumNetErrors.ResponseHeadersTruncatedError();
 
 ```js
 const err = new chromiumNetErrors.QuicHandshakeFailedError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-358);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('QUIC_HANDSHAKE_FAILED');
+const err = new Err();
 ```
 
 ### SpdyInadequateTransportSecurityError
@@ -2447,6 +3401,12 @@ const err = new chromiumNetErrors.QuicHandshakeFailedError();
 
 ```js
 const err = new chromiumNetErrors.SpdyInadequateTransportSecurityError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-360);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('SPDY_INADEQUATE_TRANSPORT_SECURITY');
+const err = new Err();
 ```
 
 ### SpdyFlowControlError
@@ -2460,6 +3420,12 @@ const err = new chromiumNetErrors.SpdyInadequateTransportSecurityError();
 
 ```js
 const err = new chromiumNetErrors.SpdyFlowControlError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-361);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('SPDY_FLOW_CONTROL_ERROR');
+const err = new Err();
 ```
 
 ### SpdyFrameSizeError
@@ -2473,6 +3439,12 @@ const err = new chromiumNetErrors.SpdyFlowControlError();
 
 ```js
 const err = new chromiumNetErrors.SpdyFrameSizeError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-362);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('SPDY_FRAME_SIZE_ERROR');
+const err = new Err();
 ```
 
 ### SpdyCompressionError
@@ -2486,6 +3458,12 @@ const err = new chromiumNetErrors.SpdyFrameSizeError();
 
 ```js
 const err = new chromiumNetErrors.SpdyCompressionError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-363);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('SPDY_COMPRESSION_ERROR');
+const err = new Err();
 ```
 
 ### ProxyAuthRequestedWithNoConnectionError
@@ -2499,6 +3477,12 @@ const err = new chromiumNetErrors.SpdyCompressionError();
 
 ```js
 const err = new chromiumNetErrors.ProxyAuthRequestedWithNoConnectionError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-364);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('PROXY_AUTH_REQUESTED_WITH_NO_CONNECTION');
+const err = new Err();
 ```
 
 ### PacScriptTerminatedError
@@ -2512,6 +3496,12 @@ const err = new chromiumNetErrors.ProxyAuthRequestedWithNoConnectionError();
 
 ```js
 const err = new chromiumNetErrors.PacScriptTerminatedError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-367);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('PAC_SCRIPT_TERMINATED');
+const err = new Err();
 ```
 
 ### InvalidHttpResponseError
@@ -2526,6 +3516,12 @@ const err = new chromiumNetErrors.PacScriptTerminatedError();
 
 ```js
 const err = new chromiumNetErrors.InvalidHttpResponseError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-370);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('INVALID_HTTP_RESPONSE');
+const err = new Err();
 ```
 
 ### ContentDecodingInitFailedError
@@ -2539,6 +3535,12 @@ const err = new chromiumNetErrors.InvalidHttpResponseError();
 
 ```js
 const err = new chromiumNetErrors.ContentDecodingInitFailedError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-371);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('CONTENT_DECODING_INIT_FAILED');
+const err = new Err();
 ```
 
 ### SpdyRstStreamNoErrorReceivedError
@@ -2554,6 +3556,12 @@ const err = new chromiumNetErrors.ContentDecodingInitFailedError();
 
 ```js
 const err = new chromiumNetErrors.SpdyRstStreamNoErrorReceivedError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-372);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('SPDY_RST_STREAM_NO_ERROR_RECEIVED');
+const err = new Err();
 ```
 
 ### SpdyPushedStreamNotAvailableError
@@ -2567,6 +3575,12 @@ const err = new chromiumNetErrors.SpdyRstStreamNoErrorReceivedError();
 
 ```js
 const err = new chromiumNetErrors.SpdyPushedStreamNotAvailableError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-373);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('SPDY_PUSHED_STREAM_NOT_AVAILABLE');
+const err = new Err();
 ```
 
 ### SpdyClaimedPushedStreamResetByServerError
@@ -2581,6 +3595,12 @@ const err = new chromiumNetErrors.SpdyPushedStreamNotAvailableError();
 
 ```js
 const err = new chromiumNetErrors.SpdyClaimedPushedStreamResetByServerError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-374);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('SPDY_CLAIMED_PUSHED_STREAM_RESET_BY_SERVER');
+const err = new Err();
 ```
 
 ### TooManyRetriesError
@@ -2597,6 +3617,12 @@ const err = new chromiumNetErrors.SpdyClaimedPushedStreamResetByServerError();
 
 ```js
 const err = new chromiumNetErrors.TooManyRetriesError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-375);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('TOO_MANY_RETRIES');
+const err = new Err();
 ```
 
 ### CacheMissError
@@ -2610,6 +3636,12 @@ const err = new chromiumNetErrors.TooManyRetriesError();
 
 ```js
 const err = new chromiumNetErrors.CacheMissError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-400);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('CACHE_MISS');
+const err = new Err();
 ```
 
 ### CacheReadFailureError
@@ -2623,6 +3655,12 @@ const err = new chromiumNetErrors.CacheMissError();
 
 ```js
 const err = new chromiumNetErrors.CacheReadFailureError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-401);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('CACHE_READ_FAILURE');
+const err = new Err();
 ```
 
 ### CacheWriteFailureError
@@ -2636,6 +3674,12 @@ const err = new chromiumNetErrors.CacheReadFailureError();
 
 ```js
 const err = new chromiumNetErrors.CacheWriteFailureError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-402);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('CACHE_WRITE_FAILURE');
+const err = new Err();
 ```
 
 ### CacheOperationNotSupportedError
@@ -2649,6 +3693,12 @@ const err = new chromiumNetErrors.CacheWriteFailureError();
 
 ```js
 const err = new chromiumNetErrors.CacheOperationNotSupportedError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-403);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('CACHE_OPERATION_NOT_SUPPORTED');
+const err = new Err();
 ```
 
 ### CacheOpenFailureError
@@ -2662,6 +3712,12 @@ const err = new chromiumNetErrors.CacheOperationNotSupportedError();
 
 ```js
 const err = new chromiumNetErrors.CacheOpenFailureError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-404);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('CACHE_OPEN_FAILURE');
+const err = new Err();
 ```
 
 ### CacheCreateFailureError
@@ -2675,6 +3731,12 @@ const err = new chromiumNetErrors.CacheOpenFailureError();
 
 ```js
 const err = new chromiumNetErrors.CacheCreateFailureError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-405);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('CACHE_CREATE_FAILURE');
+const err = new Err();
 ```
 
 ### CacheRaceError
@@ -2691,6 +3753,12 @@ const err = new chromiumNetErrors.CacheCreateFailureError();
 
 ```js
 const err = new chromiumNetErrors.CacheRaceError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-406);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('CACHE_RACE');
+const err = new Err();
 ```
 
 ### CacheChecksumReadFailureError
@@ -2707,6 +3775,12 @@ const err = new chromiumNetErrors.CacheRaceError();
 
 ```js
 const err = new chromiumNetErrors.CacheChecksumReadFailureError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-407);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('CACHE_CHECKSUM_READ_FAILURE');
+const err = new Err();
 ```
 
 ### CacheChecksumMismatchError
@@ -2722,6 +3796,12 @@ const err = new chromiumNetErrors.CacheChecksumReadFailureError();
 
 ```js
 const err = new chromiumNetErrors.CacheChecksumMismatchError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-408);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('CACHE_CHECKSUM_MISMATCH');
+const err = new Err();
 ```
 
 ### CacheLockTimeoutError
@@ -2735,6 +3815,12 @@ const err = new chromiumNetErrors.CacheChecksumMismatchError();
 
 ```js
 const err = new chromiumNetErrors.CacheLockTimeoutError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-409);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('CACHE_LOCK_TIMEOUT');
+const err = new Err();
 ```
 
 ### CacheAuthFailureAfterReadError
@@ -2749,6 +3835,12 @@ const err = new chromiumNetErrors.CacheLockTimeoutError();
 
 ```js
 const err = new chromiumNetErrors.CacheAuthFailureAfterReadError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-410);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('CACHE_AUTH_FAILURE_AFTER_READ');
+const err = new Err();
 ```
 
 ### CacheEntryNotSuitableError
@@ -2764,6 +3856,12 @@ const err = new chromiumNetErrors.CacheAuthFailureAfterReadError();
 
 ```js
 const err = new chromiumNetErrors.CacheEntryNotSuitableError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-411);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('CACHE_ENTRY_NOT_SUITABLE');
+const err = new Err();
 ```
 
 ### InsecureResponseError
@@ -2777,6 +3875,12 @@ const err = new chromiumNetErrors.CacheEntryNotSuitableError();
 
 ```js
 const err = new chromiumNetErrors.InsecureResponseError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-501);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('INSECURE_RESPONSE');
+const err = new Err();
 ```
 
 ### NoPrivateKeyForCertError
@@ -2791,6 +3895,12 @@ const err = new chromiumNetErrors.InsecureResponseError();
 
 ```js
 const err = new chromiumNetErrors.NoPrivateKeyForCertError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-502);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('NO_PRIVATE_KEY_FOR_CERT');
+const err = new Err();
 ```
 
 ### AddUserCertFailedError
@@ -2804,6 +3914,12 @@ const err = new chromiumNetErrors.NoPrivateKeyForCertError();
 
 ```js
 const err = new chromiumNetErrors.AddUserCertFailedError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-503);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('ADD_USER_CERT_FAILED');
+const err = new Err();
 ```
 
 ### FtpFailedError
@@ -2818,6 +3934,12 @@ const err = new chromiumNetErrors.AddUserCertFailedError();
 
 ```js
 const err = new chromiumNetErrors.FtpFailedError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-601);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('FTP_FAILED');
+const err = new Err();
 ```
 
 ### FtpServiceUnavailableError
@@ -2833,6 +3955,12 @@ const err = new chromiumNetErrors.FtpFailedError();
 
 ```js
 const err = new chromiumNetErrors.FtpServiceUnavailableError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-602);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('FTP_SERVICE_UNAVAILABLE');
+const err = new Err();
 ```
 
 ### FtpTransferAbortedError
@@ -2847,6 +3975,12 @@ const err = new chromiumNetErrors.FtpServiceUnavailableError();
 
 ```js
 const err = new chromiumNetErrors.FtpTransferAbortedError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-603);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('FTP_TRANSFER_ABORTED');
+const err = new Err();
 ```
 
 ### FtpFileBusyError
@@ -2862,6 +3996,12 @@ const err = new chromiumNetErrors.FtpTransferAbortedError();
 
 ```js
 const err = new chromiumNetErrors.FtpFileBusyError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-604);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('FTP_FILE_BUSY');
+const err = new Err();
 ```
 
 ### FtpSyntaxError
@@ -2876,6 +4016,12 @@ const err = new chromiumNetErrors.FtpFileBusyError();
 
 ```js
 const err = new chromiumNetErrors.FtpSyntaxError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-605);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('FTP_SYNTAX_ERROR');
+const err = new Err();
 ```
 
 ### FtpCommandNotSupportedError
@@ -2890,6 +4036,12 @@ const err = new chromiumNetErrors.FtpSyntaxError();
 
 ```js
 const err = new chromiumNetErrors.FtpCommandNotSupportedError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-606);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('FTP_COMMAND_NOT_SUPPORTED');
+const err = new Err();
 ```
 
 ### FtpBadCommandSequenceError
@@ -2905,6 +4057,12 @@ const err = new chromiumNetErrors.FtpCommandNotSupportedError();
 
 ```js
 const err = new chromiumNetErrors.FtpBadCommandSequenceError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-607);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('FTP_BAD_COMMAND_SEQUENCE');
+const err = new Err();
 ```
 
 ### ImportCaCertNotCaError
@@ -2918,6 +4076,12 @@ const err = new chromiumNetErrors.FtpBadCommandSequenceError();
 
 ```js
 const err = new chromiumNetErrors.ImportCaCertNotCaError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-703);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('IMPORT_CA_CERT_NOT_CA');
+const err = new Err();
 ```
 
 ### ImportCertAlreadyExistsError
@@ -2933,6 +4097,12 @@ const err = new chromiumNetErrors.ImportCaCertNotCaError();
 
 ```js
 const err = new chromiumNetErrors.ImportCertAlreadyExistsError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-704);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('IMPORT_CERT_ALREADY_EXISTS');
+const err = new Err();
 ```
 
 ### ImportCaCertFailedError
@@ -2946,6 +4116,12 @@ const err = new chromiumNetErrors.ImportCertAlreadyExistsError();
 
 ```js
 const err = new chromiumNetErrors.ImportCaCertFailedError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-705);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('IMPORT_CA_CERT_FAILED');
+const err = new Err();
 ```
 
 ### ImportServerCertFailedError
@@ -2959,6 +4135,12 @@ const err = new chromiumNetErrors.ImportCaCertFailedError();
 
 ```js
 const err = new chromiumNetErrors.ImportServerCertFailedError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-706);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('IMPORT_SERVER_CERT_FAILED');
+const err = new Err();
 ```
 
 ### KeyGenerationFailedError
@@ -2972,6 +4154,12 @@ const err = new chromiumNetErrors.ImportServerCertFailedError();
 
 ```js
 const err = new chromiumNetErrors.KeyGenerationFailedError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-710);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('KEY_GENERATION_FAILED');
+const err = new Err();
 ```
 
 ### PrivateKeyExportFailedError
@@ -2985,6 +4173,12 @@ const err = new chromiumNetErrors.KeyGenerationFailedError();
 
 ```js
 const err = new chromiumNetErrors.PrivateKeyExportFailedError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-712);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('PRIVATE_KEY_EXPORT_FAILED');
+const err = new Err();
 ```
 
 ### SelfSignedCertGenerationFailedError
@@ -2998,6 +4192,12 @@ const err = new chromiumNetErrors.PrivateKeyExportFailedError();
 
 ```js
 const err = new chromiumNetErrors.SelfSignedCertGenerationFailedError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-713);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('SELF_SIGNED_CERT_GENERATION_FAILED');
+const err = new Err();
 ```
 
 ### CertDatabaseChangedError
@@ -3011,6 +4211,12 @@ const err = new chromiumNetErrors.SelfSignedCertGenerationFailedError();
 
 ```js
 const err = new chromiumNetErrors.CertDatabaseChangedError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-714);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('CERT_DATABASE_CHANGED');
+const err = new Err();
 ```
 
 ### DnsMalformedResponseError
@@ -3024,6 +4230,12 @@ const err = new chromiumNetErrors.CertDatabaseChangedError();
 
 ```js
 const err = new chromiumNetErrors.DnsMalformedResponseError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-800);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('DNS_MALFORMED_RESPONSE');
+const err = new Err();
 ```
 
 ### DnsServerRequiresTcpError
@@ -3037,6 +4249,12 @@ const err = new chromiumNetErrors.DnsMalformedResponseError();
 
 ```js
 const err = new chromiumNetErrors.DnsServerRequiresTcpError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-801);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('DNS_SERVER_REQUIRES_TCP');
+const err = new Err();
 ```
 
 ### DnsServerFailedError
@@ -3058,6 +4276,12 @@ const err = new chromiumNetErrors.DnsServerRequiresTcpError();
 
 ```js
 const err = new chromiumNetErrors.DnsServerFailedError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-802);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('DNS_SERVER_FAILED');
+const err = new Err();
 ```
 
 ### DnsTimedOutError
@@ -3071,6 +4295,12 @@ const err = new chromiumNetErrors.DnsServerFailedError();
 
 ```js
 const err = new chromiumNetErrors.DnsTimedOutError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-803);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('DNS_TIMED_OUT');
+const err = new Err();
 ```
 
 ### DnsCacheMissError
@@ -3084,6 +4314,12 @@ const err = new chromiumNetErrors.DnsTimedOutError();
 
 ```js
 const err = new chromiumNetErrors.DnsCacheMissError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-804);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('DNS_CACHE_MISS');
+const err = new Err();
 ```
 
 ### DnsSearchEmptyError
@@ -3097,6 +4333,12 @@ const err = new chromiumNetErrors.DnsCacheMissError();
 
 ```js
 const err = new chromiumNetErrors.DnsSearchEmptyError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-805);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('DNS_SEARCH_EMPTY');
+const err = new Err();
 ```
 
 ### DnsSortError
@@ -3110,6 +4352,12 @@ const err = new chromiumNetErrors.DnsSearchEmptyError();
 
 ```js
 const err = new chromiumNetErrors.DnsSortError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-806);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('DNS_SORT_ERROR');
+const err = new Err();
 ```
 
 ### DnsHttpFailedError
@@ -3123,6 +4371,12 @@ const err = new chromiumNetErrors.DnsSortError();
 
 ```js
 const err = new chromiumNetErrors.DnsHttpFailedError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-807);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('DNS_HTTP_FAILED');
+const err = new Err();
 ```
 
 <!--END_ERROR_LIST-->
