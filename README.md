@@ -2157,14 +2157,14 @@ const err = new Err();
 > private key and the server's preferences.
 
  - Name: `SslClientAuthNoCommonAlgorithmsError`
- - Code: `-1478`
+ - Code: `-177`
  - Description: `SSL_CLIENT_AUTH_NO_COMMON_ALGORITHMS`
- - Type: unknown
+ - Type: connection
 
 ```js
 const err = new chromiumNetErrors.SslClientAuthNoCommonAlgorithmsError();
 // or
-const Err = chromiumNetErrors.getErrorByCode(-1478);
+const Err = chromiumNetErrors.getErrorByCode(-177);
 const err = new Err();
 // or
 const Err = chromiumNetErrors.getErrorByDescription('SSL_CLIENT_AUTH_NO_COMMON_ALGORITHMS');
