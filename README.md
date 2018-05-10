@@ -3625,6 +3625,44 @@ const Err = chromiumNetErrors.getErrorByDescription('TOO_MANY_RETRIES');
 const err = new Err();
 ```
 
+### SpdyStreamClosedError
+
+> Received an HTTP/2 frame on a closed stream.
+
+ - Name: `SpdyStreamClosedError`
+ - Code: `-376`
+ - Description: `SPDY_STREAM_CLOSED`
+ - Type: http
+
+```js
+const err = new chromiumNetErrors.SpdyStreamClosedError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-376);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('SPDY_STREAM_CLOSED');
+const err = new Err();
+```
+
+### SpdyClientRefusedStreamError
+
+> Client is refusing an HTTP/2 stream.
+
+ - Name: `SpdyClientRefusedStreamError`
+ - Code: `-377`
+ - Description: `SPDY_CLIENT_REFUSED_STREAM`
+ - Type: http
+
+```js
+const err = new chromiumNetErrors.SpdyClientRefusedStreamError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-377);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('SPDY_CLIENT_REFUSED_STREAM');
+const err = new Err();
+```
+
 ### CacheMissError
 
 > The cache does not have the requested entry.
