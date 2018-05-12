@@ -3663,6 +3663,26 @@ const Err = chromiumNetErrors.getErrorByDescription('SPDY_CLIENT_REFUSED_STREAM'
 const err = new Err();
 ```
 
+### SpdyPushedResponseDoesNotMatchError
+
+> A pushed HTTP/2 stream was claimed by a request based on matching URL and
+> request headers, but the pushed response headers do not match the request.
+
+ - Name: `SpdyPushedResponseDoesNotMatchError`
+ - Code: `-378`
+ - Description: `SPDY_PUSHED_RESPONSE_DOES_NOT_MATCH`
+ - Type: http
+
+```js
+const err = new chromiumNetErrors.SpdyPushedResponseDoesNotMatchError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-378);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('SPDY_PUSHED_RESPONSE_DOES_NOT_MATCH');
+const err = new Err();
+```
+
 ### CacheMissError
 
 > The cache does not have the requested entry.
