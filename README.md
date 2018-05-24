@@ -3980,6 +3980,25 @@ const Err = chromiumNetErrors.getErrorByDescription('ADD_USER_CERT_FAILED');
 const err = new Err();
 ```
 
+### InvalidSignedExchangeError
+
+> An error occurred while handling a signed exchange.
+
+ - Name: `InvalidSignedExchangeError`
+ - Code: `-504`
+ - Description: `INVALID_SIGNED_EXCHANGE`
+ - Type: unknown
+
+```js
+const err = new chromiumNetErrors.InvalidSignedExchangeError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-504);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('INVALID_SIGNED_EXCHANGE');
+const err = new Err();
+```
+
 ### FtpFailedError
 
 > A generic error for failed FTP control connection command.
