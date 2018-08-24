@@ -2200,8 +2200,7 @@ const err = new Err();
 > received before any data is returned from the socket. The request should be
 > retried with early data disabled.
 > 
-> See https://tools.ietf.org/html/draft-ietf-tls-tls13-28#appendix-D.3 for
-> details.
+> See https://tools.ietf.org/html/rfc8446#appendix-D.3 for details.
 
  - Name: `WrongVersionOnEarlyDataError`
  - Code: `-179`
