@@ -2217,6 +2217,29 @@ const Err = chromiumNetErrors.getErrorByDescription('WRONG_VERSION_ON_EARLY_DATA
 const err = new Err();
 ```
 
+### Tls13DowngradeDetectedError
+
+> TLS 1.3 was enabled, but a lower version was negotiated and the server
+> returned a value indicating it supported TLS 1.3. This is part of a security
+> check in TLS 1.3, but it may also indicate the user is behind a buggy
+> TLS-terminating proxy which implemented TLS 1.2 incorrectly. (See
+> https://crbug.com/boringssl/226.)
+
+ - Name: `Tls13DowngradeDetectedError`
+ - Code: `-180`
+ - Description: `TLS13_DOWNGRADE_DETECTED`
+ - Type: connection
+
+```js
+const err = new chromiumNetErrors.Tls13DowngradeDetectedError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-180);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('TLS13_DOWNGRADE_DETECTED');
+const err = new Err();
+```
+
 ### CertCommonNameInvalidError
 
 > The server responded with a certificate whose common name did not match
