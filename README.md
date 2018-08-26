@@ -3531,6 +3531,44 @@ const Err = chromiumNetErrors.getErrorByDescription('PROXY_AUTH_REQUESTED_WITH_N
 const err = new Err();
 ```
 
+### Http_1_1RequiredError
+
+> HTTP_1_1_REQUIRED error code received on HTTP/2 session.
+
+ - Name: `Http_1_1RequiredError`
+ - Code: `-365`
+ - Description: `HTTP_1_1_REQUIRED`
+ - Type: http
+
+```js
+const err = new chromiumNetErrors.Http_1_1RequiredError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-365);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('HTTP_1_1_REQUIRED');
+const err = new Err();
+```
+
+### ProxyHttp_1_1RequiredError
+
+> HTTP_1_1_REQUIRED error code received on HTTP/2 session to proxy.
+
+ - Name: `ProxyHttp_1_1RequiredError`
+ - Code: `-366`
+ - Description: `PROXY_HTTP_1_1_REQUIRED`
+ - Type: http
+
+```js
+const err = new chromiumNetErrors.ProxyHttp_1_1RequiredError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-366);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('PROXY_HTTP_1_1_REQUIRED');
+const err = new Err();
+```
+
 ### PacScriptTerminatedError
 
 > The PAC script terminated fatally and must be reloaded.
@@ -4188,6 +4226,44 @@ const Err = chromiumNetErrors.getErrorByDescription('FTP_BAD_COMMAND_SEQUENCE');
 const err = new Err();
 ```
 
+### Pkcs12ImportBadPasswordError
+
+> PKCS #12 import failed due to incorrect password.
+
+ - Name: `Pkcs12ImportBadPasswordError`
+ - Code: `-701`
+ - Description: `PKCS12_IMPORT_BAD_PASSWORD`
+ - Type: certificate-manager
+
+```js
+const err = new chromiumNetErrors.Pkcs12ImportBadPasswordError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-701);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('PKCS12_IMPORT_BAD_PASSWORD');
+const err = new Err();
+```
+
+### Pkcs12ImportFailedError
+
+> PKCS #12 import failed due to other error.
+
+ - Name: `Pkcs12ImportFailedError`
+ - Code: `-702`
+ - Description: `PKCS12_IMPORT_FAILED`
+ - Type: certificate-manager
+
+```js
+const err = new chromiumNetErrors.Pkcs12ImportFailedError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-702);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('PKCS12_IMPORT_FAILED');
+const err = new Err();
+```
+
 ### ImportCaCertNotCaError
 
 > CA import failed - not a CA cert.
@@ -4263,6 +4339,63 @@ const Err = chromiumNetErrors.getErrorByCode(-706);
 const err = new Err();
 // or
 const Err = chromiumNetErrors.getErrorByDescription('IMPORT_SERVER_CERT_FAILED');
+const err = new Err();
+```
+
+### Pkcs12ImportInvalidMacError
+
+> PKCS #12 import failed due to invalid MAC.
+
+ - Name: `Pkcs12ImportInvalidMacError`
+ - Code: `-707`
+ - Description: `PKCS12_IMPORT_INVALID_MAC`
+ - Type: certificate-manager
+
+```js
+const err = new chromiumNetErrors.Pkcs12ImportInvalidMacError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-707);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('PKCS12_IMPORT_INVALID_MAC');
+const err = new Err();
+```
+
+### Pkcs12ImportInvalidFileError
+
+> PKCS #12 import failed due to invalid/corrupt file.
+
+ - Name: `Pkcs12ImportInvalidFileError`
+ - Code: `-708`
+ - Description: `PKCS12_IMPORT_INVALID_FILE`
+ - Type: certificate-manager
+
+```js
+const err = new chromiumNetErrors.Pkcs12ImportInvalidFileError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-708);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('PKCS12_IMPORT_INVALID_FILE');
+const err = new Err();
+```
+
+### Pkcs12ImportUnsupportedError
+
+> PKCS #12 import failed due to unsupported features.
+
+ - Name: `Pkcs12ImportUnsupportedError`
+ - Code: `-709`
+ - Description: `PKCS12_IMPORT_UNSUPPORTED`
+ - Type: certificate-manager
+
+```js
+const err = new chromiumNetErrors.Pkcs12ImportUnsupportedError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-709);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('PKCS12_IMPORT_UNSUPPORTED');
 const err = new Err();
 ```
 

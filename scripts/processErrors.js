@@ -16,7 +16,7 @@ const outputPath = path.resolve(process.cwd(), OUTPUT_FILE);
 
 const EMPTY_LINE_REGEX = /^\s*$/;
 const COMMENT_REGEX = /^\/\/\s*/;
-const NET_ERROR_REGEX = /^NET_ERROR\(([A-Z_]+), ([0-9-]+)\)$/;
+const NET_ERROR_REGEX = /^NET_ERROR\(([A-Z0-9_]+), ([0-9-]+)\)$/;
 
 const errorTypesMap = {
   0: errorTypes.ERROR_TYPE_SYSTEM,
