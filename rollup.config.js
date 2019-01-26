@@ -31,7 +31,7 @@ export default {
       babelrc: false,
       plugins: [
         [
-          'transform-object-rest-spread',
+          '@babel/plugin-proposal-object-rest-spread',
           { useBuiltIns: true },
         ],
       ],
