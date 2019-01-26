@@ -717,7 +717,7 @@ const err = new Err();
 
 > The request failed because the response was delivered along with requirements
 > which are not met ('X-Frame-Options' and 'Content-Security-Policy' ancestor
-> checks, for instance).
+> checks and 'Cross-Origin-Resource-Policy', for instance).
 
  - Name: `BlockedByResponseError`
  - Code: `-27`
