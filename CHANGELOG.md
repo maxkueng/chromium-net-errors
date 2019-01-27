@@ -1,6 +1,10 @@
 Changelog
 =========
 
+## Version 4.0.1
+
+ - Retro-update change log
+
 ## Version 4.0.0
 
 ### Breaking Changes
