@@ -13,7 +13,7 @@
   "module": "build/index.es.js",
   "jsnext:main": "build/index.es.js",
   "files": [
-    "./build"
+    "build/*.js"
   ],
   "repository": {
     "type": "git",
