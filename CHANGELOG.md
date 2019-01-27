@@ -1,6 +1,54 @@
 Changelog
 =========
 
+## Version 4.0.0
+
+### Breaking Changes
+
+ - Drop support for node.js < 8.0.0
+
+## Version 3.6.1
+
+ - Fix ES build not being includes in the npm package
+ - Update `BlockedByResponseError` error description
+ - Upgrade dev dependencies
+
+## Version 3.6.0
+
+ - Add `Tls13DowngradeDetectedError` error type
+ - Fix detecting errors with numbers in the name
+
+## Version 3.5.0
+
+ - Update `WrongVersionOnEarlyDataError` error description
+
+## Version 3.4.0
+
+ - Add `EarlyDataRejectedError` error type
+ - Add `WrongVersionOnEarlyDataError` error type
+
+## Version 3.3.0
+
+ - Add `InvalidSignedExchangeError` error type
+ - Update dev dependencies
+
+## Version 3.2.0
+
+ - Add `SpdyPushedResponseDoesNotMatchError` error type
+
+## Version 3.1.0
+
+ - Add `SpdyStreamClosedError` and `SpdyClientRefusedStreamError` error types
+
+## Version 3.0.0
+
+ - Fix examples in Readme
+ - Add more examples in Readme
+
+### Breaking Changes
+
+ - Change error code of `SslClientAuthNoCommonAlgorithmsError` from -1478 to -177
+
 ## Version 2.2.0
 
  - Add `description` property to errors that contains the unmodified error name
@@ -25,7 +73,7 @@ Changelog
 
 ## Version 2.1.0
 
- - Add TooManyRetriesError (code -375)
+ - Add `TooManyRetriesError` (code -375)
 
 ## Version 2.0.1
 
@@ -42,7 +90,7 @@ Changelog
  - Code quality monitoring
  - Daily integration tests to check for updates in net_error_list.h
 
-___Breaking Changes___
+### Breaking Changes
 
  - `errors.json` is no longer part of the package. To get a list of all errors
    use `getErrors()` instead.
