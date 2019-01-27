@@ -42,6 +42,9 @@
       "url": "https://github.com/maxkueng/chromium-net-errors/raw/master/LICENSE"
     }
   ],
+  "engines": {
+    "node": ">=8.0.0"
+  },
   "devDependencies": {
     "@babel/core": "^7.2.2",
     "@babel/plugin-proposal-object-rest-spread": "^7.3.1",
