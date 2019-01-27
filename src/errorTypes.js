@@ -7,4 +7,3 @@ export const ERROR_TYPE_UNKNOWN = 'unknown';
 export const ERROR_TYPE_FTP = 'ftp';
 export const ERROR_TYPE_CERTIFICATE_MANAGER = 'certificate-manager';
 export const ERROR_TYPE_DNS = 'dns';
-

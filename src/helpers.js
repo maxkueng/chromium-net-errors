@@ -37,4 +37,3 @@ export function getErrorByDescription(description) {
 
   return Err;
 }
-
