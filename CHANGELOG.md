@@ -1,7 +1,7 @@
 Changelog
 =========
 
-## Next
+## Version 4.1.0
 
  - Add `CacheDoomFailureError` error type
 
