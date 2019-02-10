@@ -4029,6 +4029,25 @@ const Err = chromiumNetErrors.getErrorByDescription('CACHE_ENTRY_NOT_SUITABLE');
 const err = new Err();
 ```
 
+### CacheDoomFailureError
+
+> The disk cache is unable to doom this entry.
+
+ - Name: `CacheDoomFailureError`
+ - Code: `-412`
+ - Description: `CACHE_DOOM_FAILURE`
+ - Type: cache
+
+```js
+const err = new chromiumNetErrors.CacheDoomFailureError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-412);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('CACHE_DOOM_FAILURE');
+const err = new Err();
+```
+
 ### InsecureResponseError
 
 > The server's response was insecure (e.g. there was a cert error).

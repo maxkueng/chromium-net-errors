@@ -1,6 +1,10 @@
 Changelog
 =========
 
+## Next
+
+ - Add `CacheDoomFailureError` error type
+
 ## Version 4.0.1
 
  - Retro-update change log
