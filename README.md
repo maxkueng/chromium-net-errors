@@ -1518,24 +1518,27 @@ const Err = chromiumNetErrors.getErrorByDescription('TEMPORARILY_THROTTLED');
 const err = new Err();
 ```
 
-### HttpsProxyTunnelResponseError
+### HttpsProxyTunnelResponseRedirectError
 
 > A request to create an SSL tunnel connection through the HTTPS proxy
-> received a non-200 (OK) and non-407 (Proxy Auth) response. The response
-> body might include a description of why the request failed.
+> received a 302 (temporary redirect) response. The response body might
+> include a description of why the request failed.
+> 
+> TODO(https://crbug.com/928551): This is deprecated and should not be used by
+> new code.
 
- - Name: `HttpsProxyTunnelResponseError`
+ - Name: `HttpsProxyTunnelResponseRedirectError`
  - Code: `-140`
- - Description: `HTTPS_PROXY_TUNNEL_RESPONSE`
+ - Description: `HTTPS_PROXY_TUNNEL_RESPONSE_REDIRECT`
  - Type: connection
 
 ```js
-const err = new chromiumNetErrors.HttpsProxyTunnelResponseError();
+const err = new chromiumNetErrors.HttpsProxyTunnelResponseRedirectError();
 // or
 const Err = chromiumNetErrors.getErrorByCode(-140);
 const err = new Err();
 // or
-const Err = chromiumNetErrors.getErrorByDescription('HTTPS_PROXY_TUNNEL_RESPONSE');
+const Err = chromiumNetErrors.getErrorByDescription('HTTPS_PROXY_TUNNEL_RESPONSE_REDIRECT');
 const err = new Err();
 ```
 

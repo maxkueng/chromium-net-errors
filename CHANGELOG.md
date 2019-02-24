@@ -1,6 +1,10 @@
 Changelog
 =========
 
+## Next
+
+ - Rename `HttpsProxyTunnelResponseError` (-140) to `HttpsProxyTunnelResponseRedirectError`
+
 ## Version 4.1.0
 
  - Add `CacheDoomFailureError` error type
