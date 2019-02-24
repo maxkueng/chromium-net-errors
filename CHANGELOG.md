@@ -4,6 +4,7 @@ Changelog
 ## Next
 
  - Rename `HttpsProxyTunnelResponseError` (-140) to `HttpsProxyTunnelResponseRedirectError`
+ - Add `CacheOpenOrCreateFailureError` error type (-413)
 
 ## Version 4.1.0
 

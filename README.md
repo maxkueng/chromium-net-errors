@@ -4051,6 +4051,25 @@ const Err = chromiumNetErrors.getErrorByDescription('CACHE_DOOM_FAILURE');
 const err = new Err();
 ```
 
+### CacheOpenOrCreateFailureError
+
+> The disk cache is unable to open or create this entry.
+
+ - Name: `CacheOpenOrCreateFailureError`
+ - Code: `-413`
+ - Description: `CACHE_OPEN_OR_CREATE_FAILURE`
+ - Type: cache
+
+```js
+const err = new chromiumNetErrors.CacheOpenOrCreateFailureError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-413);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('CACHE_OPEN_OR_CREATE_FAILURE');
+const err = new Err();
+```
+
 ### InsecureResponseError
 
 > The server's response was insecure (e.g. there was a cert error).
