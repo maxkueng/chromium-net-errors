@@ -46,27 +46,27 @@
     "node": ">=8.0.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.3.3",
-    "@babel/plugin-proposal-object-rest-spread": "^7.3.2",
-    "@babel/plugin-transform-modules-commonjs": "^7.2.0",
-    "@babel/register": "^7.0.0",
-    "ava": "^1.2.1",
+    "@babel/core": "^7.4.3",
+    "@babel/plugin-proposal-object-rest-spread": "^7.4.3",
+    "@babel/plugin-transform-modules-commonjs": "^7.4.3",
+    "@babel/register": "^7.4.0",
+    "ava": "^1.4.1",
     "babel-eslint": "^10.0.1",
     "change-case": "^3.1.0",
     "coveralls": "^3.0.3",
-    "eslint": "^5.14.1",
+    "eslint": "^5.16.0",
     "eslint-config-airbnb-base": "^13.1.0",
-    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-import": "^2.17.1",
     "got": "^9.6.0",
     "mkdirp": "^0.5.1",
     "npm-run-all": "^4.1.5",
     "nyc": "^13.3.0",
     "rimraf": "^2.6.3",
-    "rollup": "^1.2.3",
+    "rollup": "^1.10.0",
     "rollup-plugin-babel": "^4.3.2",
-    "rollup-plugin-replace": "^2.1.0",
+    "rollup-plugin-replace": "^2.2.0",
     "split": "^1.0.1",
-    "through2": "^3.0.0"
+    "through2": "^3.0.1"
   },
   "ava": {
     "require": "@babel/register"
