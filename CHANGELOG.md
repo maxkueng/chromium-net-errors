@@ -1,7 +1,7 @@
 Changelog
 =========
 
-## Next
+## Version 5.1.0
 
  - Add `SslKeyUsageIncompatibleError` error type (-181)
 
