@@ -2243,6 +2243,26 @@ const Err = chromiumNetErrors.getErrorByDescription('TLS13_DOWNGRADE_DETECTED');
 const err = new Err();
 ```
 
+### SslKeyUsageIncompatibleError
+
+> The server's certificate has a keyUsage extension incompatible with the
+> negotiated TLS key exchange method.
+
+ - Name: `SslKeyUsageIncompatibleError`
+ - Code: `-181`
+ - Description: `SSL_KEY_USAGE_INCOMPATIBLE`
+ - Type: connection
+
+```js
+const err = new chromiumNetErrors.SslKeyUsageIncompatibleError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-181);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('SSL_KEY_USAGE_INCOMPATIBLE');
+const err = new Err();
+```
+
 ### CertCommonNameInvalidError
 
 > The server responded with a certificate whose common name did not match

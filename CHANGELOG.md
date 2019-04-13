@@ -1,6 +1,10 @@
 Changelog
 =========
 
+## Next
+
+ - Add `SslKeyUsageIncompatibleError` error type (-181)
+
 ## Version 5.0.0
 
  - Add `CacheOpenOrCreateFailureError` error type (-413)
