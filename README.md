@@ -2105,36 +2105,6 @@ const Err = chromiumNetErrors.getErrorByDescription('READ_IF_READY_NOT_IMPLEMENT
 const err = new Err();
 ```
 
-### SslVersionInterferenceError
-
-> This error is emitted if TLS 1.3 is enabled, connecting with it failed, but
-> retrying at a downgraded maximum version succeeded. This could mean:
-> 
-> 1. This is a transient network error that will be resolved when the user
-> reloads.
-> 
-> 2. The user is behind a buggy network middlebox, firewall, or proxy which is
-> interfering with TLS 1.3.
-> 
-> 3. The server is buggy and does not implement TLS version negotiation
-> correctly. TLS 1.3 was tweaked to avoid a common server bug here, so this
-> is unlikely.
-
- - Name: `SslVersionInterferenceError`
- - Code: `-175`
- - Description: `SSL_VERSION_INTERFERENCE`
- - Type: connection
-
-```js
-const err = new chromiumNetErrors.SslVersionInterferenceError();
-// or
-const Err = chromiumNetErrors.getErrorByCode(-175);
-const err = new Err();
-// or
-const Err = chromiumNetErrors.getErrorByDescription('SSL_VERSION_INTERFERENCE');
-const err = new Err();
-```
-
 ### NoBufferSpaceError
 
 > No socket buffer space is available.

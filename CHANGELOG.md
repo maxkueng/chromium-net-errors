@@ -1,6 +1,12 @@
 Changelog
 =========
 
+## Next
+
+### Breaking Changes
+
+ - Remove `SslVersionInterferenceError` error type (-175)
+
 ## Version 5.1.0
 
  - Add `SslKeyUsageIncompatibleError` error type (-181)
