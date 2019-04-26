@@ -1,6 +1,10 @@
 Changelog
 =========
 
+## Next
+
+ - Update dev dependencies
+
 ## Version 6.0.0
 
 ### Breaking Changes
