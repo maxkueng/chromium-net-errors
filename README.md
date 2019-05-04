@@ -1587,25 +1587,6 @@ const Err = chromiumNetErrors.getErrorByDescription('MSG_TOO_BIG');
 const err = new Err();
 ```
 
-### SpdySessionAlreadyExistsError
-
-> A SPDY session already exists, and should be used instead of this connection.
-
- - Name: `SpdySessionAlreadyExistsError`
- - Code: `-143`
- - Description: `SPDY_SESSION_ALREADY_EXISTS`
- - Type: connection
-
-```js
-const err = new chromiumNetErrors.SpdySessionAlreadyExistsError();
-// or
-const Err = chromiumNetErrors.getErrorByCode(-143);
-const err = new Err();
-// or
-const Err = chromiumNetErrors.getErrorByDescription('SPDY_SESSION_ALREADY_EXISTS');
-const err = new Err();
-```
-
 ### WsProtocolError
 
 > Websocket protocol error. Indicates that we are terminating the connection

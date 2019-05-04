@@ -5,6 +5,10 @@ Changelog
 
  - Update dev dependencies
 
+### Breaking Changes
+
+ - Remove `SpdySessionAlreadyExistsError` error type (-143)
+
 ## Version 6.0.0
 
 ### Breaking Changes
