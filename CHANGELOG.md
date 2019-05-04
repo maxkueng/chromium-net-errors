@@ -1,7 +1,7 @@
 Changelog
 =========
 
-## Next
+## Version 7.0.0
 
  - Update dev dependencies
 

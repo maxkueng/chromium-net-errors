@@ -1,6 +1,6 @@
 {
   "name": "chromium-net-errors",
-  "version": "6.0.0",
+  "version": "7.0.0",
   "description": "Chromium network errors for Electron and Chromium-based JavaScript environments",
   "keywords": [
     "chromium",
