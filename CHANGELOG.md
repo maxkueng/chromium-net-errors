@@ -1,7 +1,7 @@
 Changelog
 =========
 
-## Next
+## Version 8.0.0
 
  - Remove `OriginBoundCertGenerationTypeMismatchError` (-152)
 
