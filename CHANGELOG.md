@@ -1,6 +1,10 @@
 Changelog
 =========
 
+## Next
+
+ - Remove `OriginBoundCertGenerationTypeMismatchError` (-152)
+
 ## Version 7.0.0
 
  - Update dev dependencies

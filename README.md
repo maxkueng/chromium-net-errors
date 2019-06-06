@@ -1704,26 +1704,6 @@ const Err = chromiumNetErrors.getErrorByDescription('CLIENT_AUTH_CERT_TYPE_UNSUP
 const err = new Err();
 ```
 
-### OriginBoundCertGenerationTypeMismatchError
-
-> Server requested one type of cert, then requested a different type while the
-> first was still being generated.
-
- - Name: `OriginBoundCertGenerationTypeMismatchError`
- - Code: `-152`
- - Description: `ORIGIN_BOUND_CERT_GENERATION_TYPE_MISMATCH`
- - Type: connection
-
-```js
-const err = new chromiumNetErrors.OriginBoundCertGenerationTypeMismatchError();
-// or
-const Err = chromiumNetErrors.getErrorByCode(-152);
-const err = new Err();
-// or
-const Err = chromiumNetErrors.getErrorByDescription('ORIGIN_BOUND_CERT_GENERATION_TYPE_MISMATCH');
-const err = new Err();
-```
-
 ### SslDecryptErrorAlertError
 
 > An SSL peer sent us a fatal decrypt_error alert. This typically occurs when
