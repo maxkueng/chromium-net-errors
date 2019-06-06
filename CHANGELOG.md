@@ -3,6 +3,8 @@ Changelog
 
 ## Version 8.0.0
 
+### Breaking Changes
+
  - Remove `OriginBoundCertGenerationTypeMismatchError` (-152)
 
 ## Version 7.0.0
