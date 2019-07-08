@@ -3002,22 +3002,22 @@ const Err = chromiumNetErrors.getErrorByDescription('NO_SUPPORTED_PROXIES');
 const err = new Err();
 ```
 
-### SpdyProtocolError
+### Http2ProtocolError
 
-> There is a SPDY protocol error.
+> There is an HTTP/2 protocol error.
 
- - Name: `SpdyProtocolError`
+ - Name: `Http2ProtocolError`
  - Code: `-337`
- - Description: `SPDY_PROTOCOL_ERROR`
+ - Description: `HTTP2_PROTOCOL_ERROR`
  - Type: http
 
 ```js
-const err = new chromiumNetErrors.SpdyProtocolError();
+const err = new chromiumNetErrors.Http2ProtocolError();
 // or
 const Err = chromiumNetErrors.getErrorByCode(-337);
 const err = new Err();
 // or
-const Err = chromiumNetErrors.getErrorByDescription('SPDY_PROTOCOL_ERROR');
+const Err = chromiumNetErrors.getErrorByDescription('HTTP2_PROTOCOL_ERROR');
 const err = new Err();
 ```
 
@@ -3194,23 +3194,23 @@ const Err = chromiumNetErrors.getErrorByDescription('RESPONSE_HEADERS_MULTIPLE_C
 const err = new Err();
 ```
 
-### IncompleteSpdyHeadersError
+### IncompleteHttp2HeadersError
 
-> SPDY Headers have been received, but not all of them - status or version
+> HTTP/2 headers have been received, but not all of them - status or version
 > headers are missing, so we're expecting additional frames to complete them.
 
- - Name: `IncompleteSpdyHeadersError`
+ - Name: `IncompleteHttp2HeadersError`
  - Code: `-347`
- - Description: `INCOMPLETE_SPDY_HEADERS`
+ - Description: `INCOMPLETE_HTTP2_HEADERS`
  - Type: http
 
 ```js
-const err = new chromiumNetErrors.IncompleteSpdyHeadersError();
+const err = new chromiumNetErrors.IncompleteHttp2HeadersError();
 // or
 const Err = chromiumNetErrors.getErrorByCode(-347);
 const err = new Err();
 // or
-const Err = chromiumNetErrors.getErrorByDescription('INCOMPLETE_SPDY_HEADERS');
+const Err = chromiumNetErrors.getErrorByDescription('INCOMPLETE_HTTP2_HEADERS');
 const err = new Err();
 ```
 
@@ -3273,7 +3273,7 @@ const Err = chromiumNetErrors.getErrorByDescription('RESPONSE_HEADERS_MULTIPLE_L
 const err = new Err();
 ```
 
-### SpdyServerRefusedStreamError
+### Http2ServerRefusedStreamError
 
 > HTTP/2 server refused the request without processing, and sent either a
 > GOAWAY frame with error code NO_ERROR and Last-Stream-ID lower than the
@@ -3281,37 +3281,37 @@ const err = new Err();
 > been processed yet, or a RST_STREAM frame with error code REFUSED_STREAM.
 > Client MAY retry (on a different connection). See RFC7540 Section 8.1.4.
 
- - Name: `SpdyServerRefusedStreamError`
+ - Name: `Http2ServerRefusedStreamError`
  - Code: `-351`
- - Description: `SPDY_SERVER_REFUSED_STREAM`
+ - Description: `HTTP2_SERVER_REFUSED_STREAM`
  - Type: http
 
 ```js
-const err = new chromiumNetErrors.SpdyServerRefusedStreamError();
+const err = new chromiumNetErrors.Http2ServerRefusedStreamError();
 // or
 const Err = chromiumNetErrors.getErrorByCode(-351);
 const err = new Err();
 // or
-const Err = chromiumNetErrors.getErrorByDescription('SPDY_SERVER_REFUSED_STREAM');
+const Err = chromiumNetErrors.getErrorByDescription('HTTP2_SERVER_REFUSED_STREAM');
 const err = new Err();
 ```
 
-### SpdyPingFailedError
+### Http2PingFailedError
 
-> SPDY server didn't respond to the PING message.
+> HTTP/2 server didn't respond to the PING message.
 
- - Name: `SpdyPingFailedError`
+ - Name: `Http2PingFailedError`
  - Code: `-352`
- - Description: `SPDY_PING_FAILED`
+ - Description: `HTTP2_PING_FAILED`
  - Type: http
 
 ```js
-const err = new chromiumNetErrors.SpdyPingFailedError();
+const err = new chromiumNetErrors.Http2PingFailedError();
 // or
 const Err = chromiumNetErrors.getErrorByCode(-352);
 const err = new Err();
 // or
-const Err = chromiumNetErrors.getErrorByDescription('SPDY_PING_FAILED');
+const Err = chromiumNetErrors.getErrorByDescription('HTTP2_PING_FAILED');
 const err = new Err();
 ```
 
@@ -3413,79 +3413,79 @@ const Err = chromiumNetErrors.getErrorByDescription('QUIC_HANDSHAKE_FAILED');
 const err = new Err();
 ```
 
-### SpdyInadequateTransportSecurityError
+### Http2InadequateTransportSecurityError
 
-> Transport security is inadequate for the SPDY version.
+> Transport security is inadequate for the HTTP/2 version.
 
- - Name: `SpdyInadequateTransportSecurityError`
+ - Name: `Http2InadequateTransportSecurityError`
  - Code: `-360`
- - Description: `SPDY_INADEQUATE_TRANSPORT_SECURITY`
+ - Description: `HTTP2_INADEQUATE_TRANSPORT_SECURITY`
  - Type: http
 
 ```js
-const err = new chromiumNetErrors.SpdyInadequateTransportSecurityError();
+const err = new chromiumNetErrors.Http2InadequateTransportSecurityError();
 // or
 const Err = chromiumNetErrors.getErrorByCode(-360);
 const err = new Err();
 // or
-const Err = chromiumNetErrors.getErrorByDescription('SPDY_INADEQUATE_TRANSPORT_SECURITY');
+const Err = chromiumNetErrors.getErrorByDescription('HTTP2_INADEQUATE_TRANSPORT_SECURITY');
 const err = new Err();
 ```
 
-### SpdyFlowControlError
+### Http2FlowControlError
 
-> The peer violated SPDY flow control.
+> The peer violated HTTP/2 flow control.
 
- - Name: `SpdyFlowControlError`
+ - Name: `Http2FlowControlError`
  - Code: `-361`
- - Description: `SPDY_FLOW_CONTROL_ERROR`
+ - Description: `HTTP2_FLOW_CONTROL_ERROR`
  - Type: http
 
 ```js
-const err = new chromiumNetErrors.SpdyFlowControlError();
+const err = new chromiumNetErrors.Http2FlowControlError();
 // or
 const Err = chromiumNetErrors.getErrorByCode(-361);
 const err = new Err();
 // or
-const Err = chromiumNetErrors.getErrorByDescription('SPDY_FLOW_CONTROL_ERROR');
+const Err = chromiumNetErrors.getErrorByDescription('HTTP2_FLOW_CONTROL_ERROR');
 const err = new Err();
 ```
 
-### SpdyFrameSizeError
+### Http2FrameSizeError
 
-> The peer sent an improperly sized SPDY frame.
+> The peer sent an improperly sized HTTP/2 frame.
 
- - Name: `SpdyFrameSizeError`
+ - Name: `Http2FrameSizeError`
  - Code: `-362`
- - Description: `SPDY_FRAME_SIZE_ERROR`
+ - Description: `HTTP2_FRAME_SIZE_ERROR`
  - Type: http
 
 ```js
-const err = new chromiumNetErrors.SpdyFrameSizeError();
+const err = new chromiumNetErrors.Http2FrameSizeError();
 // or
 const Err = chromiumNetErrors.getErrorByCode(-362);
 const err = new Err();
 // or
-const Err = chromiumNetErrors.getErrorByDescription('SPDY_FRAME_SIZE_ERROR');
+const Err = chromiumNetErrors.getErrorByDescription('HTTP2_FRAME_SIZE_ERROR');
 const err = new Err();
 ```
 
-### SpdyCompressionError
+### Http2CompressionError
 
-> Decoding or encoding of compressed SPDY headers failed.
+> Decoding or encoding of compressed HTTP/2 headers failed.
 
- - Name: `SpdyCompressionError`
+ - Name: `Http2CompressionError`
  - Code: `-363`
- - Description: `SPDY_COMPRESSION_ERROR`
+ - Description: `HTTP2_COMPRESSION_ERROR`
  - Type: http
 
 ```js
-const err = new chromiumNetErrors.SpdyCompressionError();
+const err = new chromiumNetErrors.Http2CompressionError();
 // or
 const Err = chromiumNetErrors.getErrorByCode(-363);
 const err = new Err();
 // or
-const Err = chromiumNetErrors.getErrorByDescription('SPDY_COMPRESSION_ERROR');
+const Err = chromiumNetErrors.getErrorByDescription('HTTP2_COMPRESSION_ERROR');
 const err = new Err();
 ```
 
@@ -3604,63 +3604,63 @@ const Err = chromiumNetErrors.getErrorByDescription('CONTENT_DECODING_INIT_FAILE
 const err = new Err();
 ```
 
-### SpdyRstStreamNoErrorReceivedError
+### Http2RstStreamNoErrorReceivedError
 
 > Received HTTP/2 RST_STREAM frame with NO_ERROR error code. This error should
 > be handled internally by HTTP/2 code, and should not make it above the
 > SpdyStream layer.
 
- - Name: `SpdyRstStreamNoErrorReceivedError`
+ - Name: `Http2RstStreamNoErrorReceivedError`
  - Code: `-372`
- - Description: `SPDY_RST_STREAM_NO_ERROR_RECEIVED`
+ - Description: `HTTP2_RST_STREAM_NO_ERROR_RECEIVED`
  - Type: http
 
 ```js
-const err = new chromiumNetErrors.SpdyRstStreamNoErrorReceivedError();
+const err = new chromiumNetErrors.Http2RstStreamNoErrorReceivedError();
 // or
 const Err = chromiumNetErrors.getErrorByCode(-372);
 const err = new Err();
 // or
-const Err = chromiumNetErrors.getErrorByDescription('SPDY_RST_STREAM_NO_ERROR_RECEIVED');
+const Err = chromiumNetErrors.getErrorByDescription('HTTP2_RST_STREAM_NO_ERROR_RECEIVED');
 const err = new Err();
 ```
 
-### SpdyPushedStreamNotAvailableError
+### Http2PushedStreamNotAvailableError
 
 > The pushed stream claimed by the request is no longer available.
 
- - Name: `SpdyPushedStreamNotAvailableError`
+ - Name: `Http2PushedStreamNotAvailableError`
  - Code: `-373`
- - Description: `SPDY_PUSHED_STREAM_NOT_AVAILABLE`
+ - Description: `HTTP2_PUSHED_STREAM_NOT_AVAILABLE`
  - Type: http
 
 ```js
-const err = new chromiumNetErrors.SpdyPushedStreamNotAvailableError();
+const err = new chromiumNetErrors.Http2PushedStreamNotAvailableError();
 // or
 const Err = chromiumNetErrors.getErrorByCode(-373);
 const err = new Err();
 // or
-const Err = chromiumNetErrors.getErrorByDescription('SPDY_PUSHED_STREAM_NOT_AVAILABLE');
+const Err = chromiumNetErrors.getErrorByDescription('HTTP2_PUSHED_STREAM_NOT_AVAILABLE');
 const err = new Err();
 ```
 
-### SpdyClaimedPushedStreamResetByServerError
+### Http2ClaimedPushedStreamResetByServerError
 
 > A pushed stream was claimed and later reset by the server. When this happens,
 > the request should be retried.
 
- - Name: `SpdyClaimedPushedStreamResetByServerError`
+ - Name: `Http2ClaimedPushedStreamResetByServerError`
  - Code: `-374`
- - Description: `SPDY_CLAIMED_PUSHED_STREAM_RESET_BY_SERVER`
+ - Description: `HTTP2_CLAIMED_PUSHED_STREAM_RESET_BY_SERVER`
  - Type: http
 
 ```js
-const err = new chromiumNetErrors.SpdyClaimedPushedStreamResetByServerError();
+const err = new chromiumNetErrors.Http2ClaimedPushedStreamResetByServerError();
 // or
 const Err = chromiumNetErrors.getErrorByCode(-374);
 const err = new Err();
 // or
-const Err = chromiumNetErrors.getErrorByDescription('SPDY_CLAIMED_PUSHED_STREAM_RESET_BY_SERVER');
+const Err = chromiumNetErrors.getErrorByDescription('HTTP2_CLAIMED_PUSHED_STREAM_RESET_BY_SERVER');
 const err = new Err();
 ```
 
@@ -3686,61 +3686,61 @@ const Err = chromiumNetErrors.getErrorByDescription('TOO_MANY_RETRIES');
 const err = new Err();
 ```
 
-### SpdyStreamClosedError
+### Http2StreamClosedError
 
 > Received an HTTP/2 frame on a closed stream.
 
- - Name: `SpdyStreamClosedError`
+ - Name: `Http2StreamClosedError`
  - Code: `-376`
- - Description: `SPDY_STREAM_CLOSED`
+ - Description: `HTTP2_STREAM_CLOSED`
  - Type: http
 
 ```js
-const err = new chromiumNetErrors.SpdyStreamClosedError();
+const err = new chromiumNetErrors.Http2StreamClosedError();
 // or
 const Err = chromiumNetErrors.getErrorByCode(-376);
 const err = new Err();
 // or
-const Err = chromiumNetErrors.getErrorByDescription('SPDY_STREAM_CLOSED');
+const Err = chromiumNetErrors.getErrorByDescription('HTTP2_STREAM_CLOSED');
 const err = new Err();
 ```
 
-### SpdyClientRefusedStreamError
+### Http2ClientRefusedStreamError
 
 > Client is refusing an HTTP/2 stream.
 
- - Name: `SpdyClientRefusedStreamError`
+ - Name: `Http2ClientRefusedStreamError`
  - Code: `-377`
- - Description: `SPDY_CLIENT_REFUSED_STREAM`
+ - Description: `HTTP2_CLIENT_REFUSED_STREAM`
  - Type: http
 
 ```js
-const err = new chromiumNetErrors.SpdyClientRefusedStreamError();
+const err = new chromiumNetErrors.Http2ClientRefusedStreamError();
 // or
 const Err = chromiumNetErrors.getErrorByCode(-377);
 const err = new Err();
 // or
-const Err = chromiumNetErrors.getErrorByDescription('SPDY_CLIENT_REFUSED_STREAM');
+const Err = chromiumNetErrors.getErrorByDescription('HTTP2_CLIENT_REFUSED_STREAM');
 const err = new Err();
 ```
 
-### SpdyPushedResponseDoesNotMatchError
+### Http2PushedResponseDoesNotMatchError
 
 > A pushed HTTP/2 stream was claimed by a request based on matching URL and
 > request headers, but the pushed response headers do not match the request.
 
- - Name: `SpdyPushedResponseDoesNotMatchError`
+ - Name: `Http2PushedResponseDoesNotMatchError`
  - Code: `-378`
- - Description: `SPDY_PUSHED_RESPONSE_DOES_NOT_MATCH`
+ - Description: `HTTP2_PUSHED_RESPONSE_DOES_NOT_MATCH`
  - Type: http
 
 ```js
-const err = new chromiumNetErrors.SpdyPushedResponseDoesNotMatchError();
+const err = new chromiumNetErrors.Http2PushedResponseDoesNotMatchError();
 // or
 const Err = chromiumNetErrors.getErrorByCode(-378);
 const err = new Err();
 // or
-const Err = chromiumNetErrors.getErrorByDescription('SPDY_PUSHED_RESPONSE_DOES_NOT_MATCH');
+const Err = chromiumNetErrors.getErrorByDescription('HTTP2_PUSHED_RESPONSE_DOES_NOT_MATCH');
 const err = new Err();
 ```
 

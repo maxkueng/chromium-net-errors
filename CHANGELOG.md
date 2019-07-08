@@ -1,6 +1,25 @@
 Changelog
 =========
 
+## Next
+
+### Breaking Changes
+
+ - Rename `SpdyProtocolError` (-337) to `Http2ProtocolError`
+ - Rename `IncompleteSpdyHeadersError (-347)` to `IncompleteHttp2HeadersError`
+ - Rename `SpdyServerRefusedStreamError` (-351) to `Http2ServerRefusedStreamError`
+ - Rename `Spdy2PingFailedError` (-352) to `Http2PingFailedError`
+ - Rename `SpdyInadequateTransportSecurityError` (-360) to `Http2InadequateTransportSecurityError`
+ - Rename `SpdyFlowControlError` (-361) to `Http2FlowControlError`
+ - Rename `SpdyFrameSizeError` (-362) to `Http2FrameSizeError`
+ - Rename `SpdyCompressionError` (-363) to `Http2CompressionError`
+ - Rename `SpdyRstStreamNoErrorReceivedError` (-372) to `Http2RstStreamNoErrorReceivedError`
+ - Rename `SpdyPushedStreamNotAvailableError` (-373) to `Http2PushedStreamNotAvailableError`
+ - Rename `SpdyClaimedPushedStreamResetByServerError` (-374) to `Http2ClaimedPushedStreamResetByServerError`
+ - Rename `SpdyStreamClosedError` (-376) to `Http2StreamClosedError`
+ - Rename `SpdyClientRefusedStreamError` (-377) to `Http2ClientRefusedStreamError`
+ - Rename `SpdyPushedResponseDoesNotMatchError` (-378) to `Http2PushedResponseDoesNotMatchError`
+
 ## Version 8.0.0
 
 ### Breaking Changes
