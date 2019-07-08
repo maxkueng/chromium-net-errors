@@ -54,7 +54,7 @@
     "babel-eslint": "^10.0.2",
     "change-case": "^3.1.0",
     "coveralls": "^3.0.4",
-    "eslint": "^5.16.0",
+    "eslint": "^6.0.1",
     "eslint-config-airbnb-base": "^13.2.0",
     "eslint-plugin-import": "^2.18.0",
     "got": "^9.6.0",
