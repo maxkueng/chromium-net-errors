@@ -6,7 +6,7 @@ test('create new error', (t) => {
   errors.forEach((error) => {
     const ChromiumError = chromiumNetErrors[error.name];
     const thrower = () => { throw new ChromiumError(); };
-    t.throws(() => thrower(), ChromiumError);
+    t.throws(() => thrower(), { instanceOf: ChromiumError });
   });
 });
 
@@ -16,7 +16,7 @@ test('create error by code', (t) => {
       const Err = chromiumNetErrors.getErrorByCode(error.code);
       throw new Err();
     };
-    t.throws(() => thrower(), chromiumNetErrors[error.name]);
+    t.throws(() => thrower(), { instanceOf: chromiumNetErrors[error.name] });
   });
 });
 
@@ -26,7 +26,7 @@ test('create error by description', (t) => {
       const Err = chromiumNetErrors.getErrorByDescription(error.description);
       throw new Err();
     };
-    t.throws(() => thrower(), chromiumNetErrors[error.name]);
+    t.throws(() => thrower(), { instanceOf: chromiumNetErrors[error.name] });
   });
 });
 
@@ -62,5 +62,5 @@ test('unknown error', (t) => {
     const Err = chromiumNetErrors.getErrorByCode(9999);
     throw new Err();
   };
-  t.throws(() => thrower(), chromiumNetErrors.UnknownError);
+  t.throws(() => thrower(), { instanceOf: chromiumNetErrors.UnknownError });
 });
