@@ -3706,6 +3706,29 @@ const Err = chromiumNetErrors.getErrorByDescription('HTTP2_PUSHED_RESPONSE_DOES_
 const err = new Err();
 ```
 
+### HttpResponseCodeFailureError
+
+> The server returned a non-2xx HTTP response code.
+> 
+> Not that this error is only used by certain APIs that interpret the HTTP
+> response itself. URLRequest for instance just passes most non-2xx
+> response back as success.
+
+ - Name: `HttpResponseCodeFailureError`
+ - Code: `-379`
+ - Description: `HTTP_RESPONSE_CODE_FAILURE`
+ - Type: http
+
+```js
+const err = new chromiumNetErrors.HttpResponseCodeFailureError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-379);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('HTTP_RESPONSE_CODE_FAILURE');
+const err = new Err();
+```
+
 ### CacheMissError
 
 > The cache does not have the requested entry.

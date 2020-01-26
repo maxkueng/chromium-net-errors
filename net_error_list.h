@@ -775,6 +775,13 @@ NET_ERROR(HTTP2_CLIENT_REFUSED_STREAM, -377)
 // request headers, but the pushed response headers do not match the request.
 NET_ERROR(HTTP2_PUSHED_RESPONSE_DOES_NOT_MATCH, -378)
 
+// The server returned a non-2xx HTTP response code.
+//
+// Not that this error is only used by certain APIs that interpret the HTTP
+// response itself. URLRequest for instance just passes most non-2xx
+// response back as success.
+NET_ERROR(HTTP_RESPONSE_CODE_FAILURE, -379)
+
 // The cache does not have the requested entry.
 NET_ERROR(CACHE_MISS, -400)
 
