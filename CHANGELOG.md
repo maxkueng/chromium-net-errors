@@ -1,7 +1,12 @@
 Changelog
 =========
 
-## Next
+## Version 11.0.0
+
+### Potentially Breaking Changes
+
+ - The oldest tested Node.js version is now v10, and v8 and v9 are no longer
+   officially supported as their lifetime has ended.
 
 ### Testing
 
