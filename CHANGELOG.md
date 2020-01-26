@@ -3,6 +3,7 @@ Changelog
 
 ## Next
 
+ - Add DnsSecureResolverHostnameResolutionFailedError (-808)
  - Add InvalidWebBundleError (-505)
  - Add QuicCertRootNotKnownError (-380)
  - Add HttpResponseCodeFailureError (-379)

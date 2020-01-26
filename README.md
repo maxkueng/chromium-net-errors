@@ -4659,6 +4659,25 @@ const Err = chromiumNetErrors.getErrorByDescription('DNS_SORT_ERROR');
 const err = new Err();
 ```
 
+### DnsSecureResolverHostnameResolutionFailedError
+
+> Failed to resolve the hostname of a DNS-over-HTTPS server.
+
+ - Name: `DnsSecureResolverHostnameResolutionFailedError`
+ - Code: `-808`
+ - Description: `DNS_SECURE_RESOLVER_HOSTNAME_RESOLUTION_FAILED`
+ - Type: dns
+
+```js
+const err = new chromiumNetErrors.DnsSecureResolverHostnameResolutionFailedError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-808);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('DNS_SECURE_RESOLVER_HOSTNAME_RESOLUTION_FAILED');
+const err = new Err();
+```
+
 <!--END_ERROR_LIST-->
 
 ## License
