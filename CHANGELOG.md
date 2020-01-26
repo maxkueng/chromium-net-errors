@@ -8,6 +8,7 @@ Changelog
 
 ### Breaking Changes
 
+ - Remove BlockedByXssAuditorError (-28)
  - Change CertEndError (-216) error code to -218
 
 ## Version 9.0.0

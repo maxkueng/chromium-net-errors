@@ -734,26 +734,6 @@ const Err = chromiumNetErrors.getErrorByDescription('BLOCKED_BY_RESPONSE');
 const err = new Err();
 ```
 
-### BlockedByXssAuditorError
-
-> The request failed after the response was received, based on client-side
-> heuristics that point to the possiblility of a cross-site scripting attack.
-
- - Name: `BlockedByXssAuditorError`
- - Code: `-28`
- - Description: `BLOCKED_BY_XSS_AUDITOR`
- - Type: system
-
-```js
-const err = new chromiumNetErrors.BlockedByXssAuditorError();
-// or
-const Err = chromiumNetErrors.getErrorByCode(-28);
-const err = new Err();
-// or
-const Err = chromiumNetErrors.getErrorByDescription('BLOCKED_BY_XSS_AUDITOR');
-const err = new Err();
-```
-
 ### CleartextNotPermittedError
 
 > The request was blocked by system policy disallowing some or all cleartext
