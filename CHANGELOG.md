@@ -6,8 +6,8 @@ Changelog
  - Add QuicCertRootNotKnownError (-380)
  - Add HttpResponseCodeFailureError (-379)
  - Add CertKnownInterceptionBlockedError (-217)
- - Update DnsCacheMissError (-804) description
- - Update BlockedByAdministratorError (-22) description
+ - Update DnsCacheMissError (-804) documentation
+ - Update BlockedByAdministratorError (-22) documentation
 
 ### Breaking Changes
 
