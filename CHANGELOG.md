@@ -1,6 +1,10 @@
 Changelog
 =========
 
+## Next
+
+ - Update BlockedByAdministratorError (-22) description
+
 ## Version 9.0.0
 
 ### Breaking Changes

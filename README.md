@@ -615,7 +615,7 @@ const err = new Err();
 
 ### BlockedByAdministratorError
 
-> The request was blocked by the URL blacklist configured by the domain
+> The request was blocked by the URL block list configured by the domain
 > administrator.
 
  - Name: `BlockedByAdministratorError`
