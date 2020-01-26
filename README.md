@@ -4576,7 +4576,10 @@ const err = new Err();
 
 ### DnsCacheMissError
 
-> The entry was not found in cache, for cache-only lookups.
+> The entry was not found in cache or other local sources, for lookups where
+> only local sources were queried.
+> TODO(ericorth): Consider renaming to DNS_LOCAL_MISS or something like that as
+> the cache is not necessarily queried either.
 
  - Name: `DnsCacheMissError`
  - Code: `-804`

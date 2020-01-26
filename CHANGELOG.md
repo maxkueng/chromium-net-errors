@@ -3,6 +3,7 @@ Changelog
 
 ## Next
 
+ - Update DnsCacheMissError (-804) description
  - Update BlockedByAdministratorError (-22) description
 
 ## Version 9.0.0
