@@ -3,6 +3,7 @@ Changelog
 
 ## Next
 
+ - Add QuicCertRootNotKnownError (-380)
  - Add HttpResponseCodeFailureError (-379)
  - Add CertKnownInterceptionBlockedError (-217)
  - Update DnsCacheMissError (-804) description

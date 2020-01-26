@@ -3729,6 +3729,27 @@ const Err = chromiumNetErrors.getErrorByDescription('HTTP_RESPONSE_CODE_FAILURE'
 const err = new Err();
 ```
 
+### QuicCertRootNotKnownError
+
+> The certificate presented on a QUIC connection does not chain to a known root
+> and the origin connected to is not on a list of domains where unknown roots
+> are allowed.
+
+ - Name: `QuicCertRootNotKnownError`
+ - Code: `-380`
+ - Description: `QUIC_CERT_ROOT_NOT_KNOWN`
+ - Type: http
+
+```js
+const err = new chromiumNetErrors.QuicCertRootNotKnownError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-380);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('QUIC_CERT_ROOT_NOT_KNOWN');
+const err = new Err();
+```
+
 ### CacheMissError
 
 > The cache does not have the requested entry.

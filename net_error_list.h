@@ -782,6 +782,11 @@ NET_ERROR(HTTP2_PUSHED_RESPONSE_DOES_NOT_MATCH, -378)
 // response back as success.
 NET_ERROR(HTTP_RESPONSE_CODE_FAILURE, -379)
 
+// The certificate presented on a QUIC connection does not chain to a known root
+// and the origin connected to is not on a list of domains where unknown roots
+// are allowed.
+NET_ERROR(QUIC_CERT_ROOT_NOT_KNOWN, -380)
+
 // The cache does not have the requested entry.
 NET_ERROR(CACHE_MISS, -400)
 
