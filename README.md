@@ -4682,6 +4682,6 @@ const err = new Err();
 
 ## License
 
-Copyright (c) 2015 - 2019 Max Kueng and contributors
+Copyright (c) 2015 - 2020 Max Kueng and contributors
 
 MIT License
