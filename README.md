@@ -4104,6 +4104,25 @@ const Err = chromiumNetErrors.getErrorByDescription('INVALID_SIGNED_EXCHANGE');
 const err = new Err();
 ```
 
+### InvalidWebBundleError
+
+> An error occurred while handling a Web Bundle source.
+
+ - Name: `InvalidWebBundleError`
+ - Code: `-505`
+ - Description: `INVALID_WEB_BUNDLE`
+ - Type: unknown
+
+```js
+const err = new chromiumNetErrors.InvalidWebBundleError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-505);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('INVALID_WEB_BUNDLE');
+const err = new Err();
+```
+
 ### FtpFailedError
 
 > A generic error for failed FTP control connection command.

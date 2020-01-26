@@ -853,6 +853,9 @@ NET_ERROR(ADD_USER_CERT_FAILED, -503)
 // An error occurred while handling a signed exchange.
 NET_ERROR(INVALID_SIGNED_EXCHANGE, -504)
 
+// An error occurred while handling a Web Bundle source.
+NET_ERROR(INVALID_WEB_BUNDLE, -505)
+
 // *** Code -600 is reserved (was FTP_PASV_COMMAND_FAILED). ***
 
 // A generic error for failed FTP control connection command.

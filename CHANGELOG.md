@@ -3,6 +3,7 @@ Changelog
 
 ## Next
 
+ - Add InvalidWebBundleError (-505)
  - Add QuicCertRootNotKnownError (-380)
  - Add HttpResponseCodeFailureError (-379)
  - Add CertKnownInterceptionBlockedError (-217)
