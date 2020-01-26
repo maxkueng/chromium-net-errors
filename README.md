@@ -1301,25 +1301,6 @@ const Err = chromiumNetErrors.getErrorByDescription('PROXY_AUTH_REQUESTED');
 const err = new Err();
 ```
 
-### SslWeakServerEphemeralDhKeyError
-
-> The SSL server attempted to use a weak ephemeral Diffie-Hellman key.
-
- - Name: `SslWeakServerEphemeralDhKeyError`
- - Code: `-129`
- - Description: `SSL_WEAK_SERVER_EPHEMERAL_DH_KEY`
- - Type: connection
-
-```js
-const err = new chromiumNetErrors.SslWeakServerEphemeralDhKeyError();
-// or
-const Err = chromiumNetErrors.getErrorByCode(-129);
-const err = new Err();
-// or
-const Err = chromiumNetErrors.getErrorByDescription('SSL_WEAK_SERVER_EPHEMERAL_DH_KEY');
-const err = new Err();
-```
-
 ### ProxyConnectionFailedError
 
 > Could not create a connection to the proxy server. An error occurred
