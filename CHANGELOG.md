@@ -3,6 +3,7 @@ Changelog
 
 ## Next
 
+ - Add CertKnownInterceptionBlockedError (-217)
  - Update DnsCacheMissError (-804) description
  - Update BlockedByAdministratorError (-22) description
 

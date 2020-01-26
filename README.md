@@ -2500,6 +2500,26 @@ const Err = chromiumNetErrors.getErrorByDescription('CERT_SYMANTEC_LEGACY');
 const err = new Err();
 ```
 
+### CertKnownInterceptionBlockedError
+
+> The certificate is known to be used for interception by an entity other
+> the device owner.
+
+ - Name: `CertKnownInterceptionBlockedError`
+ - Code: `-217`
+ - Description: `CERT_KNOWN_INTERCEPTION_BLOCKED`
+ - Type: certificate
+
+```js
+const err = new chromiumNetErrors.CertKnownInterceptionBlockedError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-217);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('CERT_KNOWN_INTERCEPTION_BLOCKED');
+const err = new Err();
+```
+
 ### CertEndError
 
 > The value immediately past the last certificate error code.
