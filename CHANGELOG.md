@@ -1,6 +1,12 @@
 Changelog
 =========
 
+## Next
+
+### Testing
+
+ - Remove Node.js versions 8 and 9 from tests
+
 ## Version 10.0.0
 
  - Add DnsSecureResolverHostnameResolutionFailedError (-808)
