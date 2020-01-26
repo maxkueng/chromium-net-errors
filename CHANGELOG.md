@@ -1,7 +1,7 @@
 Changelog
 =========
 
-## Next
+## Version 10.0.0
 
  - Add DnsSecureResolverHostnameResolutionFailedError (-808)
  - Add InvalidWebBundleError (-505)
