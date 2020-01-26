@@ -2771,25 +2771,6 @@ const Err = chromiumNetErrors.getErrorByDescription('RESPONSE_HEADERS_TOO_BIG');
 const err = new Err();
 ```
 
-### PacStatusNotOkError
-
-> The PAC requested by HTTP did not have a valid status code (non-200).
-
- - Name: `PacStatusNotOkError`
- - Code: `-326`
- - Description: `PAC_STATUS_NOT_OK`
- - Type: http
-
-```js
-const err = new chromiumNetErrors.PacStatusNotOkError();
-// or
-const Err = chromiumNetErrors.getErrorByCode(-326);
-const err = new Err();
-// or
-const Err = chromiumNetErrors.getErrorByDescription('PAC_STATUS_NOT_OK');
-const err = new Err();
-```
-
 ### PacScriptFailedError
 
 > The evaluation of the PAC script failed.

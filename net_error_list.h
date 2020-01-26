@@ -587,8 +587,7 @@ NET_ERROR(EMPTY_RESPONSE, -324)
 // The headers section of the response is too large.
 NET_ERROR(RESPONSE_HEADERS_TOO_BIG, -325)
 
-// The PAC requested by HTTP did not have a valid status code (non-200).
-NET_ERROR(PAC_STATUS_NOT_OK, -326)
+// Error -326 was removed (PAC_STATUS_NOT_OK)
 
 // The evaluation of the PAC script failed.
 NET_ERROR(PAC_SCRIPT_FAILED, -327)

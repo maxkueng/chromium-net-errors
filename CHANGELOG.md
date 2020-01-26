@@ -8,6 +8,7 @@ Changelog
 
 ### Breaking Changes
 
+ - Remove PacStatusNotOkError (-326)
  - Remove SslWeakServerEphemeralDhKeyError (-129)
  - Remove BlockedByXssAuditorError (-28)
  - Change CertEndError (-216) error code to -218
