@@ -544,7 +544,7 @@ NET_ERROR(CERT_SYMANTEC_LEGACY, -215)
 // code.
 
 // The value immediately past the last certificate error code.
-NET_ERROR(CERT_END, -216)
+NET_ERROR(CERT_END, -218)
 
 // The URL is invalid.
 NET_ERROR(INVALID_URL, -300)

@@ -6,6 +6,10 @@ Changelog
  - Update DnsCacheMissError (-804) description
  - Update BlockedByAdministratorError (-22) description
 
+### Breaking Changes
+
+ - Change CertEndError (-216) error code to -218
+
 ## Version 9.0.0
 
 ### Breaking Changes
