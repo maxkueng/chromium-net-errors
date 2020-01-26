@@ -4576,25 +4576,6 @@ const Err = chromiumNetErrors.getErrorByDescription('DNS_SORT_ERROR');
 const err = new Err();
 ```
 
-### DnsHttpFailedError
-
-> Failed to resolve over HTTP, fallback to legacy
-
- - Name: `DnsHttpFailedError`
- - Code: `-807`
- - Description: `DNS_HTTP_FAILED`
- - Type: dns
-
-```js
-const err = new chromiumNetErrors.DnsHttpFailedError();
-// or
-const Err = chromiumNetErrors.getErrorByCode(-807);
-const err = new Err();
-// or
-const Err = chromiumNetErrors.getErrorByDescription('DNS_HTTP_FAILED');
-const err = new Err();
-```
-
 <!--END_ERROR_LIST-->
 
 ## License

@@ -8,6 +8,7 @@ Changelog
 
 ### Breaking Changes
 
+ - Remove DnsHttpFailedError (-807)
  - Remove PacStatusNotOkError (-326)
  - Remove SslWeakServerEphemeralDhKeyError (-129)
  - Remove BlockedByXssAuditorError (-28)
