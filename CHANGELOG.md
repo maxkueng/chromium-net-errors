@@ -3,6 +3,8 @@ Changelog
 
 ## Next
 
+ - Add SslObsoleteVersionError (-218)
+
 ### Breaking Changes
 
  - Change CertEndError error code from -218 to -219

@@ -2520,6 +2520,25 @@ const Err = chromiumNetErrors.getErrorByDescription('CERT_KNOWN_INTERCEPTION_BLO
 const err = new Err();
 ```
 
+### SslObsoleteVersionError
+
+> The connection uses an obsolete version of SSL/TLS.
+
+ - Name: `SslObsoleteVersionError`
+ - Code: `-218`
+ - Description: `SSL_OBSOLETE_VERSION`
+ - Type: certificate
+
+```js
+const err = new chromiumNetErrors.SslObsoleteVersionError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-218);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('SSL_OBSOLETE_VERSION');
+const err = new Err();
+```
+
 ### CertEndError
 
 > The value immediately past the last certificate error code.
