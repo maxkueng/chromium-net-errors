@@ -1,6 +1,12 @@
 Changelog
 =========
 
+## Next
+
+### Breaking Changes
+
+ - Change CertEndError error code from -218 to -219
+
 ## Version 11.0.0
 
 ### Potentially Breaking Changes

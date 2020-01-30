@@ -548,7 +548,7 @@ NET_ERROR(CERT_KNOWN_INTERCEPTION_BLOCKED, -217)
 // code.
 
 // The value immediately past the last certificate error code.
-NET_ERROR(CERT_END, -218)
+NET_ERROR(CERT_END, -219)
 
 // The URL is invalid.
 NET_ERROR(INVALID_URL, -300)

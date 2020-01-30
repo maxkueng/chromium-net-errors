@@ -2525,14 +2525,14 @@ const err = new Err();
 > The value immediately past the last certificate error code.
 
  - Name: `CertEndError`
- - Code: `-218`
+ - Code: `-219`
  - Description: `CERT_END`
  - Type: certificate
 
 ```js
 const err = new chromiumNetErrors.CertEndError();
 // or
-const Err = chromiumNetErrors.getErrorByCode(-218);
+const Err = chromiumNetErrors.getErrorByCode(-219);
 const err = new Err();
 // or
 const Err = chromiumNetErrors.getErrorByDescription('CERT_END');
