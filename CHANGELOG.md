@@ -1,7 +1,7 @@
 Changelog
 =========
 
-## Next
+## Version 12.0.0
 
  - Add SslObsoleteVersionError (-218)
 
