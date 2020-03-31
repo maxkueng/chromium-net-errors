@@ -1,7 +1,7 @@
 Changelog
 =========
 
-## Next
+## Version 12.1.0
 
 - Add TrustTokenOperationCacheHitError (-507)
 - Add TrustTokenOperationFailedError (-506)
