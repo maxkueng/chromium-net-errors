@@ -4142,6 +4142,26 @@ const Err = chromiumNetErrors.getErrorByDescription('INVALID_WEB_BUNDLE');
 const err = new Err();
 ```
 
+### TrustTokenOperationFailedError
+
+> A Trust Tokens protocol operation-executing request failed for one of a
+> number of reasons (precondition failure, internal error, bad response).
+
+ - Name: `TrustTokenOperationFailedError`
+ - Code: `-506`
+ - Description: `TRUST_TOKEN_OPERATION_FAILED`
+ - Type: unknown
+
+```js
+const err = new chromiumNetErrors.TrustTokenOperationFailedError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-506);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('TRUST_TOKEN_OPERATION_FAILED');
+const err = new Err();
+```
+
 ### FtpFailedError
 
 > A generic error for failed FTP control connection command.

@@ -1,6 +1,10 @@
 Changelog
 =========
 
+## Next
+
+- Add TrustTokenOperationFailedError (-506)
+
 ## Version 12.0.0
 
  - Add SslObsoleteVersionError (-218)
