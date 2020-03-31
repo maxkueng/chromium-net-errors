@@ -4162,6 +4162,27 @@ const Err = chromiumNetErrors.getErrorByDescription('TRUST_TOKEN_OPERATION_FAILE
 const err = new Err();
 ```
 
+### TrustTokenOperationCacheHitError
+
+> When handling a Trust Tokens protocol operation-executing request, the system
+> found that the request's desired Trust Tokens results were already present in
+> a local cache; as a result, the main request was cancelled.
+
+ - Name: `TrustTokenOperationCacheHitError`
+ - Code: `-507`
+ - Description: `TRUST_TOKEN_OPERATION_CACHE_HIT`
+ - Type: unknown
+
+```js
+const err = new chromiumNetErrors.TrustTokenOperationCacheHitError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-507);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('TRUST_TOKEN_OPERATION_CACHE_HIT');
+const err = new Err();
+```
+
 ### FtpFailedError
 
 > A generic error for failed FTP control connection command.
