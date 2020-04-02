@@ -35,7 +35,11 @@ const combined = (() => {
   return stream;
 })();
 
-got.stream(ERROR_LIST_URL)
+got.stream(ERROR_LIST_URL, {
+  headers: {
+    'Cookie': 'REDIRECT_STATUS=optout',
+  },
+})
   .pipe(combined)
   .on('finish', () => {
     if (check) {
