@@ -754,6 +754,25 @@ const Err = chromiumNetErrors.getErrorByDescription('CLEARTEXT_NOT_PERMITTED');
 const err = new Err();
 ```
 
+### BlockedByCspError
+
+> The request was blocked by a Content Security Policy
+
+ - Name: `BlockedByCspError`
+ - Code: `-30`
+ - Description: `BLOCKED_BY_CSP`
+ - Type: system
+
+```js
+const err = new chromiumNetErrors.BlockedByCspError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-30);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('BLOCKED_BY_CSP');
+const err = new Err();
+```
+
 ### ConnectionClosedError
 
 > A connection was closed (corresponding to a TCP FIN).

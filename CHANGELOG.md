@@ -1,10 +1,14 @@
 Changelog
 =========
 
+## Next
+
+ - Add BlockedByCspError (-30)
+
 ## Version 12.1.0
 
-- Add TrustTokenOperationCacheHitError (-507)
-- Add TrustTokenOperationFailedError (-506)
+ - Add TrustTokenOperationCacheHitError (-507)
+ - Add TrustTokenOperationFailedError (-506)
 
 ## Version 12.0.0
 
