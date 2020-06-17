@@ -10,7 +10,7 @@ Chromium Network Errors
 [![NPM](https://nodei.co/npm/chromium-net-errors.png)](https://nodei.co/npm/chromium-net-errors/)
 
 Provides Chromium network errors found in
-[net_error_list.h](https://cs.chromium.org/codesearch/f/chromium/src/net/base/net_error_list.h)
+[net_error_list.h](https://source.chromium.org/chromium/chromium/src/+/master:net/base/net_error_list.h)
 as custom error classes that can be conveniently used in Node.js, Electron apps and browsers.
 
 The errors correspond to the error codes that are provided in Electron's
