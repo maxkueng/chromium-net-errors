@@ -1,7 +1,7 @@
 Changelog
 =========
 
-## Next
+## Version 12.3.0
 
  - Add H2OrQuicRequiredError (-31)
 
