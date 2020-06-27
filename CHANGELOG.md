@@ -1,6 +1,10 @@
 Changelog
 =========
 
+## Next
+
+ - Add H2OrQuicRequiredError (-31)
+
 ## Version 12.2.0
 
  - Add BlockedByCspError (-30)

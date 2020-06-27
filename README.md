@@ -773,6 +773,25 @@ const Err = chromiumNetErrors.getErrorByDescription('BLOCKED_BY_CSP');
 const err = new Err();
 ```
 
+### H2OrQuicRequiredError
+
+> The request was blocked because of no H/2 or QUIC session.
+
+ - Name: `H2OrQuicRequiredError`
+ - Code: `-31`
+ - Description: `H2_OR_QUIC_REQUIRED`
+ - Type: system
+
+```js
+const err = new chromiumNetErrors.H2OrQuicRequiredError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-31);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('H2_OR_QUIC_REQUIRED');
+const err = new Err();
+```
+
 ### ConnectionClosedError
 
 > A connection was closed (corresponding to a TCP FIN).
