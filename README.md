@@ -4200,24 +4200,26 @@ const Err = chromiumNetErrors.getErrorByDescription('TRUST_TOKEN_OPERATION_FAILE
 const err = new Err();
 ```
 
-### TrustTokenOperationCacheHitError
+### TrustTokenOperationSuccessWithoutSendingRequestError
 
 > When handling a Trust Tokens protocol operation-executing request, the system
-> found that the request's desired Trust Tokens results were already present in
-> a local cache; as a result, the main request was cancelled.
+> was able to execute the request's Trust Tokens operation without sending the
+> request to its destination: for instance, the results could have been present
+> in a local cache (for redemption) or the operation could have been diverted
+> to a local provider (for "platform-provided" issuance).
 
- - Name: `TrustTokenOperationCacheHitError`
+ - Name: `TrustTokenOperationSuccessWithoutSendingRequestError`
  - Code: `-507`
- - Description: `TRUST_TOKEN_OPERATION_CACHE_HIT`
+ - Description: `TRUST_TOKEN_OPERATION_SUCCESS_WITHOUT_SENDING_REQUEST`
  - Type: unknown
 
 ```js
-const err = new chromiumNetErrors.TrustTokenOperationCacheHitError();
+const err = new chromiumNetErrors.TrustTokenOperationSuccessWithoutSendingRequestError();
 // or
 const Err = chromiumNetErrors.getErrorByCode(-507);
 const err = new Err();
 // or
-const Err = chromiumNetErrors.getErrorByDescription('TRUST_TOKEN_OPERATION_CACHE_HIT');
+const Err = chromiumNetErrors.getErrorByDescription('TRUST_TOKEN_OPERATION_SUCCESS_WITHOUT_SENDING_REQUEST');
 const err = new Err();
 ```
 

@@ -1,6 +1,12 @@
 Changelog
 =========
 
+## Next
+
+### Breaking Changes
+
+ - `TrustTokenOperationCacheHit` (-507) name changed to `TrustTokenOperationSuccessWithoutSendingRequestError`
+
 ## Version 12.3.0
 
  - Add H2OrQuicRequiredError (-31)
