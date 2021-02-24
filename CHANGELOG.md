@@ -3,6 +3,8 @@ Changelog
 
 ## Next
 
+ - Add `QuicGoawayRequestCanBeRetriedError` (-381)
+
 ### Breaking Changes
 
  - `TrustTokenOperationCacheHit` (-507) name changed to `TrustTokenOperationSuccessWithoutSendingRequestError`

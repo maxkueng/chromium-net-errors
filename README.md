@@ -3807,6 +3807,26 @@ const Err = chromiumNetErrors.getErrorByDescription('QUIC_CERT_ROOT_NOT_KNOWN');
 const err = new Err();
 ```
 
+### QuicGoawayRequestCanBeRetriedError
+
+> A GOAWAY frame has been received indicating that the request has not been
+> processed and is therefore safe to retry on a different connection.
+
+ - Name: `QuicGoawayRequestCanBeRetriedError`
+ - Code: `-381`
+ - Description: `QUIC_GOAWAY_REQUEST_CAN_BE_RETRIED`
+ - Type: http
+
+```js
+const err = new chromiumNetErrors.QuicGoawayRequestCanBeRetriedError();
+// or
+const Err = chromiumNetErrors.getErrorByCode(-381);
+const err = new Err();
+// or
+const Err = chromiumNetErrors.getErrorByDescription('QUIC_GOAWAY_REQUEST_CAN_BE_RETRIED');
+const err = new Err();
+```
+
 ### CacheMissError
 
 > The cache does not have the requested entry.
