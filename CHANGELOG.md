@@ -1,7 +1,7 @@
 Changelog
 =========
 
-## Next
+## Version 13.0.0
 
  - Add `QuicGoawayRequestCanBeRetriedError` (-381)
 
