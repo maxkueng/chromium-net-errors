@@ -6,7 +6,7 @@ import path from 'path';
 import got from 'got';
 import through2 from 'through2';
 
-const ERROR_LIST_URL = 'https://cs.chromium.org/codesearch/f/chromium/src/net/base/net_error_list.h';
+const ERROR_LIST_URL = 'https://raw.githubusercontent.com/chromium/chromium/master/net/base/net_error_list.h';
 const OUTPUT_FILE = './net_error_list.h';
 
 const outputPath = path.resolve(process.cwd(), OUTPUT_FILE);
